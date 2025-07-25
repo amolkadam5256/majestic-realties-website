@@ -25,6 +25,9 @@ import view13 from './view13.png';
 import view14 from './view14.jpg';
 import view15 from './view15.png';
 import view16 from './view16.png';
+import view17 from './view17.jpg';
+import view18 from './view18.jpg';
+import view19 from './view19.jpg';
 import hero from './hero.jpg';
 
 // Export all as a single object
@@ -49,6 +52,9 @@ const images = {
   view14,
   view15,
   view16,
+  view17,
+  view18,
+  view19,
   hero,
 };
 

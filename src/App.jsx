@@ -4,7 +4,7 @@ import Navbar from './components/Navbar'
 
 // Importing pages
 import Home from './pages/Home'
-import Projects from './pages/projects'
+import Projects from './pages/Projects'
 import About from './pages/About'
 import Contact from './pages/Contact'
 

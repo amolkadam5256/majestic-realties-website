@@ -1,8 +1,10 @@
 import React from 'react'
-
+import AboutMajestic from '../components/AboutComp/AboutMajestic';
 const About = () => {
   return (
-    <div>About</div>
+    <div className="w-full">
+      <AboutMajestic />
+    </div>
   )
 }
 

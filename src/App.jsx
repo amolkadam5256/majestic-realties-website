@@ -1,0 +1,29 @@
+import React from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+
+// Importing pages
+import Home from './pages/Home'
+import Projects from './pages/projects'
+import About from './pages/About'
+import Contact from './pages/Contact'
+
+const App = () => {
+  return (
+    <Router>
+      <div className="min-h-screen text-black">
+        <Navbar />
+        <main className="flex-grow pt-26 max-w-screen mx-auto w-full p-2">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
+  )
+}
+
+export default App

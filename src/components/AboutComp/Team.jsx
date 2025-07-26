@@ -16,28 +16,28 @@ const coreTeam = [
         role: "Branch Manager",
         desc: "Handles branch-level execution and team coordination.",
         image: images.Dashrath_Sable,
-        animation: "fade-down",
+        animation: "fade-up",
     },
     {
         name: "Surendra Kakade",
         role: "Branch Manager",
         desc: "Manages local client interactions and operational flow.",
         image: images.Surendra_Kakade,
-        animation: "flip-left",
+        animation: "fade-up",
     },
     {
         name: "Pooja Patil",
         role: "Human Resources (HR)",
         desc: "Drives recruitment, employee engagement, and HR strategy.",
         image: images.Pooja_Patil,
-        animation: "zoom-in-up",
+        animation: "fade-up",
     },
     {
         name: "Sampada Ambre",
         role: "Operations",
         desc: "Coordinates backend activities ensuring smooth workflow.",
         image: images.Sampada_Ambre,
-        animation: "fade-up-right",
+        animation: "fade-up",
     },
 ];
 

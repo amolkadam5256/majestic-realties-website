@@ -32,8 +32,8 @@ const Navbar = () => {
       <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 py-1">
 
         {/* Logo */}
-        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={images.logo} className="h-16 w-auto" alt="Logo" />
+        <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse h-auto">
+          <img src={images.logo} className="h-14  w-auto" alt="Logo" />
           {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white">
             Majestic Realties
           </span> */}

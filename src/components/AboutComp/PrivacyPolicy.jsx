@@ -13,6 +13,11 @@ const PrivacyPolicy = () => {
   return (
     <section className="bg-white text-black px-6 md:px-16 py-16">
       <div className="max-w-5xl mx-auto space-y-14">
+        {/* Skip to content & Contact */}
+        <div className="text-center space-y-1 text-sm" data-aos="fade-down">
+          <p className="text-[#D9BD6A] font-bold">Make a call: +91 78430 77794</p>
+        </div>
+
         {/* Header */}
         <div className="text-center space-y-4" data-aos="fade-down">
           <MdOutlinePrivacyTip className="text-5xl mx-auto text-black" />
@@ -20,90 +25,81 @@ const PrivacyPolicy = () => {
           <p className="text-gray-700 text-sm">Last updated: May 16, 2024</p>
         </div>
 
-        {/* Intro */}
-        <div className="space-y-4 text-gray-800" data-aos="fade-up">
+        {/* Full Privacy Policy */}
+        <div className="space-y-6 text-gray-800 text-sm leading-relaxed" data-aos="fade-up">
           <p>
-            At <strong>Majestic Realties</strong>, your privacy is a top priority. This policy outlines how we collect,
-            use, and protect your personal data when you access our services.
+            This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
           </p>
           <p>
-            By using our services, you consent to the practices outlined in this Privacy Policy. This page is
-            continually updated in line with legal and service changes.
+            We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.
           </p>
-        </div>
-
-        {/* Key Definitions */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-semibold flex items-center gap-2 mb-4">
-            <FaShieldAlt className="text-xl" /> Key Definitions
-          </h2>
-          <ul className="list-disc ml-6 text-gray-800 space-y-2">
-            <li><strong>Account</strong>: Your personal login created to access our services.</li>
-            <li><strong>Personal Data</strong>: Information that identifies or can be used to identify you.</li>
-            <li><strong>Usage Data</strong>: Automatically collected data during service use (e.g., browser, IP).</li>
+          <h2 className="text-lg font-semibold">Interpretation and Definitions</h2>
+          <p><strong>Interpretation:</strong> Capitalized words have specific meanings under this policy whether they appear in singular or plural.</p>
+          <p><strong>Definitions:</strong></p>
+          <ul className="list-disc ml-6 space-y-1">
+            <li><strong>Account</strong>: A unique account created for You to access our Service.</li>
+            <li><strong>Affiliate</strong>: Any entity under common control with the Company.</li>
+            <li><strong>Company</strong>: Refers to Majestic Realties, located at Bandal Spaces, Paud Road, Pune.</li>
+            <li><strong>Cookies</strong>: Small files used to collect browsing information.</li>
+            <li><strong>Device</strong>: Any device used to access the Service.</li>
+            <li><strong>Personal Data</strong>: Information related to an identifiable individual.</li>
+            <li><strong>Service</strong>: Refers to the Website.</li>
+            <li><strong>Usage Data</strong>: Data collected automatically while using the Service.</li>
+            <li><strong>You</strong>: The individual or entity accessing the Service.</li>
           </ul>
-        </div>
 
-        {/* Data Collection */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-semibold flex items-center gap-2 mb-4">
-            <FaUser className="text-xl" /> Data We Collect
-          </h2>
-          <ul className="list-disc ml-6 text-gray-800 space-y-2">
-            <li>Name, email, and phone number</li>
-            <li>Device type, browser, and location info</li>
-            <li>Usage activity and interaction on our website</li>
+          <h2 className="text-lg font-semibold">Collecting and Using Your Personal Data</h2>
+          <p><strong>Personal Data:</strong> We may collect your name, email, phone number, and usage data.</p>
+          <p><strong>Usage Data:</strong> Includes IP address, browser type/version, time spent, device type, etc.</p>
+
+          <h2 className="text-lg font-semibold">Tracking Technologies and Cookies</h2>
+          <p>We use session and persistent cookies for essential functionality, preference saving, and analytics.</p>
+
+          <h2 className="text-lg font-semibold">Use of Your Personal Data</h2>
+          <ul className="list-disc ml-6 space-y-1">
+            <li>To provide and maintain our Service</li>
+            <li>To manage Your Account</li>
+            <li>To contact You</li>
+            <li>To offer products/services</li>
+            <li>To manage requests</li>
+            <li>To evaluate for business transfers</li>
           </ul>
-        </div>
 
-        {/* Use of Data */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-semibold flex items-center gap-2 mb-4">
-            <FaDatabase className="text-xl" /> How We Use Your Data
-          </h2>
-          <ul className="list-disc ml-6 text-gray-800 space-y-2">
-            <li>To provide and improve our services</li>
-            <li>To personalize user experience</li>
-            <li>To contact you with updates or marketing offers</li>
-          </ul>
-        </div>
+          <h2 className="text-lg font-semibold">Retention and Transfer of Your Data</h2>
+          <p>Your data is retained as needed and may be processed/stored outside your jurisdiction.</p>
 
-        {/* Security */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-semibold flex items-center gap-2 mb-4">
-            <FaLock className="text-xl" /> Data Protection
-          </h2>
-          <p className="text-gray-800">
-            We implement robust security protocols to protect your data. However, no internet transmission is 100% secure, and we recommend caution when sharing sensitive information.
-          </p>
-        </div>
+          <h2 className="text-lg font-semibold">Your Rights & Deletion</h2>
+          <p>You may update or delete your data. Some legal obligations may require us to retain specific data.</p>
 
-        {/* Mobile & Cookies */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-semibold flex items-center gap-2 mb-4">
-            <FaMobileAlt className="text-xl" /> Mobile Access & Cookies
-          </h2>
-          <p className="text-gray-800">
-            Our services may collect mobile-specific identifiers. Cookies are used to enhance your browsing experience. You can disable them through your browser settings.
-          </p>
-        </div>
+          <h2 className="text-lg font-semibold">Disclosure and Legal Obligations</h2>
+          <p>We may disclose data to comply with legal obligations or to protect rights, safety, or investigate fraud.</p>
 
-        {/* Retention & Deletion */}
-        <div data-aos="fade-up">
-          <h2 className="text-2xl font-semibold flex items-center gap-2 mb-4">
-            <FaClock className="text-xl" /> Data Retention & Deletion
-          </h2>
-          <p className="text-gray-800">
-            We retain your data only as long as necessary. You can request data deletion anytime by contacting us.
-          </p>
+          <h2 className="text-lg font-semibold">Security</h2>
+          <p>We take reasonable security measures but cannot guarantee 100% data security over the Internet.</p>
+
+          <h2 className="text-lg font-semibold">Children’s Privacy</h2>
+          <p>We do not knowingly collect information from children under 13. Contact us if you suspect such data has been provided.</p>
+
+          <h2 className="text-lg font-semibold">Links to Other Sites</h2>
+          <p>We are not responsible for the content or privacy of external websites linked from our Service.</p>
+
+          <h2 className="text-lg font-semibold">Policy Updates</h2>
+          <p>We may update this policy and notify users by updating this page. Please review it periodically.</p>
         </div>
 
         {/* Contact Info */}
         <div data-aos="fade-up" className="space-y-2">
-          <h3 className="text-xl font-semibold">Contact Information</h3>
+          <h3 className="text-xl font-semibold">Contact Us</h3>
           <p>Email: <a href="mailto:zakki@majesticrealties.com" className="underline">zakki@majesticrealties.com</a></p>
           <p>Phone: <a href="tel:+917843077794" className="underline">+91 78430 77794</a></p>
           <p>Website: <a href="https://www.majesticrealties.com" className="underline" target="_blank" rel="noreferrer">www.majesticrealties.com</a></p>
+        </div>
+
+        {/* Footer Info */}
+        <div className="text-center text-sm pt-6 text-gray-600 border-t">
+          <p>Office: 3rd Floor, Bandal Spaces, Paud Rd., Kothrud, Pune, Maharashtra</p>
+          <p>Tue - Sun 9:30 AM - 6:30 PM | Monday - CLOSED</p>
+          <p>Copyright © 2025 Majestic Realties</p>
         </div>
 
         {/* Back to Top */}

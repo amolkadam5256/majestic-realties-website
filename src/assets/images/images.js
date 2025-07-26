@@ -29,6 +29,14 @@ import view17 from './view17.jpg';
 import view18 from './view18.jpg';
 import view19 from './view19.jpg';
 import hero from './hero.jpg';
+import zakki_khan from './zakki_khan.jpeg'
+import zakki_khan2 from './zakki_khan2.jpg'
+import Dashrath_Sable from './Dashrath_Sable.png'
+import Kamal_Sharma from './Kamal_Sharma.png'
+import Pooja_Patil from './Pooja_Patil.png'
+import Sampada_Ambre from './Sampada_Ambre.png'
+import Surendra_Kakade from './Surendra_Kakade.png'
+
 
 // Export all as a single object
 const images = {
@@ -56,6 +64,14 @@ const images = {
   view18,
   view19,
   hero,
+  zakki_khan,
+  zakki_khan2, 
+  Dashrath_Sable, 
+  Kamal_Sharma, 
+  Pooja_Patil, 
+  Sampada_Ambre, 
+  Surendra_Kakade,
+
 };
 
 export default images;

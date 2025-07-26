@@ -22,7 +22,7 @@ const App = () => {
     <Router>
       <div className="min-h-screen text-black overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow pt-18 max-w-screen mx-auto w-full p-2">
+        <main className="flex-grow pt-20 max-w-screen mx-auto w-full p-2">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />

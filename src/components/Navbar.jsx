@@ -29,11 +29,11 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white dark:bg-black fixed w-full z-50 top-0 ">
-      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 py-4">
+      <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between px-4 py-1">
 
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={images.logo} className="h-18 w-auto" alt="Logo" />
+          <img src={images.logo} className="h-16 w-auto" alt="Logo" />
           {/* <span className="self-center text-2xl font-semibold whitespace-nowrap text-black dark:text-white">
             Majestic Realties
           </span> */}

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import PrivacyPolicy from './components/AboutComp/PrivacyPolicy'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -21,12 +22,13 @@ const App = () => {
     <Router>
       <div className="min-h-screen text-black overflow-x-hidden">
         <Navbar />
-        <main className="flex-grow pt-26 max-w-screen mx-auto w-full p-2">
+        <main className="flex-grow pt-18 max-w-screen mx-auto w-full p-2">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </main>
         <Footer />

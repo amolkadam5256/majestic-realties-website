@@ -72,7 +72,7 @@ const CommitmentSection = () => {
                     ))}
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="700" className="text-center">
+                <div data-aos="fade-up" data-aos-delay="300" className="text-center">
 
                     <Link
                         to="/contact">

@@ -15,7 +15,7 @@ const CallToAction = () => {
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
           <Link
             to="/contact"
-            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition-transform transform hover:scale-105 shadow-md"
+            className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3  transition-transform transform hover:scale-105 shadow-md"
           >
             Buy Property
           </Link>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { IoMdAddCircle } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 const AboutMajestic = () => {
     const [experience, setExperience] = useState(0);
@@ -7,18 +8,18 @@ const AboutMajestic = () => {
     const [satisfaction, setSatisfaction] = useState(0);
 
     useEffect(() => {
-        const animateCount = (setter, max,) => {
+        const animateCount = (setter, max, speed) => {
             let count = 0;
             const interval = setInterval(() => {
                 count++;
                 setter(count);
                 if (count >= max) clearInterval(interval);
-            }, 50);
+            }, speed);
         };
 
-        animateCount(setExperience, 10, 100);
-        animateCount(setProjects, 6, 150);
-        animateCount(setSatisfaction, 100, 15);
+        animateCount(setExperience, 11, 100);
+        animateCount(setProjects, 7, 150);
+        animateCount(setSatisfaction, 100, 50);
     }, []);
 
     return (
@@ -50,13 +51,13 @@ const AboutMajestic = () => {
                                     </p>
                                 </div>
 
-                                <button><a
-                                    href="#contact"
+                                <Link
+                                    to="/contact"
                                     className="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3  transition-transform hover:scale-105 shadow-md"
                                 >
                                     General Enquiry
                                     <IoMdAddCircle className="ml-2 text-xl" />
-                                </a></button>
+                                </Link>
                             </div>
 
                             <img
@@ -126,15 +127,17 @@ const AboutMajestic = () => {
                                     </div>
                                 </div>
 
-                                {/* Contact Button */}
-                                <button
-                                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                                    className="sm:w-fit w-full px-3.5 py-2 bg-indigo-600 hover:bg-indigo-800 transition-all duration-700 ease-in-out rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] justify-center items-center flex"
+
+                                <Link
+                                    to="/contact"
+                                    className="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3  transition-transform hover:scale-105 shadow-md justify-center w-full sm:w-fit"
                                     data-aos="fade-up"
                                     data-aos-delay="400"
                                 >
-                                    <span className="px-1.5 text-white text-sm font-medium leading-6">Get In Touch</span>
-                                </button>
+                                    <span className="text-sm">Get In Touch</span>
+                                    <IoMdAddCircle className="ml-2 text-xl" />
+                                </Link>
+
                             </div>
                         </div>
                     </div>

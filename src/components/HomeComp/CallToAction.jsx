@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 const CallToAction = () => {
   return (
@@ -12,12 +13,12 @@ const CallToAction = () => {
           Whether you want to buy or rent - we’ve got your next home waiting.
         </p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-          <a
-            href="#buy"
+          <Link
+            to="/contact"
             className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-3 rounded-full transition-transform transform hover:scale-105 shadow-md"
           >
             Buy Property
-          </a>
+          </Link>
           {/* <a
             href="#rent"
             className="bg-white border-2 border-yellow-400 hover:bg-yellow-100 text-yellow-700 font-semibold px-8 py-3 rounded-full transition-transform transform hover:scale-105 shadow-sm"

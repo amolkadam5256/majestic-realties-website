@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -12,9 +12,14 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 
 const App = () => {
+
+  useEffect(() => {
+  AOS.init({ duration: 1000, once: false });
+}, []);
+
   return (
     <Router>
-      <div className="min-h-screen text-black">
+      <div className="min-h-screen text-black overflow-x-hidden">
         <Navbar />
         <main className="flex-grow pt-26 max-w-screen mx-auto w-full p-2">
           <Routes>

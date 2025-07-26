@@ -88,7 +88,7 @@ const Testimonials = () => {
         <div className="w-full lg:w-2/5 text-center lg:text-left" data-aos="fade-up" data-aos-duration="1000">
           <span className="text-[#F2B90C] font-semibold text-sm tracking-wider uppercase mb-3 block">Testimonial</span>
           <h2 className="text-4xl font-bold text-[#262324] mb-6 leading-tight">
-            200+ Happy Clients Shared Their{" "}
+            324+ Happy Clients Shared Their{" "}
             <span className="bg-gradient-to-tr from-[#F2B90C] to-[#BF8D30] bg-clip-text text-transparent">
               Success Stories
             </span>

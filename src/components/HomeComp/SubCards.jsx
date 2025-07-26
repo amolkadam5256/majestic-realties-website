@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import images from '../../assets/images/images';
 import { FaArrowRight } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const SubCards = () => {
@@ -14,27 +15,27 @@ const SubCards = () => {
     const properties = [
         {
             imageUrl: images.view1,
-            title: "3710 Meier St",
-            address: "Los Angeles, CA 90066",
-            type: "Residential",
+            title: "Royal Vista",
+            address: "Pondhe, Maharashtra",
+            type: "N.A. Plots",
         },
         {
             imageUrl: images.view2,
-            title: "212 S Saltair Ave",
-            address: "Los Angeles, CA 90049",
-            type: "Residential",
+            title: "Mount Castle ",
+            address: "Ambedwet, Pirangut",
+            type: "Farm House Plots",
         },
         {
             imageUrl: images.view3,
-            title: "800 Wilshire Blvd",
-            address: "Los Angeles, CA 90017",
-            type: "Commercial",
+            title: "Royal Greens (Farm House Plots)",
+            address: "Dandwadi, Supa Road, Baramati, Pune",
+            type: "Bungalow Plots",
         },
         {
             imageUrl: images.view5,
-            title: "1234 Beverly Hills Dr",
+            title: "Royal Casa (N.A. Plots)",
             address: "Los Angeles, CA 90210",
-            type: "Luxury",
+            type: "N.A. Plots",
         },
     ];
 
@@ -61,14 +62,17 @@ const SubCards = () => {
                         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-between p-6 text-white">
                             <div>
                                 <p className="text-sm font-normal tracking-wide">{property.type}</p>
-                                <h2 className="text-xl sm:text-1xl md:text-2xl font-light leading-tight mt-1 tracking-wide">
+                                <h2 className="text-xl sm:text-1xl md:text-1xl font-light leading-tight mt-1 tracking-wide">
                                     {property.title}<br />{property.address}
                                 </h2>
                             </div>
-                            <div className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
-                                <span>Read more</span>
-                                <FaPlayCircle className="text-white group-hover:text-yellow-400 text-lg" />
-                            </div>
+
+                            <Link to="/projects" className="group">
+                                <div className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
+                                    <span>Read more</span>
+                                    <FaPlayCircle className="text-white group-hover:text-yellow-400 text-lg" />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 ))}
@@ -76,9 +80,11 @@ const SubCards = () => {
 
             {/* Read More Button */}
             <div className="text-center my-12" data-aos="fade-up">
-                <button className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold  shadow-md transition-transform hover:scale-105">
-                    <a href=""> View All Properties </a>
-                </button>
+                <Link to="/projects" className="group">
+                    <button className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold  shadow-md transition-transform hover:scale-105">
+                        <a href=""> View All Properties </a>
+                    </button>
+                </Link>
 
             </div>
         </section>

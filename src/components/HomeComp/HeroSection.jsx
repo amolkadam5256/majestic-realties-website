@@ -1,5 +1,7 @@
 import React from 'react';
 import { IoMdAddCircle } from 'react-icons/io';
+import { Link } from 'react-router-dom';
+
 
 const HeroSection = () => {
     return (
@@ -22,14 +24,13 @@ const HeroSection = () => {
                     what’s possible.
                 </p>
 
-                <a
-                    href="#contact"
-                    className="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3  transition-transform hover:scale-105 shadow-md"
+                <Link
+                    to="/contact"
+                    className="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-6 py-3 transition-transform hover:scale-105 shadow-md"
                 >
                     General Enquiry
                     <IoMdAddCircle className="ml-2 text-xl" />
-                </a>
-
+                </Link>
             </div>
         </section>
     );

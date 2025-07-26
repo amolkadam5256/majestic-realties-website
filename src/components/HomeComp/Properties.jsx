@@ -3,6 +3,7 @@ import { FaPlayCircle } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import images from '../../assets/images/images';
+import { Link } from 'react-router-dom';
 
 const Properties = () => {
   useEffect(() => {
@@ -12,15 +13,15 @@ const Properties = () => {
   const properties = [
     {
       imageUrl: images.view17,
-      title: "3710 Meier St",
-      address: "Los Angeles, Ca 90066",
-      type: "Residential",
+      title: "Royal Greens (Farm House Plots)",
+      address: "Dandwadi, Supa Road, Baramati, Pune",
+      type: "Farm House Plots",
     },
     {
       imageUrl: images.view19,
-      title: "212 S Saltair Ave",
-      address: "Los Angeles, Ca 90049",
-      type: "Residential",
+      title: "Royal Casa (N.A. Plots)",
+      address: "Gate No. 3, Yavat-Saswad Rd, Malshiras, Purandar, Pune",
+      type: "N.A. Plots",
     },
   ];
 
@@ -32,16 +33,18 @@ const Properties = () => {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia massa vitae
-            molestie efficitur. Sed dictum arcu et dui ultricies, quis varius justo convallis.
-            Nunc vel sodales mauris.
+            Since 2014, Majestic Realties has been redefining real estate excellence with a focus on
+            quality, innovation, and integrity. We specialize in creating vibrant, future-ready
+            communities that deliver lasting value and a superior lifestyle.
           </p>
           <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed">
-            Suspendisse potenti. Etiam eget neque pellentesque, tempus dui in, varius dolor.
-            Nunc facilisis lacus est. Donec ac diam ac elit maximus facilisis.
+            With a decade of experience and a passionate team, we turn land into legacy. Our projects
+            are designed to inspire, endure, and elevate everyday living through thoughtful
+            architecture and sustainable development.
           </p>
         </div>
       </div>
+
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
         {properties.map((property, index) => (
@@ -64,10 +67,10 @@ const Properties = () => {
                   {property.title}<br />{property.address}
                 </h2>
               </div>
-              <div className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
+              <Link to="/projects" className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
                 <span>Read more</span>
                 <FaPlayCircle className="text-white group-hover:text-yellow-400 text-lg" />
-              </div>
+              </Link>
             </div>
           </div>
         ))}

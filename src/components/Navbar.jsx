@@ -43,44 +43,62 @@ const Navbar = () => {
         <div className="flex items-center md:order-2 space-x-4">
           {/* Social Media Icons */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#"
+            <a
+              href="https://wa.me/917843077794"  // WhatsApp with country code
+              className="text-[#25D366] hover:text-[#D9BD6A] transition"
+              aria-label="WhatsApp"
               target="_blank"
-              className="text-[#25D366] hover:text-[#D9BD6A] transition">
+              rel="noopener noreferrer"
+            >
               <FaWhatsapp />
             </a>
 
-
-            <a href="#"
+            <a
+              href="https://www.facebook.com/majesticrealties?mibextid=LQQJ4d"  // Replace with actual Facebook page
+              className="text-[#1877F2] hover:text-[#D9BD6A] transition"
+              aria-label="Facebook"
               target="_blank"
-              className="text-[#1877F2] hover:text-[#D9BD6A] transition">
+              rel="noopener noreferrer"
+            >
               <FaFacebookF />
             </a>
 
-            <a href="#"
+            <a
+              href="https://www.instagram.com/majesticrealtiespune?igshid=MzRlODBiNWFlZA%3D%3D"  // Replace with actual Instagram
+              className="text-[#E4405F] hover:text-[#D9BD6A] transition"
+              aria-label="Instagram"
               target="_blank"
-              className="text-[#E4405F] hover:text-[#D9BD6A] transition">
+              rel="noopener noreferrer"
+            >
               <FaInstagram />
             </a>
 
-
-            <a href="#"
+            <a
+              href="https://x.com/majesticrealti"  // Replace with actual Twitter handle
+              className="text-[#1DA1F2] hover:text-[#D9BD6A] transition"
+              aria-label="Twitter"
               target="_blank"
-              className="text-[#1DA1F2] hover:text-[#D9BD6A] transition">
+              rel="noopener noreferrer"
+            >
               <FaTwitter />
             </a>
 
-            <a href="#"
+            <a
+              href="https://www.linkedin.com/company/majesticrealties/?originalSubdomain=in"  // Replace with LinkedIn company page
+              className="text-[#0A66C2] hover:text-[#D9BD6A] transition"
+              aria-label="LinkedIn"
               target="_blank"
-              className="text-[#0A66C2] hover:text-[#D9BD6A] transition">
+              rel="noopener noreferrer"
+            >
               <FaLinkedinIn />
             </a>
 
-
             <a
-              href="https://www.youtube.com/@YourChannel" // Replace with your actual channel URL
+              href="https://www.youtube.com/channel/UCfIYfQweloVUxZikAFsQjXA"  // Replace with YouTube channel
               target="_blank"
               rel="noopener noreferrer"
-              className="text-red-500 hover:text-[#D9BD6A] text-2xl transition"
+              className="text-[#FF0000] hover:text-[#D9BD6A] transition"
+              aria-label="YouTube"
             >
               <FaYoutube />
             </a>

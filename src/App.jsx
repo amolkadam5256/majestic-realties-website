@@ -11,6 +11,9 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import About from './pages/About'
 import Contact from './pages/Contact'
+import Royal_Vista from './components/projectComp/Royal_Vista';
+import Royal_Casa from './components/projectComp/Royal_Casa';
+import Mount_Castle from './components/projectComp/Mount_Castle';
 
 const App = () => {
 
@@ -29,6 +32,9 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/projects/royal_vista" element={<Royal_Vista />} />
+            <Route path="/projects/royal_casa" element={<Royal_Casa />} />
+            <Route path="/projects/mount_castle" element={<Mount_Castle />} />
           </Routes>
         </main>
         <Footer />

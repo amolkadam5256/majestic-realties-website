@@ -12,16 +12,21 @@ const Properties = () => {
 
   const properties = [
     {
-      imageUrl: images.view17,
-      title: "Royal Greens (Farm House Plots)",
-      address: "Dandwadi, Supa Road, Baramati, Pune",
-      type: "Farm House Plots",
+
+      imageUrl: images.view1,
+      title: "Royal Vista",
+      address: "Pondhe, Maharashtra",
+      type: "N.A. Plots",
+      path: 'royal_vista',
+
     },
     {
-      imageUrl: images.view19,
+      imageUrl: images.view3,
       title: "Royal Casa (N.A. Plots)",
       address: "Gate No. 3, Yavat-Saswad Rd, Malshiras, Purandar, Pune",
       type: "N.A. Plots",
+      path: 'royal_casa',
+
     },
   ];
 
@@ -67,7 +72,7 @@ const Properties = () => {
                   {property.title}<br />{property.address}
                 </h2>
               </div>
-              <Link to="/projects" className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
+              <Link to={`/projects/${property.path}`} className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
                 <span>Read more</span>
                 <FaPlayCircle className="text-white group-hover:text-yellow-400 text-lg" />
               </Link>

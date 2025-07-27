@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { IoMdAddCircle } from 'react-icons/io';
 import { Link } from 'react-router-dom';
+import images from '../../assets/images/images';
 
 const AboutMajestic = () => {
     const [experience, setExperience] = useState(0);
@@ -62,7 +63,7 @@ const AboutMajestic = () => {
 
                             <img
                                 className="lg:mx-0 mx-auto h-full rounded-3xl object-cover"
-                                src="https://pagedone.io/asset/uploads/1717751272.png"
+                                src={images.view2}
                                 alt="Majestic Realties Project Image"
                                 data-aos="zoom-in"
                                 data-aos-delay="200"
@@ -80,13 +81,13 @@ const AboutMajestic = () => {
                                 <div className="pt-24 lg:justify-center sm:justify-end justify-start items-start gap-2.5 flex">
                                     <img
                                         className="rounded-xl object-cover"
-                                        src="https://pagedone.io/asset/uploads/1717741205.png"
+                                    src={images.view1} 
                                         alt="Majestic Realty Project"
                                     />
                                 </div>
                                 <img
                                     className="sm:ml-0 ml-auto rounded-xl object-cover"
-                                    src="https://pagedone.io/asset/uploads/1717741215.png"
+                                    src={images.view3} 
                                     alt="Majestic Realty Project"
                                 />
                             </div>

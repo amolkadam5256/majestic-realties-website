@@ -18,24 +18,28 @@ const SubCards = () => {
             title: "Royal Vista",
             address: "Pondhe, Maharashtra",
             type: "N.A. Plots",
+            path: 'royal_vista',
         },
         {
             imageUrl: images.view2,
             title: "Mount Castle ",
             address: "Ambedwet, Pirangut",
             type: "Farm House Plots",
-        },
-        {
-            imageUrl: images.view3,
-            title: "Royal Greens (Farm House Plots)",
-            address: "Dandwadi, Supa Road, Baramati, Pune",
-            type: "Bungalow Plots",
+            path: 'mount_castle',
         },
         {
             imageUrl: images.view5,
             title: "Royal Casa (N.A. Plots)",
-            address: "Los Angeles, CA 90210",
+            address: "Gate No. 3, Yavat-Saswad Rd, Malshiras, Purandar, Pune",
             type: "N.A. Plots",
+            path: 'royal_casa',
+        },
+        {
+            imageUrl: images.view7,
+            title: "Royal Vista",
+            address: "Pondhe, Maharashtra",
+            type: "N.A. Plots",
+            path: 'royal_vista',
         },
     ];
 
@@ -67,7 +71,7 @@ const SubCards = () => {
                                 </h2>
                             </div>
 
-                            <Link to="/projects" className="group">
+                            <Link to={`/projects/${property.path}`} className="group">
                                 <div className="flex items-center space-x-3 text-sm font-normal cursor-pointer group-hover:text-yellow-400">
                                     <span>Read more</span>
                                     <FaPlayCircle className="text-white group-hover:text-yellow-400 text-lg" />

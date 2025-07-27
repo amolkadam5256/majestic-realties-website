@@ -12,22 +12,10 @@ import img1 from './img1.jpg';
 import view1 from './view1.png';
 import view2 from './view2.png';
 import view3 from './view3.png';
-import view4 from './view4.png';
-import view5 from './view5.png';
-import view6 from './view6.png';
-import view7 from './view7.png';
-import view8 from './view8.png';
-import view9 from './view9.png';
-import view10 from './view10.png';
-import view11 from './view11.png';
-import view12 from './view12.png';
-import view13 from './view13.png';
-import view14 from './view14.jpg';
-import view15 from './view15.png';
-import view16 from './view16.png';
-import view17 from './view17.jpg';
-import view18 from './view18.jpg';
-import view19 from './view19.jpg';
+import view4 from './view4.jpg';
+import view5 from './view5.jpg';
+import view6 from './view6.jpg';
+import view7 from './view7.jpg';
 import hero from './hero.jpg';
 import zakki_khan from './zakki_khan.jpeg'
 import zakki_khan2 from './zakki_khan2.jpg'
@@ -36,6 +24,14 @@ import Kamal_Sharma from './Kamal_Sharma.png'
 import Pooja_Patil from './Pooja_Patil.png'
 import Sampada_Ambre from './Sampada_Ambre.png'
 import Surendra_Kakade from './Surendra_Kakade.png'
+import Mount_Castle1 from './Mount_Castle1.png'
+import Mount_Castle2 from './Mount_Castle2.png'
+import Mount_Castle3 from './Mount_Castle3.png'
+import Mount_Castle4 from './Mount_Castle4.png'
+import Mount_Castle5 from './Mount_Castle5.png'
+import Mount_Castle6 from './Mount_Castle6.png'
+import Mount_Castle7 from './Mount_Castle7.png'
+import Mount_Castle8 from './Mount_Castle8.png'
 
 
 // Export all as a single object
@@ -51,18 +47,6 @@ const images = {
   view5,
   view6,
   view7,
-  view8,
-  view9,
-  view10,
-  view11,
-  view12,
-  view13,
-  view14,
-  view15,
-  view16,
-  view17,
-  view18,
-  view19,
   hero,
   zakki_khan,
   zakki_khan2, 
@@ -71,6 +55,14 @@ const images = {
   Pooja_Patil, 
   Sampada_Ambre, 
   Surendra_Kakade,
+  Mount_Castle1,
+  Mount_Castle2,
+  Mount_Castle3,
+  Mount_Castle4,
+  Mount_Castle5,
+  Mount_Castle6,
+  Mount_Castle7,
+  Mount_Castle8,
 
 };
 

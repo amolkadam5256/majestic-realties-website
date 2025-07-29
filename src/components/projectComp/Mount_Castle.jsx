@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import images from "../../assets/images/images"; // assuming it's an object with image paths
+import SubCards from "../HomeComp/SubCards";
 
 const mountCastleImages = [
   images.Mount_Castle1,
   images.Mount_Castle2,
   images.Mount_Castle3,
   images.Mount_Castle4,
+  images.Mount_Castle5,
+  images.Mount_Castle6,
+  images.Mount_Castle7,
+  images.Mount_Castle8,
 ];
 
 const Mount_Castle = () => {
@@ -31,15 +36,15 @@ const Mount_Castle = () => {
 
 
       {/* Project Heading */}
-      <div className="text-center mb-12 mt-5 ">
+      <div className="text-center mb-12 mt-5">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-yellow-400 uppercase tracking-wide drop-shadow">
           Mount Castle (Farm House Plots)
         </h1>
         <h2 className="text-xl sm:text-2xl mt-2 text-black font-semibold">
-          Royal Casa - Yavat Malshiras
-          {/* <span className="line-through text-red-600">Sold Out!</span> */}
+          Premium Farmhouse & Bungalow Plots – Ambedwet, Pirangut, Pune
         </h2>
       </div>
+
 
 
       <div className="relative w-full">
@@ -121,29 +126,46 @@ const Mount_Castle = () => {
       </div>
 
       {/* Project Header Section */}
-      <div className=" text-black py-12 px-4 sm:px-10 rounded-lg  mb-10">
+      <div className="text-black py-12 px-4 sm:px-10 rounded-lg mb-10">
         <div className="max-w-5xl mx-auto text-start">
 
           <p className="mt-6 text-lg sm:text-xl leading-relaxed text-black">
-            Perched in the breathtaking locale of <strong>Ambedwet, Pirangut</strong>, Mount Castle beckons those in search of a higher standard of living.
-            This project offers a blend of <strong>farm and bungalow plots</strong> on hilltop table land, promising <strong>panoramic views</strong> and serene surroundings.
-          </p>
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            With amenities like a <strong>grand entrance gate</strong>, <strong>clubhouse</strong>, <strong>water supply</strong>, and <strong>electricity</strong>, Mount Castle is ideal for building your dream farmhouse or bungalow.
-            Discover a life of <strong>tranquility</strong> and <strong>natural beauty</strong> with <strong>Majestic Realties</strong>.
-          </p>
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Surrounded by nature and close to <strong>Gohtawade Phata</strong> and <strong>Pirangut</strong>, this RERA-approved project provides clear titles and immediate 7/12 access. 
-            It’s also strategically located near upcoming and sold-out projects like <strong>Royal Casa – Malshiras</strong>, and offers excellent connectivity to <strong>Kothrud</strong>, <strong>Paud Road</strong>, and <strong>Chandani Chowk</strong>.
-          </p>
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Services in the nearby area include <strong>schools</strong>, <strong>hospitals</strong>, <strong>local markets</strong>, <strong>restaurants</strong>, and <strong>resort stays</strong>. 
-            It’s a perfect weekend destination or long-term investment with potential returns up to <strong>₹60+ Lakhs in 3–5 years</strong>.
+            💫 <strong>Introducing Mount Castle – Your Dream Plot Destination!</strong>
           </p>
 
-         
+          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
+            Nestled in the breathtaking locale of <strong>Ambedwet, Pirangut</strong>, <strong>Mount Castle</strong> is a premium offering for those seeking a higher standard of living. This exclusive project features a blend of <strong>farmhouse and bungalow plots</strong> on scenic hilltop table land, delivering <strong>panoramic views</strong> and a peaceful, nature-rich environment.
+          </p>
+
+          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
+            With amenities like a <strong>grand entrance gate</strong>, <strong>clubhouse</strong>, dependable <strong>water supply</strong>, and <strong>electricity</strong>, the project is designed to support your vision of a tranquil retreat or an investment-worthy property.
+          </p>
+
+          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
+            Surrounded by lush greenery and conveniently located near <strong>ghotawade phata</strong> and <strong>Pirangut</strong>, Mount Castle ensures connectivity to major locations like <strong>Kothrud</strong>, <strong>Paud Road</strong>, and <strong>Chandani Chowk</strong>. It is also close to successful developments such as <strong>Royal Casa – Malshiras</strong>.
+          </p>
+
+          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
+            Whether you're looking to build a <strong>weekend home</strong>, make a <strong>long-term investment</strong>, or secure your <strong>second home in nature</strong>, Mount Castle offers the perfect opportunity. The surrounding region is well-developed with <strong>schools</strong>, <strong>hospitals</strong>, <strong>markets</strong>, <strong>restaurants</strong>, and <strong>resort stays</strong>.
+          </p>
+
+          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
+            🌿 <strong>Scenic views. Serene lifestyle. Smart investment.</strong> <br />
+            📞 <strong>Limited inventory – Book your site visit today!</strong>
+          </p>
+
         </div>
       </div>
+
+          {/* Projects Overview Title */}
+      <div className="text-start mb-10 mt-16">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 uppercase tracking-wide pl-6">
+          Our Real Estate Projects
+        </h1>
+      </div>
+      
+      <SubCards/>
+
 
     </>
   );

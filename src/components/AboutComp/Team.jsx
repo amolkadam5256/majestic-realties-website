@@ -6,8 +6,8 @@ import TeamCardCompact from "./TeamCardCompact";
 const coreTeam = [
     {
         name: "Kamal Sharma",
-        role: "Branch Manager - Pirangut Branch",
-        desc: "Leads operations and customer relations at the Pirangut branch.",
+        role: "Branch Manager – Pirangut Branch",
+        desc: "A core pillar of Majestic Realties, Expertly leads the Pirangut branch, overseeing sales, legal, and project development with unmatched dedication and experience.",
         image: images.Kamal_Sharma,
         animation: "fade-up",
     },

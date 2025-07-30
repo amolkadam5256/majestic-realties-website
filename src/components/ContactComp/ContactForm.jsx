@@ -1,0 +1,126 @@
+import React from "react";
+
+const ContactForm = () => {
+    return (
+        <section className="py-24 bg-white">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+                
+                <div className="grid lg:grid-cols-2 grid-cols-1 gap-x-24">
+                    {/* Contact Form Section */}
+                    <div className="flex items-center lg:mb-0 mb-10">
+                        <div className="w-full">
+                            <h2 className="text-gray-900 font-manrope text-4xl font-bold leading-10 mb-8 lg:text-left text-center">
+                                Contact Us
+                            </h2>
+                            <form
+                                action="https://api.web3forms.com/submit"
+                                method="POST"
+                                className="w-full max-w-xl mx-auto"
+                            >
+                                {/* ✅ Web3Forms Access Key */}
+                                <input
+                                    type="hidden"
+                                    name="access_key"
+                                    value="c9bf8252-ac36-4dd6-b096-886c40f67d00"
+                                />
+
+                                {/* ✅ Honeypot Field for Spam Protection */}
+                                <input
+                                    type="checkbox"
+                                    name="botcheck"
+                                    className="hidden"
+                                    style={{ display: "none" }}
+                                />
+
+                                <div className="mb-4">
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        placeholder="Name"
+                                        required
+                                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        placeholder="Email"
+                                        required
+                                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <input
+                                        type="tel"
+                                        name="phone"
+                                        placeholder="Phone"
+                                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    />
+                                </div>
+
+                                <div className="mb-4">
+                                    <textarea
+                                        name="message"
+                                        rows="5"
+                                        placeholder="Message"
+                                        required
+                                        className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                                    />
+                                </div>
+
+                                <button
+                                    type="submit"
+                                    className="w-full bg-indigo-600 text-white py-3 px-6 rounded-md hover:bg-indigo-700 transition"
+                                >
+                                    Send Message
+                                </button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    {/* Right Side: Embedded Map with Overlay */}
+                    <div className="relative w-full h-[400px] lg:h-[500px]">
+                        {/* Google Maps Iframe */}
+
+                        <iframe
+                            title="Our Location"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7566.939207833448!2d73.79342557393534!3d18.507669169570725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfb35bfc955f%3A0xd31660777e44519a!2sBandal%20Spaces%2C%20Paud%20Rd%2C%20Paud%20Road%2C%20Bharti%20Nagar%2C%20Kothrud%2C%20Pune%2C%20Maharashtra%20411038!5e0!3m2!1sen!2sin!4v1753853215025!5m2!1sen!2sin"
+                            className="w-full h-full rounded-lg border-0"
+                            allowFullScreen=""
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+
+                        {/* Overlay content */}
+                        <div className="absolute -bottom-14 left-0 bg-white px-4 py-2 rounded-md shadow-md flex items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="w-6 h-6 text-indigo-600"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={1.5}
+                                    d="M12 4v16m8-8H4"
+                                />
+                            </svg>
+                            <span className="text-sm font-medium text-gray-700">
+                                We typically respond within 1 hour
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default ContactForm;

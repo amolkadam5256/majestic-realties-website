@@ -86,7 +86,7 @@ const SubCards = () => {
             <div className="text-center my-12" data-aos="fade-up">
                 <Link to="/projects" className="group">
                     <button className="px-6 py-3 bg-yellow-400 hover:bg-yellow-500 text-black font-semibold  shadow-md transition-transform hover:scale-105">
-                        <a href=""> View All Properties </a>
+                        View All Properties
                     </button>
                 </Link>
 

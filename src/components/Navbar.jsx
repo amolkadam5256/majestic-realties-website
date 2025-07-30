@@ -142,20 +142,64 @@ const Navbar = () => {
               </li>
             ))}
             <div className="justify-center flex  md:hidden items-center space-x-6 py-10">
-              <a href="#" className="text-[#25D366] hover:text-[#D9BD6A] transition">
+              <a
+                href="https://wa.me/917843077794"  // WhatsApp with country code
+                className="text-[#25D366] hover:text-[#D9BD6A] transition"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaWhatsapp />
               </a>
-              <a href="#" className="text-[#1877F2] hover:text-[#D9BD6A] transition">
+
+              <a
+                href="https://www.facebook.com/majesticrealties?mibextid=LQQJ4d"  // Replace with actual Facebook page
+                className="text-[#1877F2] hover:text-[#D9BD6A] transition"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaFacebookF />
               </a>
-              <a href="#" className="text-[#E4405F] hover:text-[#D9BD6A] transition">
+
+              <a
+                href="https://www.instagram.com/majesticrealtiespune?igshid=MzRlODBiNWFlZA%3D%3D"  // Replace with actual Instagram
+                className="text-[#E4405F] hover:text-[#D9BD6A] transition"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaInstagram />
               </a>
-              <a href="#" className="text-[#1DA1F2] hover:text-[#D9BD6A] transition">
+
+              <a
+                href="https://x.com/majesticrealti"  // Replace with actual Twitter handle
+                className="text-[#1DA1F2] hover:text-[#D9BD6A] transition"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaTwitter />
               </a>
-              <a href="#" className="text-[#0A66C2] hover:text-[#D9BD6A] transition">
+
+              <a
+                href="https://www.linkedin.com/company/majesticrealties/?originalSubdomain=in"  // Replace with LinkedIn company page
+                className="text-[#0A66C2] hover:text-[#D9BD6A] transition"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://www.youtube.com/channel/UCfIYfQweloVUxZikAFsQjXA"  // Replace with YouTube channel
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#FF0000] hover:text-[#D9BD6A] transition"
+                aria-label="YouTube"
+              >
+                <FaYoutube />
               </a>
             </div>
           </ul>

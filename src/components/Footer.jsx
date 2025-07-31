@@ -134,8 +134,9 @@ const Footer = () => {
 
       {/* Bottom Strip */}
       <div className="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-4">
-        &copy; 2025 <span className="text-[#D9BD6A] font-semibold">Majestic Realties</span>. All rights reserved.
+        &copy; {new Date().getFullYear()} <span className="text-[#D9BD6A] font-semibold">Majestic Realties</span>. All rights reserved.
       </div>
+
     </footer>
   );
 };

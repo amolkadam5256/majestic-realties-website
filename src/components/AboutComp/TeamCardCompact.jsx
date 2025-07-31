@@ -62,7 +62,7 @@ const FounderCard = () => (
           Under his leadership, Majestic Realties is known for trust, transparency, and high-return properties from plots to second homes.
         </p>
         <p>
-          His vision: turn every land deal into a legacy for your future.
+          His vision: turn every land deal into a legacy of the future.
         </p>
       </section>
 

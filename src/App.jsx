@@ -1,46 +1,62 @@
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import PrivacyPolicy from './components/AboutComp/PrivacyPolicy'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// Importing pages
-import Home from './pages/Home'
-import Projects from './pages/Projects'
-import About from './pages/About'
-import Contact from './pages/Contact'
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import PrivacyPolicy from './components/AboutComp/PrivacyPolicy';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import Royal_Vista from './components/projectComp/Royal_Vista';
 import Royal_Casa from './components/projectComp/Royal_Casa';
 import Mount_Castle from './components/projectComp/Mount_Castle';
+import PageWrapper from './components/PageWrapper';
+import Loader from './components/Loader';
+
+const AnimatedRoutes = () => {
+  const location = useLocation();
+
+  return (
+    <AnimatePresence mode="wait">
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
+        <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
+        <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+        <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
+        <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
+        <Route path="/projects/royal_vista" element={<PageWrapper><Royal_Vista /></PageWrapper>} />
+        <Route path="/projects/royal_casa" element={<PageWrapper><Royal_Casa /></PageWrapper>} />
+        <Route path="/projects/mount_castle" element={<PageWrapper><Mount_Castle /></PageWrapper>} />
+      </Routes>
+    </AnimatePresence>
+  );
+};
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-  AOS.init({ duration: 1000, once: false });
-}, []);
+    AOS.init({ duration: 1000, once: false });
+  }, []);
 
   return (
     <Router>
-      <div className="min-h-screen text-black overflow-x-hidden">
-        <Navbar />
-        <main className="flex-grow pt-16 max-w-screen mx-auto w-full p-2">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/projects/royal_vista" element={<Royal_Vista />} />
-            <Route path="/projects/royal_casa" element={<Royal_Casa />} />
-            <Route path="/projects/mount_castle" element={<Mount_Castle />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      {loading && <Loader onComplete={() => setLoading(false)} />}
+      {!loading && (
+        <div className="min-h-screen text-black overflow-x-hidden">
+          <Navbar />
+          <main className="flex-grow pt-10 max-w-screen mx-auto w-full p-2">
+            <AnimatedRoutes />
+          </main>
+          <Footer />
+        </div>
+      )}
     </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;

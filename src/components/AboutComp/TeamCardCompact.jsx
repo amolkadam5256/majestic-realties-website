@@ -51,45 +51,30 @@ const FounderCard = () => (
         </a>
       </header>
 
-    <section
-  className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"
-  itemProp="description"
->
-  <p className="mb-2">
-    <strong className="text-lg text-[#D9BD6A]">Zakki Khan</strong>, Founder of <strong>Majestic Realties</strong>, brings 11+ years of real estate and digital expertise, guiding hundreds toward smart property investments across Pune.
-  </p>
-  <p className="mb-2">
-    Under his leadership, Majestic Realties is known for trust, transparency, and high-return properties from plots to second homes.
-  </p>
-  <p>
-    His vision: turn every land deal into a legacy for your future.
-  </p>
-</section>
+      <section
+        className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"
+        itemProp="description"
+      >
+        <p className="mb-2">
+          <strong className="text-lg text-[#D9BD6A]">Zakki Khan</strong>, Founder of <strong>Majestic Realties</strong>, brings 11+ years of real estate and digital expertise, guiding hundreds toward smart property investments across Pune.
+        </p>
+        <p className="mb-2">
+          Under his leadership, Majestic Realties is known for trust, transparency, and high-return properties from plots to second homes.
+        </p>
+        <p>
+          His vision: turn every land deal into a legacy for your future.
+        </p>
+      </section>
 
 
 
 
-  
+
 
       {/* Social Media Icons */}
       <div className="flex flex-wrap justify-center sm:justify-start gap-4 pt-4 text-xl text-gray-500 dark:text-gray-400">
-        <a href="https://www.linkedin.com/in/zakki-khan" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <a href="https://www.linkedin.com/in/zakkikhan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <FaLinkedin className="hover:text-blue-700 transition" />
-        </a>
-        <a href="https://twitter.com/zakki_khan" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-          <FaTwitter className="hover:text-sky-500 transition" />
-        </a>
-        <a href="https://facebook.com/zakki.khan" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <FaFacebook className="hover:text-blue-600 transition" />
-        </a>
-        <a href="https://instagram.com/zakki.khan" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <FaInstagram className="hover:text-pink-500 transition" />
-        </a>
-        {/* <a href="https://github.com/zakki-khan" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <FaGithub className="hover:text-gray-900 dark:hover:text-white transition" />
-        </a> */}
-        <a href="https://dribbble.com/zakki" target="_blank" rel="noopener noreferrer" aria-label="Dribbble">
-          <FaDribbble className="hover:text-pink-400 transition" />
         </a>
       </div>
     </div>

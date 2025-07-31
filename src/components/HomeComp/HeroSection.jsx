@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
     return (
-        <section className="relative overflow-hidden group min-h-[88vh] flex items-center px-4 md:px-16">
+        <section className="relative overflow-hidden group min-h-[92vh] flex items-center px-4 md:px-16">
             {/* Background Image */}
             <div className="absolute inset-0 bgHero bg-cover bg-center transform transition-transform duration-1000 ease-in-out scale-100 group-hover:scale-140 z-0" />
 

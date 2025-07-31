@@ -16,8 +16,10 @@ import Royal_Casa from './components/projectComp/Royal_Casa';
 import Mount_Castle from './components/projectComp/Mount_Castle';
 import PageWrapper from './components/PageWrapper';
 import Loader from './components/Loader';
+import InfoModal from './components/InfoModal';
 
 const AnimatedRoutes = () => {
+
   const location = useLocation();
 
   return (
@@ -43,11 +45,21 @@ const App = () => {
     AOS.init({ duration: 1000, once: false });
   }, []);
 
+
+  const [showModal, setShowModal] = useState(false);
+  // Show modal on page load after 500ms
+  useEffect(() => {
+    const timer = setTimeout(() => setShowModal(true), 500);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Router>
       {loading && <Loader onComplete={() => setLoading(false)} />}
       {!loading && (
         <div className="min-h-screen text-black overflow-x-hidden">
+          <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
           <Navbar />
           <main className="flex-grow pt-10 max-w-screen mx-auto w-full p-2">
             <AnimatedRoutes />

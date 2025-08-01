@@ -35,7 +35,7 @@ const coreTeam = [
     {
         name: "Sampada Ambre",
         role: "Operations",
-        desc: "Coordinates backend activities ensuring smooth workflow.",
+        desc: "Plays a vital role in streamlining the company’s processes through efficient planning, cross-department coordination, and operational excellence, ensuring smooth workflow and strong backend support with precision and professionalism.",
         image: images.Sampada_Ambre,
         animation: "fade-up",
     },

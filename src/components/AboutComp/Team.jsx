@@ -44,7 +44,7 @@ const coreTeam = [
 
 const Team = () => {
     useEffect(() => {
-        AOS.init({ once: true, duration: 900, easing: "ease-in-out" });
+        AOS.init({ once: false, duration: 900, easing: "ease-in-out" });
     }, []);
 
     return (

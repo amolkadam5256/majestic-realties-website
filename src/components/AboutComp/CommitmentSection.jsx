@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const CommitmentSection = () => {
     useEffect(() => {
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1000, once: false });
     }, []);
 
     const cards = [

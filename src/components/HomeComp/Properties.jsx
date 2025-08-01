@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const Properties = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, once: false, });
   }, []);
 
   const properties = [

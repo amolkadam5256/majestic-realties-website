@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-    AOS.init({ duration: 800, once: true });
+    AOS.init({ duration: 800, once: false });
   }, []);
 
   return (

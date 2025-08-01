@@ -11,7 +11,7 @@ import images from "../../assets/images/images";
 
 const FounderCard = () => (
   <article
-    className="flex flex-col sm:flex-row items-center bg-white dark:bg-gray-900 rounded-2xl md:shadow-xl overflow-hidden gap-6 p-6 sm:p-8 mx-0 sm:mx-12"
+    className="flex flex-col sm:flex-row items-center bg-white rounded-2xl md:shadow-xl overflow-hidden gap-6 p-6 sm:p-8 mx-0 sm:mx-12"
     itemScope
     itemType="https://schema.org/Person"
   >
@@ -29,13 +29,13 @@ const FounderCard = () => (
     <div className="w-full sm:w-2/3 space-y-4 text-center sm:text-left">
       <header>
         <h1
-          className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"
+          className="text-2xl sm:text-3xl font-bold text-gray-900"
           itemProp="name"
         >
           Zakki Khan
         </h1>
         <p
-          className="text-sm font-medium text-blue-600 dark:text-blue-400"
+          className="text-sm font-medium text-blue-600"
           itemProp="jobTitle"
         >
           Director at Majestic Realties & Webmarkx LLC (Dubai)
@@ -52,7 +52,7 @@ const FounderCard = () => (
       </header>
 
       <section
-        className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"
+        className="text-gray-700 text-sm leading-relaxed"
         itemProp="description"
       >
         <p className="mb-2">
@@ -66,13 +66,8 @@ const FounderCard = () => (
         </p>
       </section>
 
-
-
-
-
-
       {/* Social Media Icons */}
-      <div className="flex flex-wrap justify-center sm:justify-start gap-4 pt-4 text-xl text-gray-500 dark:text-gray-400">
+      <div className="flex flex-wrap justify-center sm:justify-start gap-4 pt-4 text-xl text-gray-500">
         <a href="https://www.linkedin.com/in/zakkikhan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
           <FaLinkedin className="hover:text-blue-700 transition" />
         </a>

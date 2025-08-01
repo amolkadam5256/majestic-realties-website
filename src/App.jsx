@@ -17,6 +17,7 @@ import Mount_Castle from './components/projectComp/Mount_Castle';
 import PageWrapper from './components/PageWrapper';
 import Loader from './components/Loader';
 import InfoModal from './components/InfoModal';
+import ErrorPage from './components/ErrorPage';
 
 const AnimatedRoutes = () => {
 
@@ -33,6 +34,7 @@ const AnimatedRoutes = () => {
         <Route path="/projects/royal_vista" element={<PageWrapper><Royal_Vista /></PageWrapper>} />
         <Route path="/projects/royal_casa" element={<PageWrapper><Royal_Casa /></PageWrapper>} />
         <Route path="/projects/mount_castle" element={<PageWrapper><Mount_Castle /></PageWrapper>} />
+        <Route path="*" element={<PageWrapper><ErrorPage /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
   );

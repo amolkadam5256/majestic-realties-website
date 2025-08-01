@@ -5,6 +5,7 @@ import {
   FaPlaneDeparture,
   FaChartLine,
   FaBuilding,
+  FaChild, // ✅ Correct icon
   FaTools,
   FaTree,
   FaWater,
@@ -15,6 +16,7 @@ import {
   FaLandmark,
   FaHome,
 } from "react-icons/fa";
+
 import { HiLocationMarker } from "react-icons/hi";
 
 const mountCastleImages = [
@@ -195,7 +197,7 @@ const Royal_Vista = () => {
               <li className="flex items-center gap-2"><FaBasketballBall className="text-orange-500" /> Basketball Court</li>
               <li className="flex items-center gap-2"><FaHome className="text-green-600" /> Club House</li>
               <li className="flex items-center gap-2"><FaChartLine className="text-pink-600" /> Exclusive Party Lawn</li>
-              <li className="flex items-center gap-2"><FaChildren className="text-blue-600" /> Children’s Play Area</li>
+              <li className="flex items-center gap-2"><FaChild  className="text-blue-600" /> Children’s Play Area</li>
             </ul>
           </div>
 

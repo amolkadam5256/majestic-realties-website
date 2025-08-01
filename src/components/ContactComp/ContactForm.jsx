@@ -65,7 +65,7 @@ const ContactForm = () => {
                     name="name"
                     placeholder="Your Name"
                     required
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   />
                 </div>
 
@@ -75,7 +75,7 @@ const ContactForm = () => {
                     name="email"
                     placeholder="Your Email"
                     required
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   />
                 </div>
 
@@ -84,7 +84,7 @@ const ContactForm = () => {
                     type="tel"
                     name="phone"
                     placeholder="Phone Number"
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   />
                 </div>
 
@@ -94,15 +94,15 @@ const ContactForm = () => {
                     rows="5"
                     placeholder="Write your message..."
                     required
-                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                    className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={loading}
-                  className={`w-full bg-indigo-600 text-white py-3 px-6 rounded-md transition ${
-                    loading ? "opacity-50 cursor-not-allowed" : "hover:bg-indigo-700"
+                  className={`w-full bg-yellow-400 text-white py-3 px-6 rounded-md transition ${
+                    loading ? "opacity-50 cursor-not-allowed" : "hover:bg-white hover:text-black border-2 border-yellow-400"
                   }`}
                 >
                   {loading ? "Sending..." : "Send Message"}
@@ -150,7 +150,7 @@ const ContactForm = () => {
             <div className="absolute -bottom-14 left-0 bg-white px-4 py-2 rounded-md shadow-md flex items-center gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-6 h-6 text-indigo-600"
+                className="w-6 h-6 text-yellow-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"

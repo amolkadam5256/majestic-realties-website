@@ -9,9 +9,14 @@ import {
 
 const ErrorPage = () => {
   return (
-    <div className="min-h-screen bg-white text-black flex flex-col justify-center items-center px-4 py-12">
+    <div className="min-h-screen bg-white text-black flex flex-col justify-center items-center px-4 py-20">
       <div className="text-center space-y-6 max-w-xl w-full">
-        <h1 className="text-9xl font-extrabold text-yellow-400">404</h1>
+        <h1 className="justify-center text-9xl font-extrabold text-yellow-400 flex gap-2">
+          <div className="inline-block animate-bounce" style={{ animationDelay: "0ms" }}>4</div>
+          <div className="inline-block animate-bounce" style={{ animationDelay: "300ms" }}>0</div>
+          <div className="inline-block animate-bounce" style={{ animationDelay: "600ms" }}>4</div>
+        </h1>
+
         <h2 className="text-3xl font-bold">Oops! Page Not Found</h2>
         <p className="text-base text-gray-600">
           We couldn’t find the page you were looking for. <br />
@@ -48,7 +53,7 @@ const ErrorPage = () => {
             </a>
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 ">
             <FaEnvelope className="text-yellow-500 text-lg" />
             <a
               href="mailto:zakki@majesticrealties.com"
@@ -59,7 +64,7 @@ const ErrorPage = () => {
           </div>
         </div>
 
-       
+
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { IoMdAddCircle } from 'react-icons/io';
 import { IoPlayCircle, IoPauseCircle } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
-import images from '../../assets/images/images'; // images.bgVideo and images.videoThumbnail must exist
+import images from '../../assets/images/images';
 
 const HeroSection = () => {
     const videoRef = useRef(null);

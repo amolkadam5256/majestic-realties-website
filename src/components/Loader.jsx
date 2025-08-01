@@ -38,7 +38,7 @@ const Loader = ({ onComplete }) => {
 
           {/* Circular Spinner */}
           <div className="relative z-10 mb-4">
-            <div className="w-16 h-16 border-4 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
+            <div className="w-16 h-16 border-4 border-t-transparent border-yellow-500 rounded-full animate-spin"></div>
           </div>
 
           {/* Animated Loading Text */}

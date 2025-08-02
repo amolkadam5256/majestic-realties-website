@@ -42,7 +42,7 @@ const HeroSection = () => {
                 preload="auto"
                 poster={images.thumnail}
             >
-                <source src={images.bgVideo} type="video/mp4" />
+                <source src="public\bgVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 

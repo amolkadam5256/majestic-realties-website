@@ -16,9 +16,17 @@ const HeroSection = () => {
             videoRef.current.pause();
             setIsPlaying(false);
         } else {
-            videoRef.current.play();
-            setIsPlaying(true);
-            setShowThumbnail(false);
+            const video = videoRef.current;
+
+            const onCanPlay = () => {
+                video.play();
+                setIsPlaying(true);
+                setShowThumbnail(false);
+                video.removeEventListener('canplay', onCanPlay);
+            };
+
+            video.addEventListener('canplay', onCanPlay);
+            video.load(); // reinitialize buffering
         }
     };
 
@@ -31,6 +39,7 @@ const HeroSection = () => {
                 muted
                 loop
                 playsInline
+                preload="auto"
                 poster={images.thumnail}
             >
                 <source src={images.bgVideo} type="video/mp4" />
@@ -38,15 +47,17 @@ const HeroSection = () => {
             </video>
 
             {/* Thumbnail overlay before play */}
-            {showThumbnail && (
-                <div className="absolute inset-0 w-full h-full z-0">
-                    <img
-                        src={images.thumnail}
-                        alt="Video Thumbnail"
-                        className="w-full h-full object-cover"
-                    />
-                </div>
-            )}
+            <div
+                className={`absolute inset-0 w-full h-full z-0 transition-opacity duration-700 ease-in-out ${
+                    showThumbnail ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                }`}
+            >
+                <img
+                    src={images.thumnail}
+                    alt="Video Thumbnail"
+                    className="w-full h-full object-cover"
+                />
+            </div>
 
             {/* Text Content */}
             <div className="relative z-10 w-full lg:w-1/2 text-left text-white space-y-6 bg-transparent backdrop-blur-[1.1px]">
@@ -56,11 +67,11 @@ const HeroSection = () => {
                 <h1 className="text-4xl md:text-5xl font-bold">
                     Welcome to <span className="text-yellow-300">Majestic Realties</span>
                 </h1>
-                <p className="text-md md:text-lg text-gray-200 ">
+                <p className="text-md md:text-lg text-gray-200">
                     Where we turn dreams into reality. As passionate land developers, we craft spaces that inspire,
                     innovate, and endure. With a legacy of excellence and a future-focused approach,{' '}
-                    <span className="text-yellow-300 font-bold">Majestic Realties</span> is poised to redefine your perception of
-                    what’s possible.
+                    <span className="text-yellow-300 font-bold">Majestic Realties</span> is poised to redefine your
+                    perception of what’s possible.
                 </p>
 
                 <Link

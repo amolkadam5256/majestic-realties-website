@@ -76,7 +76,7 @@ const InfoModal = ({ isOpen, onClose }) => {
                     name="name"
                     required
                     className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 dark:bg-gray-900 dark:text-white dark:border-gray-700"
-                    placeholder="majestic realties "
+                    // placeholder="majestic realties "
                   />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ const InfoModal = ({ isOpen, onClose }) => {
                     name="email"
                     required
                     className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 dark:bg-gray-900 dark:text-white dark:border-gray-700"
-                    placeholder="zakki@majesticrealties.com"
+                    // placeholder="zakki@majesticrealties.com"
                   />
                 </div>
                 <div>
@@ -100,7 +100,7 @@ const InfoModal = ({ isOpen, onClose }) => {
                     name="phone"
                     required
                     className="mt-1 w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 dark:bg-gray-900 dark:text-white dark:border-gray-700"
-                    placeholder="+91 78430 77794"
+                    // placeholder="+91 78430 77794"
                   />
                 </div>
 

@@ -14,18 +14,18 @@ const SubCards = () => {
 
     const properties = [
         {
-            imageUrl: images.view1,
-            title: "Royal Vista",
-            address: "Pondhe, Maharashtra",
-            type: "N.A. Plots",
-            path: 'royal_vista',
-        },
-        {
             imageUrl: images.view2,
             title: "Mount Castle ",
             address: "Ambedwet, Pirangut",
             type: "Farm House Plots",
             path: 'mount_castle',
+        },
+        {
+            imageUrl: images.view1,
+            title: "Royal Vista",
+            address: "Pondhe, Maharashtra",
+            type: "N.A. Plots",
+            path: 'royal_vista',
         },
         {
             imageUrl: images.view5,
@@ -34,13 +34,7 @@ const SubCards = () => {
             type: "N.A. Plots",
             path: 'royal_casa',
         },
-        {
-            imageUrl: images.view7,
-            title: "Royal Vista",
-            address: "Pondhe, Maharashtra",
-            type: "N.A. Plots",
-            path: 'royal_vista',
-        },
+       
     ];
 
     return (
@@ -49,7 +43,7 @@ const SubCards = () => {
 
 
             {/* Cards */}
-            <div className="max-w-7xl mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
+            <div className="max-w-7xl mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 {properties.map((property, index) => (
                     <div
                         key={index}

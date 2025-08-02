@@ -1,12 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import CountUp from 'react-countup';
 import { FaBuilding, FaRegSmile, FaHandshake, FaHeadset } from 'react-icons/fa';
 
 const BottomSection = () => {
+    const [countVisible, setCountVisible] = useState(false);
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: false });
+
+        // Delay setting visibility slightly to ensure DOM is ready
+        const timeout = setTimeout(() => setCountVisible(true), 100);
+        return () => clearTimeout(timeout);
     }, []);
 
     const stats = [
@@ -30,7 +36,7 @@ const BottomSection = () => {
                     Since 2014
                 </p>
                 <h2 className="text-3xl md:text-4xl font-bold text-white" data-aos="fade-right">
-                   11+ Years of Real Estate Excellence
+                    11+ Years of Real Estate Excellence
                 </h2>
                 <p className="max-w-2xl mx-auto text-gray-200" data-aos="fade-left">
                     Providing modern villas, luxury flats, farmhouses, and commercial spaces with unmatched dedication and client satisfaction.
@@ -47,15 +53,17 @@ const BottomSection = () => {
                         >
                             <div className="text-3xl text-yellow-400 mb-2">{item.icon}</div>
                             <p className="text-2xl font-bold text-white">
-                                <CountUp
-                                    start={0}
-                                    end={item.value}
-                                    duration={3}
-                                    suffix={item.suffix}
-                                    separator=","
-                                    enableScrollSpy={true}
-                                    scrollSpyOnce={false}
-                                />
+                                {countVisible && (
+                                    <CountUp
+                                        start={0}
+                                        end={item.value}
+                                        duration={3}
+                                        suffix={item.suffix}
+                                        separator=","
+                                        enableScrollSpy={true}
+                                        scrollSpyOnce={false}
+                                    />
+                                )}
                             </p>
                             <span className="text-gray-300 text-sm">{item.label}</span>
                         </div>
@@ -67,3 +75,4 @@ const BottomSection = () => {
 };
 
 export default BottomSection;
+    

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { IoMdAddCircle } from 'react-icons/io';
 import { IoPlayCircle, IoPauseCircle } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
@@ -6,8 +6,24 @@ import images from '../../assets/images/images';
 
 const HeroSection = () => {
     const videoRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
+    const [isPlaying, setIsPlaying] = useState(true); // default autoplay
     const [showThumbnail, setShowThumbnail] = useState(true);
+
+    useEffect(() => {
+        const video = videoRef.current;
+
+        const handleLoadedData = () => {
+            setShowThumbnail(false);
+        };
+
+        if (video) {
+            video.addEventListener('loadeddata', handleLoadedData);
+
+            return () => {
+                video.removeEventListener('loadeddata', handleLoadedData);
+            };
+        }
+    }, []);
 
     const handleTogglePlay = () => {
         if (!videoRef.current) return;
@@ -16,17 +32,8 @@ const HeroSection = () => {
             videoRef.current.pause();
             setIsPlaying(false);
         } else {
-            const video = videoRef.current;
-
-            const onCanPlay = () => {
-                video.play();
-                setIsPlaying(true);
-                setShowThumbnail(false);
-                video.removeEventListener('canplay', onCanPlay);
-            };
-
-            video.addEventListener('canplay', onCanPlay);
-            video.load(); // reinitialize buffering
+            videoRef.current.play();
+            setIsPlaying(true);
         }
     };
 
@@ -37,16 +44,16 @@ const HeroSection = () => {
                 ref={videoRef}
                 className="absolute inset-0 w-full h-full object-cover z-0"
                 muted
+                autoPlay
                 loop
                 playsInline
-                preload="auto"
                 poster={images.thumnail}
             >
-                <source src="public\bgVideo.mp4" type="video/mp4" />
+                <source src="/videos/bgVideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
 
-            {/* Thumbnail overlay before play */}
+            {/* Thumbnail overlay before video loads */}
             <div
                 className={`absolute inset-0 w-full h-full z-0 transition-opacity duration-700 ease-in-out ${
                     showThumbnail ? 'opacity-100' : 'opacity-0 pointer-events-none'

@@ -18,6 +18,7 @@ import PageWrapper from './components/PageWrapper';
 import Loader from './components/Loader';
 import InfoModal from './components/InfoModal';
 import ErrorPage from './components/ErrorPage';
+import OurTeam from './pages/OurTeam';
 
 const AnimatedRoutes = () => {
 
@@ -29,6 +30,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<PageWrapper><Home /></PageWrapper>} />
         <Route path="/projects" element={<PageWrapper><Projects /></PageWrapper>} />
         <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
+        <Route path="/our-team" element={<PageWrapper><OurTeam /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
         <Route path="/privacy-policy" element={<PageWrapper><PrivacyPolicy /></PageWrapper>} />
         <Route path="/projects/royal_vista" element={<PageWrapper><Royal_Vista /></PageWrapper>} />

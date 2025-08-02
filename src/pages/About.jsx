@@ -8,7 +8,6 @@ const About = () => {
   return (
     <div className="w-full">
       <AboutMajestic />
-      <Team/>
       <BottomSection />
       <CommitmentSection />
       <CallToAction />

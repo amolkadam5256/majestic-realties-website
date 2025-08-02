@@ -12,7 +12,6 @@ const Projects = () => {
       <SubCards/>
       <BottomSection />
       <CommitmentSection />
-      <Team/>
       <CallToAction />
     </div>
   )

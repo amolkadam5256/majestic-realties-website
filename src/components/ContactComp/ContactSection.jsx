@@ -1,17 +1,18 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import images from "../../assets/images/images";
 
 const officeLocations = [
   {
     country: "Kothrud Head Office",
     address: "Bandal Spaces, Paud Road, Bharti Nagar, Kothrud, Pune, Maharashtra",
-    image: "https://pagedone.io/asset/uploads/1696246502.png",
+    image: images.thumnail,
   },
   {
     country: "Kondhwa Head Office",
     address: "203, B.G. Lonkar Road, Kondhwa, Pune – 411048",
-    image: "https://pagedone.io/asset/uploads/1696246522.png",
+    image: images.kondhwa,
   },
   {
     country: "Pirangut Head Office",
@@ -73,7 +74,7 @@ const ContactSection = () => {
                 alt={`${location.country} image`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-50 transition duration-300"></div>
+              <div className="absolute inset-0  bg-opacity-40 group-hover:bg-opacity-50 transition duration-300"></div>
               <div className="absolute bottom-0 p-6 text-white">
                 <h5 className="text-lg font-semibold mb-1">{location.country}</h5>
                 <p className="text-sm leading-snug">{location.address}</p>

@@ -34,6 +34,7 @@ import Mount_Castle7 from './Mount_Castle7.png'
 import Mount_Castle8 from './Mount_Castle8.png'
 import bgVideo from './bgVideo.mp4'
 import thumnail from './thumnail.png';
+import kondhwa  from './kondhwa.png';
 
 // Export all as a single object
 const images = {
@@ -66,6 +67,7 @@ const images = {
   Mount_Castle8,
   bgVideo,
   thumnail,
+  kondhwa,
 
 };
 

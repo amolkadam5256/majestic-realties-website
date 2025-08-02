@@ -31,7 +31,7 @@ const HeroSection = () => {
                 muted
                 loop
                 playsInline
-                poster={images.HeroBg}
+                poster={images.thumnail}
             >
                 <source src={images.bgVideo} type="video/mp4" />
                 Your browser does not support the video tag.
@@ -41,7 +41,7 @@ const HeroSection = () => {
             {showThumbnail && (
                 <div className="absolute inset-0 w-full h-full z-0">
                     <img
-                        src={images.HeroBg}
+                        src={images.thumnail}
                         alt="Video Thumbnail"
                         className="w-full h-full object-cover"
                     />

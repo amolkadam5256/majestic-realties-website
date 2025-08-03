@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import images from "../../assets/images/images"; // assuming it's an object with image paths
 import SubCards from "../HomeComp/SubCards";
+import MountCastleShowcase from "./MountCastleShowcase";
 
 const mountCastleImages = [
   images.Mount_Castle1,
@@ -126,37 +127,8 @@ const Mount_Castle = () => {
       </div>
 
       {/* Project Header Section */}
-      <div className="text-black py-12 px-4 sm:px-10 rounded-lg mb-10">
-        <div className="max-w-5xl mx-auto text-start">
-
-          <p className="mt-6 text-lg sm:text-xl leading-relaxed text-black">
-            💫 <strong>Introducing Mount Castle – Your Dream Plot Destination!</strong>
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Nestled in the breathtaking locale of <strong>Ambedwet, Pirangut</strong>, <strong>Mount Castle</strong> is a premium offering for those seeking a higher standard of living. This exclusive project features a blend of <strong>farmhouse and bungalow plots</strong> on scenic hilltop table land, delivering <strong>panoramic views</strong> and a peaceful, nature-rich environment.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            With amenities like a <strong>grand entrance gate</strong>, <strong>clubhouse</strong>, dependable <strong>water supply</strong>, and <strong>electricity</strong>, the project is designed to support your vision of a tranquil retreat or an investment-worthy property.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Surrounded by lush greenery and conveniently located near <strong>ghotawade phata</strong> and <strong>Pirangut</strong>, Mount Castle ensures connectivity to major locations like <strong>Kothrud</strong>, <strong>Paud Road</strong>, and <strong>Chandani Chowk</strong>. It is also close to successful developments such as <strong>Royal Casa – Malshiras</strong>.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Whether you're looking to build a <strong>weekend home</strong>, make a <strong>long-term investment</strong>, or secure your <strong>second home in nature</strong>, Mount Castle offers the perfect opportunity. The surrounding region is well-developed with <strong>schools</strong>, <strong>hospitals</strong>, <strong>markets</strong>, <strong>restaurants</strong>, and <strong>resort stays</strong>.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            🌿 <strong>Scenic views. Serene lifestyle. Smart investment.</strong> <br />
-            📞 <strong>Limited inventory – Book your site visit today!</strong>
-          </p>
-
-        </div>
-      </div>
-
+     <MountCastleShowcase/>
+     
           {/* Projects Overview Title */}
       <div className="text-start mb-10 mt-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 uppercase tracking-wide pl-6">

@@ -56,7 +56,7 @@ const Royal_Vista = () => {
 
         </h1>
         <h2 className="text-xl sm:text-2xl mt-2 text-black font-semibold">
-          Vawat Pondhe near Pune – Solapur – Hyderabad National Highway
+          Yavat Pondhe near Pune – Solapur – Hyderabad National Highway
         </h2>
         {/* <span className="block mt-2 text-red-600 font-bold text-lg">Sold Out!</span> */}
       </div>

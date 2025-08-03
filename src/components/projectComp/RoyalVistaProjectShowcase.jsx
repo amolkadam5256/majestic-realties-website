@@ -5,7 +5,7 @@ import {
 import { HiLocationMarker } from "react-icons/hi";
 import images from "../../assets/images/images";
 
-const ProjectShowcase = () => {
+const RoyalVistaProjectShowcase = () => {
     return (
         <div className="bg-white text-black py-14 px-6 sm:px-10 rounded-2xl shadow-inner">
             {/* Top Hero Section */}
@@ -125,4 +125,4 @@ const ProjectShowcase = () => {
     );
 };
 
-export default ProjectShowcase;
+export default RoyalVistaProjectShowcase;

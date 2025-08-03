@@ -90,6 +90,33 @@ const CommitmentSection = () => {
             </button>
           </Link>
         </div>
+
+        <section className="py-10 px-6 mt-12">
+          <div className="bg-white p-8 max-w-6xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-black mb-4">Privacy Policy</h2>
+
+            <p className="text-black text-lg mb-4 leading-relaxed">
+              <strong>Last updated:</strong> May 16, 2024
+            </p>
+
+            <p className="text-black text-lg mb-6 leading-relaxed">
+              This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+            </p>
+
+            <p className="text-black text-lg mb-6 leading-relaxed">
+              We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
+            </p>
+
+            <Link
+              to="/privacy-policy"
+              className="inline-block bg-yellow-400 hover:bg-white hover:border-2 hover:border-yellow-400 hover:text-black text-white font-semibold py-2.5 px-6 rounded-full transition duration-300"
+            >
+              View Full Privacy Policy
+            </Link>
+          </div>
+        </section>
+
+
       </div>
     </section>
   );

@@ -18,12 +18,13 @@ import {
 } from "react-icons/fa";
 
 import { HiLocationMarker } from "react-icons/hi";
+import RoyalVistaProjectShowcase from "./RoyalVistaProjectShowcase";
 
 const mountCastleImages = [
-  images.Mount_Castle1,
-  images.Mount_Castle2,
-  images.Mount_Castle3,
-  images.Mount_Castle4,
+  images.RoyalVistaLayout,
+  images.RoyalVistaLayout_Phase_1,
+  images.RoyalVistaframe,
+  images.view1,
 ];
 
 const Royal_Vista = () => {
@@ -143,85 +144,7 @@ const Royal_Vista = () => {
 
       {/* Project Header Section */}
 
-
-
-
-      <div className="text-black py-12 px-4 sm:px-10 rounded-lg mb-10">
-        <div className="max-w-5xl mx-auto text-start">
-
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-yellow-600 mb-4">
-            Build Your Tomorrow with a Sound Investment Today!
-          </h2>
-
-          <p className="text-lg sm:text-xl leading-relaxed text-black">
-            This pivotal decision should be made wisely to secure your future with <strong>Royal Vista</strong>. Make the right investment choice and embark on a path to success.
-          </p>
-
-          <p className="mt-6 text-lg sm:text-xl font-bold flex items-center gap-2">
-            <FaPlaneDeparture className="text-yellow-500" size={22} />
-            NA Sanctioned Residential Plots near Pune Airport
-          </p>
-
-          {/* Infrastructure */}
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Infrastructure Includes:</h3>
-            <ul className="ml-6 space-y-2 text-black text-lg">
-              <li className="flex items-center gap-2"><FaTree className="text-green-600" /> Tree plantation</li>
-              <li className="flex items-center gap-2"><FaWater className="text-blue-500" /> Water connection</li>
-              <li className="flex items-center gap-2"><FaBolt className="text-yellow-500" /> Electricity supply</li>
-              <li className="flex items-center gap-2"><FaTools className="text-orange-600" /> Drainage system</li>
-              <li className="flex items-center gap-2"><FaLandmark className="text-purple-600" /> Name plate for each plot</li>
-              <li className="flex items-center gap-2"><FaRoad className="text-gray-600" /> Internal cement roads</li>
-              <li className="flex items-center gap-2"><FaWater className="text-cyan-600" /> Drip irrigation system</li>
-              <li className="flex items-center gap-2"><FaLightbulb className="text-yellow-600" /> Street lights</li>
-              <li className="flex items-center gap-2"><FaBuilding className="text-gray-700" /> Compound wall fencing</li>
-            </ul>
-          </div>
-
-          {/* Features */}
-          <div className="mt-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Project Features:</h3>
-            <ul className="ml-6 space-y-2 text-black text-lg">
-              <li className="flex items-center gap-2"><FaHome className="text-green-700" /> Fully developed bungalow plots starting from 1100 sq.ft</li>
-              <li className="flex items-center gap-2"><FaTree className="text-green-500" /> Pollution-free picturesque surroundings</li>
-              <li className="flex items-center gap-2"><FaLandmark className="text-purple-600" /> Individual 7/12 extract for every plot</li>
-              <li className="flex items-center gap-2"><HiLocationMarker className="text-red-500" /> Near Pune–Solapur–Hyderabad Highway</li>
-            </ul>
-          </div>
-
-          {/* Amenities */}
-          <div className="mt-8">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Amenities:</h3>
-            <ul className="ml-6 space-y-2 text-black text-lg">
-              <li className="flex items-center gap-2"><FaLandmark className="text-yellow-700" /> Grand Entrance Gate</li>
-              <li className="flex items-center gap-2"><FaBasketballBall className="text-orange-500" /> Basketball Court</li>
-              <li className="flex items-center gap-2"><FaHome className="text-green-600" /> Club House</li>
-              <li className="flex items-center gap-2"><FaChartLine className="text-pink-600" /> Exclusive Party Lawn</li>
-              <li className="flex items-center gap-2"><FaChild  className="text-blue-600" /> Children’s Play Area</li>
-            </ul>
-          </div>
-
-          {/* Highlights */}
-          <div className="mt-8">
-            <p className="text-lg sm:text-xl leading-relaxed text-black">
-              <strong>Bungalow Plots:</strong> Starting from 1100 sq.ft
-              <br />
-              <strong>Location:</strong> Just 8 km from the Upcoming Sambhajiraje International Airport
-              <br />
-              <strong>Loan Facility:</strong> Approved by all major banks
-            </p>
-          </div>
-
-          {/* Note */}
-          <div className="mt-6 bg-yellow-100 border-l-4 border-yellow-500 p-4 rounded">
-            <p className="text-yellow-800 font-semibold">
-              Lowest price ever launched in the market! This is your Now-or-Never opportunity — make the smart move!
-            </p>
-          </div>
-
-        </div>
-      </div>
-
+      <RoyalVistaProjectShowcase />
 
 
       {/* Projects Overview Title */}

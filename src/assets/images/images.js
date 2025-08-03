@@ -35,9 +35,15 @@ import Mount_Castle8 from './Mount_Castle8.png'
 import bgVideo from './bgVideo.mp4'
 import thumnail from './thumnail.png';
 import kondhwa  from './kondhwa.JPG'
+import RoyalVistaframe from './RoyalVistaframe.jpg';
+import RoyalVistaLayout_Phase_1 from './RoyalVistaLayout_Phase_1.png';
+import RoyalVistaLayout from './RoyalVistaLayout.jpg';
 
 // Export all as a single object
 const images = {
+  RoyalVistaframe,
+  RoyalVistaLayout_Phase_1,
+  RoyalVistaLayout,
   logo,
   logo2,
   building,
@@ -68,6 +74,7 @@ const images = {
   bgVideo,
   thumnail,
   kondhwa,
+
 
 };
 

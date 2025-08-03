@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { FaPlayCircle } from "react-icons/fa";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,28 +7,38 @@ import { Link } from 'react-router-dom';
 
 const Properties = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false, });
+    AOS.init({ duration: 1000, once: false });
   }, []);
 
-  const properties = [
+  const properties = useMemo(() => [
     {
-
-      imageUrl: images.view1,
+      imageUrls: [images.RoyalVistaLayout, images.RoyalVistaLayout_Phase_1, images.RoyalVistaframe],
       title: "Royal Vista",
       address: "Pondhe, Maharashtra",
       type: "N.A. Plots",
       path: 'royal_vista',
-
     },
     {
-      imageUrl: images.view3,
+      imageUrls: [images.view3, images.view4, images.view5],
       title: "Royal Casa (N.A. Plots)",
       address: "Gate No. 3, Yavat-Saswad Rd, Malshiras, Purandar, Pune",
       type: "N.A. Plots",
       path: 'royal_casa',
-
     },
-  ];
+  ], []);
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(
+    Array(properties.length).fill(0)
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex(prev =>
+        prev.map((index, i) => (index + 1) % properties[i].imageUrls.length)
+      );
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [properties]);
 
   return (
     <section className="bg-gray-10 p-6">
@@ -50,7 +60,6 @@ const Properties = () => {
         </div>
       </div>
 
-
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-8">
         {properties.map((property, index) => (
           <div
@@ -60,7 +69,7 @@ const Properties = () => {
           >
             <div className="overflow-hidden">
               <img
-                src={property.imageUrl}
+                src={property.imageUrls[currentImageIndex[index]]}
                 alt={property.title}
                 className="w-full h-64 sm:h-80 md:h-96 object-cover transform transition-transform duration-500 group-hover:scale-110"
               />

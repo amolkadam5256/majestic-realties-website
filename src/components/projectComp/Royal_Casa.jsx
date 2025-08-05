@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import images from "../../assets/images/images"; // assuming it's an object with image paths
 import SubCards from "../HomeComp/SubCards";
+import RoyalCasaProjectShowcase from "./RoyalCasaProjectShowcase";
 
-const mountCastleImages = [
+const RoyalCasaImages = [
   images.RoyalCasa1,
   images.RoyalCasa2,
   images.RoyalCasa3,
@@ -11,7 +12,7 @@ const mountCastleImages = [
 
 const Royal_Casa = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const length = mountCastleImages.length;
+  const length = RoyalCasaImages.length;
 
   const prevSlide = () => {
     setActiveIndex((prev) => (prev === 0 ? length - 1 : prev - 1));
@@ -47,7 +48,7 @@ const Royal_Casa = () => {
       <div className="relative w-full">
         {/* Carousel wrapper */}
         <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
-          {mountCastleImages.map((src, index) => (
+          {RoyalCasaImages.map((src, index) => (
             <div
               key={index}
               className={`absolute w-full h-full transition-opacity duration-700 ease-in-out ${index === activeIndex ? "opacity-100" : "opacity-0"
@@ -64,7 +65,7 @@ const Royal_Casa = () => {
 
         {/* Indicators */}
         <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
-          {mountCastleImages.map((_, i) => (
+          {RoyalCasaImages.map((_, i) => (
             <button
               key={i}
               onClick={() => goToSlide(i)}
@@ -122,32 +123,7 @@ const Royal_Casa = () => {
         </button>
       </div>
 
-      {/* Project Header Section */}
-      <div className="text-black py-12 px-4 sm:px-10 rounded-lg mb-10">
-        <div className="max-w-5xl mx-auto text-start">
-
-          <p className="mt-6 text-lg sm:text-xl leading-relaxed text-black">
-            Nestled in the serene surroundings of <strong>Yavat–Malshiras</strong>, <strong>Royal Casa</strong> is more than just a land development-it’s an invitation to embrace a lifestyle of comfort, tranquility, and refined living. This Collector-sanctioned <strong>Residential N.A. plot project</strong> is designed for those who value both nature and modern infrastructure.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Spread across a well-planned, secure gated community, Royal Casa offers features like <strong>well-laid internal roads</strong>, <strong>clear plot demarcations</strong>, <strong>lush plantations</strong>, and <strong>exclusive amenities</strong> such as a clubhouse, party lawn, children’s play area, and basketball court—making it the perfect space to create your dream villa or weekend retreat.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Each plot includes <strong>individual 7/12 ownership</strong> and comes with water connectivity and the option of an individual boundary wall. The project is located close to the <strong>Pune–Solapur Highway</strong>, ensuring excellent access while allowing you to stay away from the chaos of city life.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            Surrounded by peaceful, pollution-free landscapes, Royal Casa gives you access to essential facilities like <strong>schools</strong>, <strong>local markets</strong>, <strong>hospitals</strong>, and <strong>resorts</strong>. Whether you're looking to build your forever home or a peaceful getaway, this location delivers on all fronts.
-          </p>
-
-          <p className="mt-4 text-lg sm:text-xl leading-relaxed text-black">
-            With secure infrastructure, community-driven design, and natural surroundings, <strong>Royal Casa is where dreams truly find their address</strong>.
-          </p>
-
-        </div>
-      </div>
+     <RoyalCasaProjectShowcase/>
 
 
       {/* Projects Overview Title */}

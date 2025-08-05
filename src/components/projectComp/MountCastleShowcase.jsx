@@ -25,7 +25,7 @@ const MountCastleShowcase = () => {
 
         <div className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
           <video
-            src={images.bgVideo} // ← Replace this with your video file path or import
+            src="/public/videos/bgVideo.mp4" // ← Replace this with your video file path or import
             autoPlay
             muted
             loop

@@ -24,8 +24,16 @@ const MountCastleShowcase = () => {
         </div>
 
         <div className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
-          <img src={images.Mount_Castle1} alt="Mount Castle View" className="object-cover w-full h-full" />
+          <video
+            src={images.bgVideo} // ← Replace this with your video file path or import
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="object-cover w-full h-full"
+          />
         </div>
+
       </div>
 
       <div className="my-12" />
@@ -33,7 +41,7 @@ const MountCastleShowcase = () => {
       {/* Infrastructure Section */}
       <div className="grid md:grid-cols-2 gap-10">
         <div>
-          <img src={images.Mount_Castle2} alt="Infrastructure" className="rounded-lg shadow-md hover:shadow-yellow-300 transition-shadow duration-300" />
+          <img src={images.Mount_Castle8} alt="Infrastructure" className="rounded-lg shadow-md hover:shadow-yellow-300 transition-shadow duration-300" />
         </div>
         <div>
           <h3 className="text-2xl font-bold text-gray-800 mb-4">Essential Infrastructure</h3>

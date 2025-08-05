@@ -25,15 +25,17 @@ const RoyalVistaProjectShowcase = () => {
 
                 <div className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
                     <video
-                        src="/videos/Walkthrough.mp4" // ✅ Correct relative path from public folder
+                        src="/videos/Walkthrough.mp4"
                         autoPlay
                         muted
                         loop
                         playsInline
-                        poster={images.RoyalVistaLayout}
+                        poster={images.RoyalVistaLayout} // Optional thumbnail
                         className="object-cover w-full h-full"
                     />
                 </div>
+
+
 
             </div>
 

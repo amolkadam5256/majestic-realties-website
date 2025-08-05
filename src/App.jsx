@@ -63,9 +63,8 @@ const App = () => {
       {!loading && (
         <div className="min-h-screen text-black overflow-x-hidden">
           <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
-
           <Navbar />
-          <main className="flex-grow pt-10 max-w-screen mx-auto w-full p-2">
+          <main className="flex-grow pt-16 max-w-screen mx-auto w-full p-2">
             <AnimatedRoutes />
           </main>
           <Footer />

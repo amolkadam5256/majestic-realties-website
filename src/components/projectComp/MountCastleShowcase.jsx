@@ -30,6 +30,7 @@ const MountCastleShowcase = () => {
             muted
             loop
             playsInline
+            poster={images.Mount_Castle1} // Thumbnail image before video loads
             className="object-cover w-full h-full"
           />
         </div>

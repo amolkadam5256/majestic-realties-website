@@ -111,7 +111,9 @@ const RoyalCasaProjectShowcase = () => {
                     <p className="text-lg sm:text-xl leading-relaxed text-gray-800 space-y-4">
                         <strong className="text-black">Peaceful Yet Connected:</strong> A perfect mix of nature and accessibility<br />
                         <strong className="text-black">Facilities Nearby:</strong> Schools, hospitals, markets, and resorts<br />
-                        <strong className="text-black">Ideal For:</strong> Your forever home or a relaxing weekend getaway
+                        <strong className="text-black">Ideal For:</strong> Your forever home or a relaxing weekend getaway <br />
+                        <strong className="text-black">Loan Facility:</strong> Approved by all major banks
+
                     </p>
                     <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg shadow-sm hover:bg-yellow-100 transition-colors duration-300">
                         <p className="text-yellow-800 font-semibold">

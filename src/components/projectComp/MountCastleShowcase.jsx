@@ -118,13 +118,14 @@ const MountCastleShowcase = () => {
           <p className="text-lg sm:text-xl leading-relaxed text-gray-800 space-y-4">
             <strong className="text-black">Location:</strong> Ambedwet, Pirangut, Pune<br />
             <strong className="text-black">Connectivity:</strong> Near Ghotawade Phata, close to Pirangut<br />
-            <strong className="text-black">Development Nearby:</strong> Royal Casa – Malshiras<br />
+            <strong className="text-black">Development Nearby:</strong> Chandani Chowk, Near Mumbai-Bangalore Highway (NH 48),
+            Bavdhan, Pune, Maharashtra – 411021<br />
             <strong className="text-black">Surroundings:</strong> Schools, markets, hospitals & resorts
           </p>
           <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg shadow-sm hover:bg-yellow-100 transition-colors duration-300">
             <p className="text-yellow-800 font-semibold">
-              🌿 Scenic views. Serene lifestyle. Smart investment.<br />
-              📞 <span className="text-red-600 font-bold">Limited inventory – Book your site visit today!</span>
+               Scenic views. Serene lifestyle. Smart investment.<br />
+               <span className="text-red-600 font-bold">Limited inventory – Book your site visit today!</span>
             </p>
           </div>
         </div>

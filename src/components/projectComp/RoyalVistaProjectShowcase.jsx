@@ -110,12 +110,12 @@ const RoyalVistaProjectShowcase = () => {
                 <div>
                     <p className="text-lg sm:text-xl leading-relaxed text-gray-800 space-y-4">
                         <strong className="text-black">Bungalow Plots:</strong> Starting from 1100 sq.ft<br />
-                        <strong className="text-black">Location:</strong> Just 8 km from the Upcoming Sambhajiraje International Airport<br />
+                        <strong className="text-black">Location:</strong> Yavat – Pondhe, near Pune – Solapur – Hyderabad National Highway (NH 65),Pune District, Maharashtra<br />
                         <strong className="text-black">Loan Facility:</strong> Approved by all major banks
                     </p>
                     <div className="mt-6 bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-lg shadow-sm hover:bg-yellow-100 transition-colors duration-300">
                         <p className="text-yellow-800 font-semibold">
-                            💥 Lowest price ever launched in the market!<br />
+                            Lowest price ever launched in the market!<br />
                             This is your <span className="text-red-600 font-bold">Now-or-Never</span> opportunity — make the smart move!
                         </p>
                     </div>

@@ -24,8 +24,17 @@ const RoyalVistaProjectShowcase = () => {
                 </div>
 
                 <div className="rounded-xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-500">
-                    <img src={images.RoyalVistaLayout_Phase_1} alt="Investment" className="object-cover w-full h-full" />
+                    <video
+                        src="/videos/Walkthrough.mp4" // ✅ Correct relative path from public folder
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster={images.RoyalVistaLayout}
+                        className="object-cover w-full h-full"
+                    />
                 </div>
+
             </div>
 
             <div className="my-12" />

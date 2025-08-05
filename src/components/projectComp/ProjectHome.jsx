@@ -25,9 +25,10 @@ const ProjectHome = () => {
         },
         {
             imageUrls: [
-                images.view3,
-                images.view4,
-                images.view5,
+                images.RoyalCasa1,
+                images.RoyalCasa2,
+                images.RoyalCasa3,
+                images.RoyalCasa4,
             ],
             title: "Royal Casa (N.A. Plots)",
             address: "Gate No. 3, Yavat-Saswad Rd, Malshiras, Purandar, Pune",

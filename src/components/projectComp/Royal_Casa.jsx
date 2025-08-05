@@ -3,10 +3,10 @@ import images from "../../assets/images/images"; // assuming it's an object with
 import SubCards from "../HomeComp/SubCards";
 
 const mountCastleImages = [
-  images.Mount_Castle1,
-  images.Mount_Castle2,
-  images.Mount_Castle3,
-  images.Mount_Castle4,
+  images.RoyalCasa1,
+  images.RoyalCasa2,
+  images.RoyalCasa3,
+  images.RoyalCasa4
 ];
 
 const Royal_Casa = () => {

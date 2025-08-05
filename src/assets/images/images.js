@@ -38,9 +38,17 @@ import kondhwa  from './kondhwa.JPG'
 import RoyalVistaframe from './RoyalVistaframe.jpg';
 import RoyalVistaLayout_Phase_1 from './RoyalVistaLayout_Phase_1.png';
 import RoyalVistaLayout from './RoyalVistaLayout.jpg';
+import RoyalCasa1 from './RoyalCasa1.jpeg';
+import RoyalCasa2 from './RoyalCasa2.jpeg';
+import RoyalCasa3 from './RoyalCasa3.jpeg';
+import RoyalCasa4 from './RoyalCasa4.jpeg';
 
 // Export all as a single object
 const images = {
+  RoyalCasa1,
+  RoyalCasa2,
+  RoyalCasa3,
+  RoyalCasa4,
   RoyalVistaframe,
   RoyalVistaLayout_Phase_1,
   RoyalVistaLayout,

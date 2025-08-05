@@ -13,7 +13,14 @@ const SubCards = () => {
     const properties = [
         {
             imageUrls: [
-                images.view2,
+                images.Mount_Castle1,
+                images.Mount_Castle2,
+                images.Mount_Castle3,
+                images.Mount_Castle4,
+                images.Mount_Castle5,
+                images.Mount_Castle6,
+                images.Mount_Castle7,
+                images.Mount_Castle8,
                 images.view3
             ],
             title: "Mount Castle ",
@@ -34,8 +41,10 @@ const SubCards = () => {
         },
         {
             imageUrls: [
-                images.view5,
-                images.view6
+                images.RoyalCasa1,
+                images.RoyalCasa2,
+                images.RoyalCasa3,
+                images.RoyalCasa4,
             ],
             title: "Royal Casa (N.A. Plots)",
             address: "Gate No. 3, Yavat-Saswad Rd, Malshiras, Purandar, Pune",

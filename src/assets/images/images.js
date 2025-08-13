@@ -20,6 +20,7 @@ import hero from './hero.jpg';
 import zakki_khan from './zakki_khan.jpeg'
 import zakki_khan2 from './zakki_khan2.jpg'
 import Dashrath_Sable from './Dashrath_Sable.png'
+import Dashrath_SableAI from './Dashrath_SableAI.png'
 import Kamal_Sharma from './Kamal_Sharma.png'
 import Pooja_Patil from './Pooja_Patil.png'
 import Sampada_Ambre from './Sampada_Ambre.png'
@@ -67,6 +68,7 @@ const images = {
   zakki_khan,
   zakki_khan2, 
   Dashrath_Sable, 
+  Dashrath_SableAI, 
   Kamal_Sharma, 
   Pooja_Patil, 
   Sampada_Ambre, 

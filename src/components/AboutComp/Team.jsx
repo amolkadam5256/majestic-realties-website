@@ -16,7 +16,7 @@ const coreTeam = [
     name: "Dashrath Sabale",
     role: "Branch Manager",
     desc: "With sharp leadership in sales and team management, Dashrath is a key force behind branch performance and a significant contributor to the company’s overall revenue and strategic growth.",
-    image: images.Dashrath_Sable,
+    image: images.Dashrath_SableAI,
     animation: "fade-up",
   },
   {

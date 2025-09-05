@@ -7,7 +7,7 @@ import Team from '../components/AboutComp/Team'
 import SubCards from '../components/HomeComp/SubCards';
 const Projects = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-16">
       <ProjectHome/>
       <SubCards/>
       <BottomSection />

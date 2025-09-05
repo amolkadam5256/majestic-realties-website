@@ -4,7 +4,7 @@ import TeamCardCompact from '../components/AboutComp/TeamCardCompact'
 
 const OurTeam = () => {
     return (
-        <div className="w-full ">
+        <div className="w-full pt-16 ">
             <Team />
         </div>
     );

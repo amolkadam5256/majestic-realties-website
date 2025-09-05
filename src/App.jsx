@@ -19,9 +19,10 @@ import Loader from './components/Loader';
 import InfoModal from './components/InfoModal';
 import ErrorPage from './components/ErrorPage';
 import OurTeam from './pages/OurTeam';
+import Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat from './Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat';
 
+// all your routes
 const AnimatedRoutes = () => {
-
   const location = useLocation();
 
   return (
@@ -36,22 +37,49 @@ const AnimatedRoutes = () => {
         <Route path="/projects/royal_vista" element={<PageWrapper><Royal_Vista /></PageWrapper>} />
         <Route path="/projects/royal_casa" element={<PageWrapper><Royal_Casa /></PageWrapper>} />
         <Route path="/projects/mount_castle" element={<PageWrapper><Mount_Castle /></PageWrapper>} />
+
+        {/* your new landing page */}
+        <Route
+          path="/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat"
+          element={<Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat />}
+        />
+
         <Route path="*" element={<PageWrapper><ErrorPage /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
   );
 };
 
+// wrapper to control header/footer
+const Layout = ({ children }) => {
+  const location = useLocation();
+
+  // all paths where header/footer should be hidden:
+  const noHeaderFooterRoutes = [
+    '/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat'
+  ];
+
+  const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
+
+  return (
+    <>
+      {!hideHeaderFooter && <Navbar />}
+      <main className="flex-grow pt-0 max-w-screen mx-auto w-full p-2">
+        {children}
+      </main>
+      {!hideHeaderFooter && <Footer />}
+    </>
+  );
+};
+
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
   }, []);
 
-
-  const [showModal, setShowModal] = useState(false);
-  // Show modal on page load after 500ms
   useEffect(() => {
     const timer = setTimeout(() => setShowModal(true), 500);
     return () => clearTimeout(timer);
@@ -63,15 +91,13 @@ const App = () => {
       {!loading && (
         <div className="min-h-screen text-black overflow-x-hidden">
           <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
-          <Navbar />
-          <main className="flex-grow pt-16 max-w-screen mx-auto w-full p-2">
+          <Layout>
             <AnimatedRoutes />
-          </main>
-          <Footer />
+          </Layout>
         </div>
       )}
     </Router>
-  );
+  );  
 };
 
 export default App;

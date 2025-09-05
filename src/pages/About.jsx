@@ -6,7 +6,7 @@ import CommitmentSection from '../components/AboutComp/CommitmentSection';
 import Team from '../components/AboutComp/Team'
 const About = () => {
   return (
-    <div className="w-full">
+    <div className="w-full pt-16">
       <AboutMajestic />
       <BottomSection />
       <CommitmentSection />

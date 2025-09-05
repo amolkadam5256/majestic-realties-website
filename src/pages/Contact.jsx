@@ -5,7 +5,7 @@ import ContactSection from '../components/ContactComp/ContactSection';
 import ContactForm from '../components/ContactComp/ContactForm';
 const Contact = () => {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full pt-16 overflow-x-hidden">
       <ContactForm/>
       <ContactSection />
       <BottomSection />

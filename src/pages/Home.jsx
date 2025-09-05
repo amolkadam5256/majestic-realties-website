@@ -8,7 +8,7 @@ import BottomSection from '../components/HomeComp/BottomSection';
 
 const Home = () => {
   return (
-    <div className="w-full ">
+    <div className="w-full pt-16 ">
       <HeroSection />
       <Properties />
       <SubCards />

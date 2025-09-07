@@ -20,6 +20,7 @@ import InfoModal from './components/InfoModal';
 import ErrorPage from './components/ErrorPage';
 import OurTeam from './pages/OurTeam';
 import Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat from './Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat';
+import Royal_Vista_NA_Residential_Plots_Pondhe from './Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Pondhe';
 
 // all your routes
 const AnimatedRoutes = () => {
@@ -43,6 +44,11 @@ const AnimatedRoutes = () => {
           path="/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat"
           element={<Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat />}
         />
+        {/* your new landing page */}
+        <Route
+          path="/Royal_Vista_NA_Residential_Plots_Pondhe"
+          element={<Royal_Vista_NA_Residential_Plots_Pondhe />}
+        />
 
         <Route path="*" element={<PageWrapper><ErrorPage /></PageWrapper>} />
       </Routes>
@@ -56,7 +62,8 @@ const Layout = ({ children }) => {
 
   // all paths where header/footer should be hidden:
   const noHeaderFooterRoutes = [
-    '/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat'
+    '/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat',
+    '/Royal_Vista_NA_Residential_Plots_Pondhe'
   ];
 
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);
@@ -97,7 +104,7 @@ const App = () => {
         </div>
       )}
     </Router>
-  );  
+  );
 };
 
 export default App;

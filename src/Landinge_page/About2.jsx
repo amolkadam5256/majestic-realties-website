@@ -15,8 +15,10 @@ import {
     FaDumbbell,
     FaCheckCircle,
     FaArrowRight,
-    FaChevronRight
+    FaChevronRight,
+    FaTint,
 } from 'react-icons/fa';
+import images from '../assets/images/images';
 
 const About = () => {
     const [activeTab, setActiveTab] = useState('overview');
@@ -37,23 +39,23 @@ const About = () => {
                 sizes: ["2400 sq ft", "3200 sq ft", "4500 sq ft"],
                 price: "Starting at ₹1.8 Cr",
                 features: ["3-4 Bedrooms", "Modern Kitchen", "Private Garden"],
-                availability: "Available"
+                availability: "Limited"
             },
             {
                 type: "Bungalows",
                 sizes: ["5500 sq ft", "7000 sq ft"],
                 price: "Starting at ₹2.5 Cr",
                 features: ["4-5 Bedrooms", "Private Pool", "Roof Terrace"],
-                availability: "Almost Sold Out"
+                availability: "Limited"
             }
         ],
 
         // Land details
         landDetails: {
             totalArea: "25 Acres",
-            totalPlots: "120",
-            plotSizes: "600 sq yd to 1200 sq yd",
-            zoning: "Residential",
+            totalPlots: "50",
+            plotSizes: "3500 sq.ft to 11024 sq.ft",
+            zoning: "Agriculture / Farmhouse & Bungalow",
             topography: "Flat and even terrain"
         },
 
@@ -67,15 +69,18 @@ const About = () => {
         ],
 
         // Amenities
-        amenities: [
-            "Clubhouse with swimming pool",
-            "Landscaped gardens and parks",
-            "24/7 security with CCTV",
-            "Power backup",
-            "Jogging tracks",
-            "Children's play area",
-            "Underground wiring"
-        ],
+         amenities: [
+        "Clubhouse with swimming pool",
+        "Landscaped gardens and parks",
+        "24/7 security with CCTV",
+        "Power backup",
+        "Jogging tracks",
+        "Children's play area",
+        "Underground wiring",
+        "Entrance gate",
+        "Well-maintained roads",
+        "Water supply"
+    ],
 
     };
 
@@ -87,7 +92,10 @@ const About = () => {
         "Power backup": <FaWifi />,
         "Jogging tracks": <FaDumbbell />,
         "Children's play area": <FaParking />,
-        "Underground wiring": <FaWifi />
+        "Underground wiring": <FaWifi />,
+        "Entrance gate": <FaMapMarkerAlt />,
+        "Well-maintained roads": <FaRulerCombined />,
+        "Water supply": <FaTint />
     };
 
     return (
@@ -154,10 +162,13 @@ const About = () => {
                                         supply systems, and lush green spaces. With a focus on sustainable living, the project
                                         incorporates rainwater harvesting and solar energy solutions.
                                     </p>
-                                    <button className="mt-6 flex items-center text-yellow-700 font-semibold hover:text-yellow-800 transition-colors">
-                                        Download Brochure
-                                        <FaArrowRight className="ml-2" />
-                                    </button>
+                                    <a href={images.Mount_Castle_Brochure_1} download>
+                                        <button className="mt-6 flex items-center text-yellow-700 font-semibold hover:text-yellow-800 transition-colors">
+                                            Download Brochure
+                                            <FaArrowRight className="ml-2" />
+                                        </button>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>

@@ -76,7 +76,7 @@ const HeroSection = () => {
         </h2>
         <h1 className="text-4xl md:text-5xl font-bold">
           Welcome to{" "}
-          <span className="text-yellow-300">Mount Castle – Ambedwet</span>
+          <span className="text-yellow-300">Majestic Realties</span>
         </h1>
         <p className="text-md md:text-lg text-gray-200">
           Premium farmhouse & bungalow plots on serene hilltop tableland with

@@ -50,7 +50,7 @@ const Royal_Vista = () => {
 
 
       {/* Project Heading */}
-      <div className="text-center mb-12 mt-5">
+      <div className="text-center mb-12 mt-5 pt-18">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-yellow-400 uppercase tracking-wide drop-shadow">
           Royal Vista – N.A Sanctioned <br /> Residential plots.
 

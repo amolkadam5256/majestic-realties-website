@@ -12,21 +12,6 @@ const RoyalCasaNaResidentialPlotsYavatMalshiras = () => {
         <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
         <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
         <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
-        <p>RoyalCasaNaResidentialPlotsYavatMalshiras</p>
     </div>
   )
 }

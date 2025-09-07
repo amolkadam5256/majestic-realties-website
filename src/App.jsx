@@ -21,6 +21,7 @@ import ErrorPage from './components/ErrorPage';
 import OurTeam from './pages/OurTeam';
 import Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat from './Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat';
 import Royal_Vista_NA_Residential_Plots_Pondhe from './Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Pondhe';
+import RoyalCasaNaResidentialPlotsYavatMalshiras from './Royal_Casa_Landing_Page/RoyalCasaNaResidentialPlotsYavatMalshiras';
 
 // all your routes
 const AnimatedRoutes = () => {
@@ -49,6 +50,11 @@ const AnimatedRoutes = () => {
           path="/royal-vista-na-residential-plots-pondhe"
           element={<Royal_Vista_NA_Residential_Plots_Pondhe />}
         />
+        {/* your new landing page */}
+        <Route
+          path="/royal-casa-na-residential-plots-yavat-malshiras"
+          element={<RoyalCasaNaResidentialPlotsYavatMalshiras />}
+        />
 
         <Route path="*" element={<PageWrapper><ErrorPage /></PageWrapper>} />
       </Routes>
@@ -63,7 +69,8 @@ const Layout = ({ children }) => {
   // all paths where header/footer should be hidden:
   const noHeaderFooterRoutes = [
     '/mount-castle-farmhouse-bungalow-plots-yevat',
-    '/royal-vista-na-residential-plots-pondhe'
+    '/royal-vista-na-residential-plots-pondhe',
+    '/royal-casa-na-residential-plots-yavat-malshiras',
   ];
 
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);

@@ -41,12 +41,12 @@ const AnimatedRoutes = () => {
 
         {/* your new landing page */}
         <Route
-          path="/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat"
+          path="/mount-castle-farmhouse-bungalow-plots-yevat"
           element={<Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat />}
         />
         {/* your new landing page */}
         <Route
-          path="/Royal_Vista_NA_Residential_Plots_Pondhe"
+          path="/royal-vista-na-residential-plots-pondhe"
           element={<Royal_Vista_NA_Residential_Plots_Pondhe />}
         />
 
@@ -62,8 +62,8 @@ const Layout = ({ children }) => {
 
   // all paths where header/footer should be hidden:
   const noHeaderFooterRoutes = [
-    '/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat',
-    '/Royal_Vista_NA_Residential_Plots_Pondhe'
+    '/mount-castle-farmhouse-bungalow-plots-yevat',
+    '/royal-vista-na-residential-plots-pondhe'
   ];
 
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);

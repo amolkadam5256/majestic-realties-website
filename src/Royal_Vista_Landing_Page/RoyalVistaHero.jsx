@@ -146,10 +146,11 @@ const RoyalVistaHero = () => {
                     </span>
                 </h1>
                 <p className="text-md md:text-lg text-gray-200">
-                    Discover <strong>NA-sanctioned residential bungalow and farmhouse plots near Pune Airport</strong>,
-                    close to the <strong>Pune–Solapur–Hyderabad Highway</strong>. Enjoy <strong>robust infrastructure</strong> with tree plantation, water and electricity, drainage, paved roads, street lights and compound fencing.
+                    Discover premium NA-sanctioned residential plots at Royal Vista, located near Pune Airport and the Pune-Solapur-Hyderabad Highway.
+                    Our development offers fully-equipped plots with complete infrastructure including water, electricity, drainage, and paved roads.
 
-                    <em>Royal Vista offers developed plots from 1100 sq.ft in a pollution-free, scenic setting with individual 7/12 extract</em> plus premium amenities like a grand entrance, club house, party lawn and children’s play area — a smart, nature-inspired investment.
+                    Enjoy pollution-free surroundings with premium amenities like a grand entrance and clubhouse - a perfect blend of natural beauty
+                    and modern convenience for your dream home.
                 </p>
 
 

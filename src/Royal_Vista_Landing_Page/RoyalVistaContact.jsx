@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Contact = () => {
+const RoyalVistaContact = () => {
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState("");
     const [loading, setLoading] = useState(false);
-    
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -65,6 +65,13 @@ const Contact = () => {
                             <form onSubmit={handleSubmit} className="w-full">
                                 <input type="hidden" name="access_key" value="c9bf8252-ac36-4dd6-b096-886c40f67d00" />
                                 <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+                                {/* Subject for the email */}
+                                <input
+                                    type="hidden"
+                                    name="subject"
+                                    value="New enquiry from Royal Vista Landing Page"
+                                />
+
 
                                 <div className="mb-5">
                                     <input
@@ -185,4 +192,4 @@ const Contact = () => {
     );
 };
 
-export default Contact;
+export default RoyalVistaContact;

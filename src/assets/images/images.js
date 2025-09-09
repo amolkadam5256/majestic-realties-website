@@ -44,6 +44,7 @@ import RoyalCasa2 from './RoyalCasa2.jpeg';
 import RoyalCasa3 from './RoyalCasa3.jpeg';
 import RoyalCasa4 from './RoyalCasa4.jpeg';
 import Mount_Castle_Brochure_1 from './Mount_Castle_Brochure_1.pdf';
+import Royal_vista from './Royal_vista.pdf';
 
 // Export all as a single object
 const images = {
@@ -86,6 +87,7 @@ const images = {
   thumnail,
   kondhwa,
 Mount_Castle_Brochure_1,
+Royal_vista,
 
 };
 

@@ -20,7 +20,7 @@ import InfoModal from './components/InfoModal';
 import ErrorPage from './components/ErrorPage';
 import OurTeam from './pages/OurTeam';
 import Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat from './Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat';
-import Royal_Vista_NA_Residential_Plots_Pondhe from './Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Pondhe';
+import Royal_Vista_NA_Residential_Plots_Yavat from './Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Yavat';
 import RoyalCasaNaResidentialPlotsYavatMalshiras from './Royal_Casa_Landing_Page/RoyalCasaNaResidentialPlotsYavatMalshiras';
 
 // all your routes
@@ -47,8 +47,8 @@ const AnimatedRoutes = () => {
         />
         {/* your new landing page */}
         <Route
-          path="/royal-vista-na-residential-plots-pondhe"
-          element={<Royal_Vista_NA_Residential_Plots_Pondhe />}
+          path="/royal-vista-na-residential-plots-yevat"
+          element={<Royal_Vista_NA_Residential_Plots_Yavat />}
         />
         {/* your new landing page */}
         <Route
@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
   // all paths where header/footer should be hidden:
   const noHeaderFooterRoutes = [
     '/mount-castle-farmhouse-bungalow-plots-yevat',
-    '/royal-vista-na-residential-plots-pondhe',
+    '/royal-vista-na-residential-plots-yevat',
     '/royal-casa-na-residential-plots-yavat-malshiras',
   ];
 

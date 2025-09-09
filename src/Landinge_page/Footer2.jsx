@@ -16,7 +16,7 @@ const Footer = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        www.majesticestates.com
+                        www.majesticrealties.com
                     </a>
                 </div>
 

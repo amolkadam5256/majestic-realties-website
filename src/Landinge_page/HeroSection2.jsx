@@ -84,8 +84,8 @@ const HeroSection = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY_HERE", // Replace with your Web3Forms access key
-          subject: "New Enquiry from Mount Castle Website",
+          access_key: "c9bf8252-ac36-4dd6-b096-886c40f67d00", // Replace with your Web3Forms access key
+          subject: "New Enquiry from Mount Castle Landing Page ",
           ...formData
         }),
       });

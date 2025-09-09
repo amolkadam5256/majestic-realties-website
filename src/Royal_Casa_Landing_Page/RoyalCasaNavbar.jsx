@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 import images from '../assets/images/images';
 
-const NavbarRoyalVista = () => {
+const RoyalCasaNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Smooth scroll to section
@@ -100,4 +100,4 @@ const NavbarRoyalVista = () => {
   );
 };
 
-export default NavbarRoyalVista;
+export default RoyalCasaNavbar;

@@ -27,8 +27,8 @@ const NavbarRoyalVista = () => {
   const navLinks = [
     { label: 'Home', id: 'home' },
     { label: 'About', id: 'about' },
-    { label: 'Amenities', id: 'about' },
-    { label: 'Location', id: 'about' },
+    { label: 'Amenities', id: 'amenities' },
+    { label: 'Location', id: 'location' },
     { label: 'Contact', id: 'contact' },
   ];
 

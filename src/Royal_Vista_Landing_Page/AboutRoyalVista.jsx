@@ -313,7 +313,9 @@ const AboutRoyalVista = () => {
                                 <h3 className="text-2xl font-bold mb-4">Build Your Tomorrow with a Sound Investment Today!</h3>
                                 <p className="mb-6 max-w-2xl mx-auto">This pivotal decision should be made wisely to secure your future with Royal Vista. Make the right investment choice and embark on a path to success.</p>
                                 <button className="bg-white text-yellow-700 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors shadow-md">
-                                    Book a Site Tour
+                                    <a href="#contact">
+                                        Book a Site Tour
+                                    </a>
                                 </button>
                             </div>
                         </div>

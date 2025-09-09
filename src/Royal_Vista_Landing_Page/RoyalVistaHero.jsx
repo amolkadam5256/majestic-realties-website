@@ -146,7 +146,7 @@ const RoyalVistaHero = () => {
                     </span>
                 </h1>
                 <p className="text-md md:text-lg text-gray-200">
-                    Discover premium NA-sanctioned residential plots at Royal Vista, located near Pune Airport and the Pune-Solapur-Hyderabad Highway.
+                    Discover premium NA-sanctioned residential plots at Royal Vista, located near Pune upcoming international Airport pune  and the Pune-Solapur-Hyderabad Highway.
                     Our development offers fully-equipped plots with complete infrastructure including water, electricity, drainage, and paved roads.
 
                     Enjoy pollution-free surroundings with premium amenities like a grand entrance and clubhouse - a perfect blend of natural beauty

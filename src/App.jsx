@@ -52,7 +52,7 @@ const AnimatedRoutes = () => {
         />
         {/* your new landing page */}
         <Route
-          path="/royal-casa-na-residential-plots-yavat-malshiras"
+          path="/royal-casa-na-residential-plots-yavat"
           element={<RoyalCasaNaResidentialPlotsYavatMalshiras />}
         />
 
@@ -70,7 +70,7 @@ const Layout = ({ children }) => {
   const noHeaderFooterRoutes = [
     '/mount-castle-farmhouse-bungalow-plots-yevat',
     '/royal-vista-na-residential-plots-yevat',
-    '/royal-casa-na-residential-plots-yavat-malshiras',
+    '/royal-casa-na-residential-plots-yavat',
   ];
 
   const hideHeaderFooter = noHeaderFooterRoutes.includes(location.pathname);

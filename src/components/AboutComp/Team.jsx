@@ -5,20 +5,21 @@ import images from "../../assets/images/images";
 import TeamCardCompact from "./TeamCardCompact";
 
 const coreTeam = [
-  {
-    name: "aslam shake",
-    role: "Branch Manager – NIBM Pune Branch",
-    desc: "A core pillar of Majestic Realties, Expertly leads the NIBM Pune branch, overseeing sales, legal, and project development with unmatched dedication and experience.",
-    image: images.Kamal_Sharma,
-    animation: "fade-up",
-  },
-  {
-    name: "Sidr Sabale",
-    role: "Branch Manager",
-    desc: "With sharp leadership in sales and team management, Dashrath is a key force behind branch performance and a significant contributor to the company’s overall revenue and strategic growth.",
-    image: images.Dashrath_SableAI,
-    animation: "fade-up",
-  },
+ {
+  name: "Aslam Shake",
+  role: "Branch Manager and Digital Marketing Head",
+  desc: "A former Google employee with expertise in digital marketing and creative strategies. Now managing the NIBM Pune branch, leading all aspects of digital marketing, real estate, and creative direction with a professional and innovative approach.",
+  image: images,
+  animation: "fade-up",
+},
+{
+  name: "Sidram Sir",
+  role: "Accountant – Real Estate",
+  desc: "A highly skilled accountant specializing in real estate. Sidram manages all financial aspects related to real estate transactions, ensuring smooth operations and financial accuracy. Additionally, he creates and manages professional and attractive content to support the business.",
+  image: images,
+  animation: "fade-up",
+},
+
   {
     name: "Kamal Sharma",
     role: "Branch Manager – Pirangut Branch",

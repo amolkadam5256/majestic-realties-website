@@ -101,15 +101,15 @@ const Testimonials = () => {
           <div className="flex justify-center lg:justify-start mt-10 gap-6">
             <button
               onClick={handlePrev}
-              className="w-12 h-12 border-2 border-[#F2B90C] rounded-lg flex items-center justify-center hover:bg-[#F2B90C] transition group"
+              className="w-12 h-12 border-2 border-[#F2B90C]  flex items-center justify-center hover:bg-[#F2B90C] transition group"
             >
               <svg
                 className="w-6 h-6 text-[#F2B90C] group-hover:text-[#262324]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+                // strokeLinecap="round"
+                // strokeLinejoin="round"
                 viewBox="0 0 24 24"
               >
                 <path d="M20.9999 12L4.99992 12M9.99992 6L4.70703 11.2929C4.3737 11.6262 4.20703 11.7929 4.20703 12C4.20703 12.2071 4.3737 12.3738 4.70703 12.7071L9.99992 18"></path>
@@ -118,7 +118,7 @@ const Testimonials = () => {
 
             <button
               onClick={handleNext}
-              className="w-12 h-12 border-2 border-[#F2B90C] rounded-lg flex items-center justify-center hover:bg-[#F2B90C] transition group"
+              className="w-12 h-12 border-2 border-[#F2B90C]  flex items-center justify-center hover:bg-[#F2B90C] transition group"
             >
               <svg
                 className="w-6 h-6 text-[#F2B90C] group-hover:text-[#262324]"
@@ -147,10 +147,10 @@ const Testimonials = () => {
           >
             {testimonials.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="bg-gray-100   text-[#262324] rounded-xl p-6 sm:p-8 shadow-md hover:shadow-xl transition-transform duration-300">
+                <div className="bg-gray-100   text-[#262324]  p-6 sm:p-8 shadow-md hover:shadow-xl transition-transform duration-300">
                   <div className="flex items-center gap-5 mb-5">
                     <img
-                      className="rounded object-cover w-24 h-24 sm:w-28 sm:h-28 border-4 border-white shadow-md"
+                      className=" object-cover w-24 h-24 sm:w-28 sm:h-28 border-4 border-white shadow-md"
                       src={item.image}
                       alt={item.name}
                     />

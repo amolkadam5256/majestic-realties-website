@@ -6,17 +6,17 @@ import TeamCardCompact from "./TeamCardCompact";
 
 const coreTeam = [
  {
-  name: "Aslam Shake",
+  name: "Aslam Shaikh",
   role: "Branch Manager and Digital Marketing Head",
   desc: "A former Google employee with expertise in digital marketing and creative strategies. Now managing the NIBM Pune branch, leading all aspects of digital marketing, real estate, and creative direction with a professional and innovative approach.",
   image: images,
   animation: "fade-up",
 },
 {
-  name: "Sidram Sir",
+  name: "Siddharam B.",
   role: "Accountant – Real Estate",
   desc: "A highly skilled accountant specializing in real estate. Sidram manages all financial aspects related to real estate transactions, ensuring smooth operations and financial accuracy. Additionally, he creates and manages professional and attractive content to support the business.",
-  image: images,
+  image: images.Siddharam,
   animation: "fade-up",
 },
 

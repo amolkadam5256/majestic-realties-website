@@ -30,11 +30,11 @@ const Navbar = () => {
     { label: 'Our Team', path: '/our-team' },
     { label: 'Projects', path: '/projects' },
     { 
-      label: 'Expo', 
+      label: 'Expert talk', 
       submenu: [
-        { label: 'Legal Expo', path: '/expo-legal' },
-        { label: 'Financial Expo', path: '/expo-financial' },
-        { label: 'Analytical Expo', path: '/expo-analytical' },
+        { label: 'Legal Experts', path: '/legal-expert' },
+        { label: 'Financial Experts', path: '/financial-expert' },
+        { label: 'Architectural Experts', path: '/architectural-expert' },
       ]
     },
     { label: 'Contact', path: '/contact' },

@@ -22,9 +22,9 @@ import OurTeam from './pages/OurTeam';
 import Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat from './Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat';
 import Royal_Vista_NA_Residential_Plots_Yavat from './Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Yavat';
 import RoyalCasaNaResidentialPlotsYavatMalshiras from './Royal_Casa_Landing_Page/RoyalCasaNaResidentialPlotsYavatMalshiras';
-import ExpoLegal from './components/Expo/ExpoLegal';
-import ExpoFinancial from './components/Expo/ExpoFinancial';
-import ExpoAnalytical from './components/Expo/ExpoAnalytical';
+import LegalExpert from './components/Expert_talk/LegalExpert';
+import FinancialExpert from './components/Expert_talk/FinancialExpert';
+import ArchitecturalExpert from './components/Expert_talk/ArchitecturalExpert';
 
 // all your routes
 const AnimatedRoutes = () => {
@@ -42,9 +42,9 @@ const AnimatedRoutes = () => {
         <Route path="/projects/royal_vista" element={<PageWrapper><Royal_Vista /></PageWrapper>} />
         <Route path="/projects/royal_casa" element={<PageWrapper><Royal_Casa /></PageWrapper>} />
         <Route path="/projects/mount_castle" element={<PageWrapper><Mount_Castle /></PageWrapper>} />
-        <Route path="/expo-legal" element={<PageWrapper><ExpoLegal /></PageWrapper>} />
-        <Route path="/expo-financial" element={<PageWrapper><ExpoFinancial /></PageWrapper>} />
-        <Route path="/expo-analytical" element={<PageWrapper><ExpoAnalytical /></PageWrapper>} />
+        <Route path="/legal-expert" element={<PageWrapper><LegalExpert /></PageWrapper>} />
+        <Route path="/financial-expert" element={<PageWrapper><FinancialExpert /></PageWrapper>} />
+        <Route path="/architectural-expert" element={<PageWrapper><ArchitecturalExpert /></PageWrapper>} />
 
         {/* your new landing page */}
         <Route

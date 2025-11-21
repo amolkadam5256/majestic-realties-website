@@ -26,6 +26,7 @@ import LegalExpert from './components/Expert_talk/LegalExpert';
 import FinancialExpert from './components/Expert_talk/FinancialExpert';
 import ArchitecturalExpert from './components/Expert_talk/ArchitecturalExpert';
 import Career from './pages/Career';
+import Influence from './pages/Influence';
 
 // all your routes
 const AnimatedRoutes = () => {
@@ -47,6 +48,7 @@ const AnimatedRoutes = () => {
         <Route path="/financial-expert" element={<PageWrapper><FinancialExpert /></PageWrapper>} />
         <Route path="/architectural-expert" element={<PageWrapper><ArchitecturalExpert /></PageWrapper>} />
         <Route path="/career" element={<PageWrapper><Career /></PageWrapper>} />
+        <Route path="/real-estate-influence" element={<PageWrapper><Influence /></PageWrapper>} />
 
         {/* your new landing page */}
         <Route

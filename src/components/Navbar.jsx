@@ -29,13 +29,14 @@ const Navbar = () => {
     { label: 'About', path: '/about' },
     { label: 'Our Team', path: '/our-team' },
     { label: 'Projects', path: '/projects' },
-    { 
-      label: 'Expert talk', 
+    {
+      label: 'Expert talk',
       submenu: [
         { label: 'Real Estate Talks', path: '/plots_near_pune' },
         { label: 'Legal Experts', path: '/legal-expert' },
         { label: 'Financial Experts', path: '/financial-expert' },
         { label: 'Architectural Experts', path: '/architectural-expert' },
+        { label: 'Real Estate Influence', path: '/real-estate-influence' }, // new link
       ]
     },
     { label: 'Contact', path: '/contact' },
@@ -151,7 +152,7 @@ const Navbar = () => {
                     /* Expo Dropdown Menu */
                     <>
                       {/* Desktop Dropdown */}
-                      <div 
+                      <div
                         className="hidden md:block"
                         onMouseEnter={() => setExpoOpen(true)}
                         onMouseLeave={() => setExpoOpen(false)}
@@ -167,7 +168,7 @@ const Navbar = () => {
                           {item.label}
                           <FaChevronDown className={`ml-1 transition-transform ${expoOpen ? 'rotate-180' : ''}`} size={12} />
                         </button>
-                        
+
                         {/* Dropdown Menu */}
                         {expoOpen && (
                           <div className="absolute left-0 mt-0 w-48 bg-white dark:bg-black border border-[#BF9039]  shadow-lg z-50">
@@ -204,7 +205,7 @@ const Navbar = () => {
                           {item.label}
                           <FaChevronDown className={`transition-transform ${expoOpen ? 'rotate-180' : ''}`} size={12} />
                         </button>
-                        
+
                         {/* Mobile Dropdown Menu */}
                         {expoOpen && (
                           <div className="ml-4 mt-2 border-l-2 border-[#BF9039]">
@@ -247,7 +248,7 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
-              
+
               {/* Mobile Social Icons */}
               <div className="justify-center flex md:hidden items-center space-x-6 py-10">
                 <a

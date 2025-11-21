@@ -46,6 +46,7 @@ import RoyalCasa4 from './RoyalCasa4.jpeg';
 import Mount_Castle_Brochure_1 from './Mount_Castle_Brochure_1.pdf';
 import Royal_vista from './Royal_vista.pdf';
 import Siddharam from './Siddharam.png';
+import AslamS from './AslamS.webp';
 
 
 // Export all as a single object
@@ -91,6 +92,7 @@ const images = {
   kondhwa,
 Mount_Castle_Brochure_1,
 Royal_vista,
+AslamS,
 
 };
 

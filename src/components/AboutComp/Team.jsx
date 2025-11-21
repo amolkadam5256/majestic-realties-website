@@ -9,7 +9,7 @@ const coreTeam = [
   name: "Aslam Shaikh",
   role: "Branch Manager and Digital Marketing Head",
   desc: "A former Google employee with expertise in digital marketing and creative strategies. Now managing the NIBM Pune branch, leading all aspects of digital marketing, real estate, and creative direction with a professional and innovative approach.",
-  image: images,
+  image: images.AslamS,
   animation: "fade-up",
 },
 {

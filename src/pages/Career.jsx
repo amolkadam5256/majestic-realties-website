@@ -20,7 +20,17 @@ const Career = ({ selectedJob, onClose }) => {
         behance: "",
         otherLinks: "",
         hearAboutUs: "",
-        referral: ""
+        referral: "",
+        // Real Estate Specific Fields
+        realEstateExperience: "",
+        propertyTypes: "",
+        salesAchievements: "",
+        clientPortfolio: "",
+        // Digital Marketing Specific Fields
+        marketingSkills: "",
+        toolsPlatforms: "",
+        campaignResults: "",
+        seoExperience: ""
     });
 
     const [showToast, setShowToast] = useState(false);
@@ -91,6 +101,28 @@ const Career = ({ selectedJob, onClose }) => {
         }
     ];
 
+    // Real Estate specific roles
+    const realEstatePositions = [
+        "Real Estate Sales Manager",
+        "Property Consultant",
+        "Sales Executive",
+        "Business Development Manager",
+        "Relationship Manager",
+        "Team Lead - Sales",
+        "Senior Sales Consultant"
+    ];
+
+    // Digital Marketing specific roles
+    const digitalMarketingPositions = [
+        "Digital Marketing Specialist",
+        "Social Media Manager",
+        "SEO Specialist",
+        "Content Marketing Manager",
+        "PPC Specialist",
+        "Digital Marketing Manager",
+        "Marketing Coordinator"
+    ];
+
     return (
         <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-25 px-4">
             {/* Success Toast */}
@@ -122,8 +154,7 @@ const Career = ({ selectedJob, onClose }) => {
                     animate={{ opacity: 1, y: 0 }}
                     className="text-center mb-8"
                 >
-                    <div className="inline-flex items-center gap-2 bg-yellow-100 text-yellow-800 px-4 py-2  text-sm font-medium mb-4">
-                        <span>🚀</span>
+                    <div className="inline-flex items-center gap-2 bg-yellow-400 text-white px-4 py-2  text-sm font-medium mb-4">
                         Join Our Team
                     </div>
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -145,9 +176,9 @@ const Career = ({ selectedJob, onClose }) => {
                     className="flex justify-center mb-12"
                 >
                     <div className="flex items-center space-x-8">
-                        {['Personal Info', 'Professional Details', 'Social Links', 'Review & Submit'].map((step, index) => (
+                        {['Personal Info', 'Professional Details', 'Industry Experience', 'Review & Submit'].map((step, index) => (
                             <div key={step} className="flex items-center">
-                                <div className="w-10 h-10 rounded-full bg-yellow-500 text-white flex items-center justify-center font-semibold text-sm">
+                                <div className="w-10 h-10  bg-yellow-500 text-white flex items-center justify-center font-semibold text-sm">
                                     {index + 1}
                                 </div>
                                 <span className="ml-3 text-sm font-medium text-gray-700 hidden sm:block">{step}</span>
@@ -171,7 +202,7 @@ const Career = ({ selectedJob, onClose }) => {
                         {/* Personal Information */}
                         <div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
-                                <div className="w-8 h-8 bg-blue-100  flex items-center justify-center">
+                                <div className="w-8 h-8 bg-blue-100 flex items-center justify-center">
                                     <span className="text-blue-600">👤</span>
                                 </div>
                                 Personal Information
@@ -201,7 +232,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
                                         placeholder="your.email@example.com"
                                     />
                                 </div>
@@ -223,15 +254,26 @@ const Career = ({ selectedJob, onClose }) => {
                                     <label className="block text-sm font-medium text-gray-700 mb-2">
                                         Position Applied For *
                                     </label>
-                                    <input
-                                        type="text"
+                                    <select
                                         name="position"
                                         required
                                         value={formData.position}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-gray-50"
-                                        placeholder="e.g., Real Estate Sales Manager"
-                                    />
+                                    >
+                                        <option value="">Select Position</option>
+                                        <optgroup label="Real Estate Sales">
+                                            {realEstatePositions.map(position => (
+                                                <option key={position} value={position}>{position}</option>
+                                            ))}
+                                        </optgroup>
+                                        <optgroup label="Digital Marketing">
+                                            {digitalMarketingPositions.map(position => (
+                                                <option key={position} value={position}>{position}</option>
+                                            ))}
+                                        </optgroup>
+                                        <option value="Other">Other Position</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -300,7 +342,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         required
                                         value={formData.expectedSalary}
                                         onChange={handleChange}
-                                        className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                        className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
                                         placeholder="Expected annual salary"
                                     />
                                 </div>
@@ -327,10 +369,116 @@ const Career = ({ selectedJob, onClose }) => {
                             </div>
                         </div>
 
+                        {/* Industry Specific Experience */}
+                        <div>
+                            <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
+                                <div className="w-8 h-8 bg-purple-100  flex items-center justify-center">
+                                    <span className="text-purple-600">🏆</span>
+                                </div>
+                                Industry Experience
+                            </h3>
+
+                            {/* Real Estate Specific Fields */}
+                            <div className="space-y-4 mb-6 p-4 bg-blue-50 ">
+                                <h4 className="font-semibold text-blue-800 mb-3">Real Estate Experience</h4>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Real Estate Industry Experience
+                                        </label>
+                                        <select
+                                            name="realEstateExperience"
+                                            value={formData.realEstateExperience}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                        >
+                                            <option value="">Select experience</option>
+                                            <option value="No experience">No experience</option>
+                                            <option value="0-2 years">0-2 years</option>
+                                            <option value="2-5 years">2-5 years</option>
+                                            <option value="5+ years">5+ years</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Property Types Handled
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="propertyTypes"
+                                            value={formData.propertyTypes}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                            placeholder="e.g., Residential, Commercial, Plots"
+                                        />
+                                    </div>
+                                    <div className="md:col-span-2">
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Sales Achievements
+                                        </label>
+                                        <textarea
+                                            name="salesAchievements"
+                                            rows="3"
+                                            value={formData.salesAchievements}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                            placeholder="Describe your sales achievements, targets achieved, etc."
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Digital Marketing Specific Fields */}
+                            <div className="space-y-4 p-4 bg-green-50 ">
+                                <h4 className="font-semibold text-green-800 mb-3">Digital Marketing Experience</h4>
+                                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Marketing Skills
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="marketingSkills"
+                                            value={formData.marketingSkills}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                            placeholder="e.g., SEO, PPC, Social Media, Content"
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Tools & Platforms
+                                        </label>
+                                        <input
+                                            type="text"
+                                            name="toolsPlatforms"
+                                            value={formData.toolsPlatforms}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                            placeholder="e.g., Google Analytics, Meta Ads, Canva"
+                                        />
+                                    </div>
+                                    <div className="md:col-span-2">
+                                        <label className="block text-sm font-medium text-gray-700 mb-2">
+                                            Campaign Results
+                                        </label>
+                                        <textarea
+                                            name="campaignResults"
+                                            rows="3"
+                                            value={formData.campaignResults}
+                                            onChange={handleChange}
+                                            className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
+                                            placeholder="Describe successful campaigns and results achieved"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Social Links & Portfolio */}
                         <div>
                             <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center gap-3">
-                                <div className="w-8 h-8 bg-pink-100 flex items-center justify-center">
+                                <div className="w-8 h-8 bg-pink-100  flex items-center justify-center">
                                     <span className="text-pink-600">🔗</span>
                                 </div>
                                 Online Presence
@@ -396,6 +544,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         <option value="Employee Referral">Employee Referral</option>
                                         <option value="Job Fair">Job Fair</option>
                                         <option value="Social Media">Social Media</option>
+                                        <option value="Real Estate Portal">Real Estate Portal</option>
                                         <option value="Other">Other</option>
                                     </select>
                                 </div>
@@ -437,7 +586,7 @@ const Career = ({ selectedJob, onClose }) => {
                                 >
                                     {isSubmitting ? (
                                         <>
-                                            <div className="w-5 h-5 border-2 border-white border-t-transparent  animate-spin"></div>
+                                            <div className="w-5 h-5 border-2 border-white border-t-transparent animate-spin"></div>
                                             Submitting...
                                         </>
                                     ) : (
@@ -458,11 +607,11 @@ const Career = ({ selectedJob, onClose }) => {
                     transition={{ delay: 0.5 }}
                     className="text-center mt-8 text-gray-600"
                 >
-                    <p>We typically respond to applications within 2-3 business days</p>
+                    <p>We typically respond to applications within 1-2 business days</p>
                 </motion.div>
             </div>
         </div>
     );
 };
 
-export default Career
+export default Career;

@@ -84,104 +84,7 @@ const Influence = () => {
             projectsCompleted: 47,
             verified: true
         },
-        {
-            id: 2,
-            name: "Property With Priya",
-            category: "Instagram Influencer",
-            followers: "1.8M+",
-            platform: "Instagram",
-            specialty: "Residential Apartments",
-            engagement: "5.2%",
-            location: "Delhi NCR",
-            image: "/images/influencer2.jpg",
-            social: {
-                instagram: "https://instagram.com/propertywithpriya",
-                youtube: "https://youtube.com/propertywithpriya",
-                linkedin: "https://linkedin.com/in/propertywithpriya",
-                facebook: "https://facebook.com/propertywithpriya",
-                twitter: "https://twitter.com/propertywithpriya"
-            },
-            previousCollabs: [
-                {
-                    project: "Royal Casa",
-                    type: "Residential Plots",
-                    date: "2024-02-10",
-                    views: "1.5M",
-                    engagement: "42K",
-                    link: "/projects/royal_casa"
-                }
-            ],
-            rates: "₹1-3 Lacs per campaign",
-            contentTypes: ["Reels", "Stories", "Live Sessions"],
-            rating: 4.8,
-            projectsCompleted: 32,
-            verified: true
-        },
-        {
-            id: 3,
-            name: "Investment Guru Ankit",
-            category: "Financial Influencer",
-            followers: "3.2M+",
-            platform: "YouTube & Instagram",
-            specialty: "Real Estate Investment",
-            engagement: "6.1%",
-            location: "Pan India",
-            image: "/images/influencer3.jpg",
-            social: {
-                youtube: "https://youtube.com/investmentguru",
-                instagram: "https://instagram.com/investmentguru",
-                twitter: "https://twitter.com/investmentguru",
-                linkedin: "https://linkedin.com/in/investmentguru",
-                facebook: "https://facebook.com/investmentguru"
-            },
-            previousCollabs: [
-                {
-                    project: "Agricultural Plots Yavat",
-                    type: "Investment Campaign",
-                    date: "2023-12-05",
-                    views: "3.1M",
-                    engagement: "67K",
-                    link: "/projects/mount_castle"
-                }
-            ],
-            rates: "₹3-7 Lacs per campaign",
-            contentTypes: ["Investment Analysis", "Market Trends", "ROI Calculations"],
-            rating: 4.9,
-            projectsCompleted: 63,
-            verified: true
-        },
-        {
-            id: 4,
-            name: "Architect Sameer",
-            category: "Architecture Influencer",
-            followers: "850K+",
-            platform: "Instagram & LinkedIn",
-            specialty: "Architecture & Design",
-            engagement: "7.3%",
-            location: "Bangalore, Hyderabad",
-            image: "/images/influencer4.jpg",
-            social: {
-                instagram: "https://instagram.com/architectsameer",
-                linkedin: "https://linkedin.com/in/architectsameer",
-                youtube: "https://youtube.com/architectsameer",
-                twitter: "https://twitter.com/architectsameer"
-            },
-            previousCollabs: [
-                {
-                    project: "Royal Vista Architecture",
-                    type: "Design Review",
-                    date: "2024-01-20",
-                    views: "890K",
-                    engagement: "28K",
-                    link: "/projects/royal_vista"
-                }
-            ],
-            rates: "₹1.5-4 Lacs per campaign",
-            contentTypes: ["Design Reviews", "Architecture Tours", "Space Planning"],
-            rating: 4.7,
-            projectsCompleted: 28,
-            verified: true
-        }
+        
     ];
 
     const pastCollaborations = [
@@ -218,72 +121,7 @@ const Influence = () => {
             ],
             projectLink: "/projects/royal_vista"
         },
-        {
-            id: 2,
-            project: "Mount Castle Farmhouse",
-            influencer: "Investment Guru Ankit",
-            type: "Investment Guide",
-            date: "December 2023",
-            platform: "YouTube & Instagram",
-            metrics: {
-                views: "3.1M",
-                engagement: "67K",
-                leads: "540",
-                conversions: "89"
-            },
-            content: [
-                {
-                    type: "video",
-                    platform: "YouTube",
-                    title: "Farmhouse Investment Guide - Mount Castle",
-                    url: "https://youtube.com/watch?v=mountcastle",
-                    views: "2.1M",
-                    likes: "58K"
-                },
-                {
-                    type: "carousel",
-                    platform: "Instagram",
-                    title: "ROI Analysis - Ambedwet, Pirangut",
-                    url: "https://instagram.com/p/mountcastle",
-                    views: "980K",
-                    likes: "41K"
-                }
-            ],
-            projectLink: "/projects/mount_castle"
-        },
-        {
-            id: 3,
-            project: "Royal Casa Residential",
-            influencer: "Property With Priya",
-            type: "Instagram Campaign",
-            date: "February 2024",
-            platform: "Instagram",
-            metrics: {
-                views: "1.5M",
-                engagement: "42K",
-                leads: "280",
-                conversions: "35"
-            },
-            content: [
-                {
-                    type: "reel",
-                    platform: "Instagram",
-                    title: "Virtual Site Tour - Royal Casa",
-                    url: "https://instagram.com/p/royalcasa",
-                    views: "1.1M",
-                    likes: "38K"
-                },
-                {
-                    type: "story",
-                    platform: "Instagram",
-                    title: "Q&A Session - Yavat-Saswad Road",
-                    url: "https://instagram.com/stories/royalcasa",
-                    views: "950K",
-                    engagement: "15K"
-                }
-            ],
-            projectLink: "/projects/royal_casa"
-        }
+        
     ];
 
     const collaborationBenefits = [
@@ -323,32 +161,38 @@ const Influence = () => {
         {
             step: "01",
             title: "Strategy Planning",
-            description: "Define campaign goals for your Majestic Realties project and key performance indicators"
+            description: "Define campaign goals for your Majestic Realties project and key performance indicators",
+            icon: <BarChart3 className="w-6 h-6" />
         },
         {
             step: "02",
             title: "Influencer Selection",
-            description: "Choose the perfect influencers based on your project requirements at Majestic Realties"
+            description: "Choose the perfect influencers based on your project requirements at Majestic Realties",
+            icon: <Users className="w-6 h-6" />
         },
         {
             step: "03",
             title: "Content Creation",
-            description: "Collaborate on authentic content that showcases your premium plots and farmhouses"
+            description: "Collaborate on authentic content that showcases your premium plots and farmhouses",
+            icon: <Video className="w-6 h-6" />
         },
         {
             step: "04",
             title: "Campaign Launch",
-            description: "Execute multi-platform campaign with optimized posting schedule"
+            description: "Execute multi-platform campaign with optimized posting schedule",
+            icon: <Rocket className="w-6 h-6" />
         },
         {
             step: "05",
             title: "Performance Tracking",
-            description: "Monitor engagement, leads, and ROI with detailed analytics"
+            description: "Monitor engagement, leads, and ROI with detailed analytics",
+            icon: <TrendingUp className="w-6 h-6" />
         },
         {
             step: "06",
             title: "Results Analysis",
-            description: "Review campaign performance and plan future collaborations"
+            description: "Review campaign performance and plan future collaborations",
+            icon: <Award className="w-6 h-6" />
         }
     ];
 
@@ -405,7 +249,7 @@ const Influence = () => {
                 href={url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className={`p-2 bg-gray-100 border-2 border-transparent rounded-lg transition-all duration-300 text-gray-600 ${colors[platform] || 'hover:bg-gray-600 hover:border-gray-600 hover:text-white'}`}
+                className={`p-2 bg-gray-100 border-2 border-transparent  transition-all duration-300 text-gray-600 ${colors[platform] || 'hover:bg-gray-600 hover:border-gray-600 hover:text-white'}`}
             >
                 {icons[platform] || <Globe className="w-5 h-5" />}
             </a>
@@ -448,10 +292,10 @@ const Influence = () => {
     return (
         <div className="bg-gray-50 min-h-screen">
             {/* Hero Section */}
-            <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-indigo-900 text-white py-24 lg:py-32 overflow-hidden">
+            <section className="relative bg-gradient-to-br from-yellow-900 via-yellow-800 to-yellow-700 text-white py-24 lg:py-32 overflow-hidden">
                 <div className="absolute inset-0 bg-black/20"></div>
-                <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-600/20 rounded-full blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-indigo-600/20 rounded-full blur-3xl"></div>
+                <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-yellow-600/20  blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-yellow-600/20  blur-3xl"></div>
 
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <motion.div
@@ -461,16 +305,16 @@ const Influence = () => {
                         className="text-center"
                     >
                         <div className="flex justify-center mb-6">
-                            <div className="bg-blue-500/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-2 inline-flex items-center gap-2">
+                            <div className="bg-yellow-500/20 backdrop-blur-sm border border-yellow-400/30  px-6 py-2 inline-flex items-center gap-2">
                                 <TrendingUp className="w-4 h-4" />
                                 <span className="text-sm font-medium">Majestic Realties - Since 2014</span>
                             </div>
                         </div>
 
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-                            Majestic Realties <span className="text-blue-400">Influencer</span> Collaborations
+                            Majestic Realties <span className="text-yellow-400">Influencer</span> Collaborations
                         </h1>
-                        <p className="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto leading-relaxed">
+                        <p className="text-xl md:text-2xl text-yellow-100 mb-8 max-w-4xl mx-auto leading-relaxed">
                             Amplify your property sales with India's top real estate influencers.
                             Reach millions of potential buyers through trusted voices for our premium farmhouse & bungalow plots.
                         </p>
@@ -478,7 +322,7 @@ const Influence = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-blue-500 text-white px-8 py-4 font-bold text-lg rounded-lg hover:bg-blue-600 transition-colors inline-flex items-center gap-2 shadow-lg"
+                                className="bg-yellow-500 text-gray-900 px-8 py-4 font-bold text-lg  hover:bg-yellow-400 transition-colors inline-flex items-center gap-2 shadow-lg"
                             >
                                 <MessageCircle className="w-5 h-5" />
                                 Start Collaboration
@@ -486,7 +330,7 @@ const Influence = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white px-8 py-4 font-bold text-lg rounded-lg hover:bg-white/20 transition-colors inline-flex items-center gap-2"
+                                className="border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white px-8 py-4 font-bold text-lg  hover:bg-white/20 transition-colors inline-flex items-center gap-2"
                                 onClick={() => scrollToSection('past-collaborations')}
                             >
                                 <Award className="w-5 h-5" />
@@ -499,7 +343,7 @@ const Influence = () => {
 
             {/* Stats Section */}
             <section className="py-16 bg-white relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-50 to-white"></div>
+                <div className="absolute inset-0 bg-gradient-to-b from-yellow-50 to-white"></div>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {[
@@ -513,10 +357,10 @@ const Influence = () => {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ delay: index * 0.1 }}
-                                className="text-center p-6 bg-white rounded-xl shadow-lg border border-gray-100"
+                                className="text-center p-6 bg-white  shadow-lg border border-gray-100"
                             >
                                 <div className="flex justify-center mb-4">
-                                    <div className="p-3 bg-blue-100 text-blue-600 rounded-lg">
+                                    <div className="p-3 bg-yellow-100 text-yellow-600 ">
                                         {stat.icon}
                                     </div>
                                 </div>
@@ -537,7 +381,7 @@ const Influence = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Majestic Realties <span className="text-blue-600">Success Stories</span>
+                            Majestic Realties <span className="text-yellow-600">Success Stories</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Successful influencer campaigns that drove real results for our premium projects in Pune
@@ -552,15 +396,15 @@ const Influence = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden group"
+                                className="bg-white  shadow-lg border border-gray-200 overflow-hidden group"
                             >
                                 <div className="p-6">
                                     <div className="flex items-start justify-between mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                                            <h3 className="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors">
                                                 {collab.project}
                                             </h3>
-                                            <p className="text-blue-600 font-semibold">{collab.influencer}</p>
+                                            <p className="text-yellow-600 font-semibold">{collab.influencer}</p>
                                         </div>
                                         <div className="flex items-center gap-2 text-sm text-gray-500">
                                             <Clock className="w-4 h-4" />
@@ -573,13 +417,13 @@ const Influence = () => {
                                             <PlatformIcon platform={collab.platform} />
                                             {collab.platform}
                                         </div>
-                                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full">
+                                        <span className="px-2 py-1 bg-green-100 text-green-700 text-xs font-medium">
                                             {collab.type}
                                         </span>
                                     </div>
 
                                     {/* Metrics */}
-                                    <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-gray-50 rounded-lg">
+                                    <div className="grid grid-cols-2 gap-4 mb-6 p-4 bg-gray-50">
                                         <div className="text-center">
                                             <div className="text-lg font-bold text-gray-900">{collab.metrics.views}</div>
                                             <div className="text-xs text-gray-500">Views</div>
@@ -607,12 +451,12 @@ const Influence = () => {
                                                 href={item.url}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition-colors group"
+                                                className="flex items-center justify-between p-3 bg-gray-50  hover:bg-yellow-50 transition-colors group"
                                             >
                                                 <div className="flex items-center gap-3">
                                                     <ContentTypeIcon type={item.type} />
                                                     <div>
-                                                        <div className="font-medium text-gray-900 group-hover:text-blue-600">
+                                                        <div className="font-medium text-gray-900 group-hover:text-yellow-600">
                                                             {item.title}
                                                         </div>
                                                         <div className="flex items-center gap-4 text-xs text-gray-500">
@@ -629,7 +473,7 @@ const Influence = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-blue-600" />
+                                                <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-yellow-600" />
                                             </a>
                                         ))}
                                     </div>
@@ -637,12 +481,12 @@ const Influence = () => {
                                     <div className="flex gap-3">
                                         <Link
                                             to={collab.projectLink}
-                                            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors text-center font-semibold inline-flex items-center justify-center gap-2"
+                                            className="flex-1 bg-yellow-600 text-white py-2 px-4  hover:bg-yellow-700 transition-colors text-center font-semibold inline-flex items-center justify-center gap-2"
                                         >
                                             View Project
                                             <ExternalLink className="w-4 h-4" />
                                         </Link>
-                                        <button className="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors inline-flex items-center gap-2">
+                                        <button className="px-4 py-2 border border-gray-300  hover:bg-gray-50 transition-colors inline-flex items-center gap-2">
                                             <Share2 className="w-4 h-4" />
                                         </button>
                                     </div>
@@ -662,7 +506,7 @@ const Influence = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Why Collaborate with <span className="text-blue-600">Majestic Realties</span>?
+                            Why Collaborate with <span className="text-yellow-600">Majestic Realties</span>?
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             "The best investment on earth is earth" - Join us in promoting premium farmhouse & bungalow plots
@@ -677,9 +521,9 @@ const Influence = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ y: -5 }}
-                                className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 hover:shadow-xl transition-all group"
+                                className="bg-white p-8  shadow-lg border border-gray-100 hover:shadow-xl transition-all group"
                             >
-                                <div className="p-3 bg-blue-100 text-blue-600 rounded-lg w-fit mb-6 group-hover:scale-110 transition-transform">
+                                <div className="p-3 bg-yellow-100 text-yellow-600  w-fit mb-6 group-hover:scale-110 transition-transform">
                                     {benefit.icon}
                                 </div>
                                 <h3 className="text-xl font-bold text-gray-900 mb-3">{benefit.title}</h3>
@@ -699,7 +543,7 @@ const Influence = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Our <span className="text-blue-600">Trusted Influencer Partners</span>
+                            Our <span className="text-yellow-600">Trusted Influencer Partners</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Handpicked real estate influencers who understand the value of premium plots and farmhouse investments
@@ -713,28 +557,28 @@ const Influence = () => {
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 whileHover={{ y: -8 }}
-                                className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all border border-gray-200 overflow-hidden group"
+                                className="bg-white  shadow-lg hover:shadow-2xl transition-all border border-gray-200 overflow-hidden group"
                             >
                                 <div className="relative">
-                                    <div className="h-48 bg-gradient-to-br from-blue-500 to-indigo-600 relative overflow-hidden">
+                                    <div className="h-48 bg-gradient-to-br from-yellow-500 to-yellow-600 relative overflow-hidden">
                                         <div className="absolute inset-0 bg-black/10"></div>
                                         <div className="absolute top-4 right-4">
-                                            <div className="bg-white/90 backdrop-blur-sm rounded-full px-3 py-1 inline-flex items-center gap-1">
+                                            <div className="bg-white/90 backdrop-blur-sm  px-3 py-1 inline-flex items-center gap-1">
                                                 <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                                                 <span className="text-sm font-bold text-gray-900">{influencer.rating}</span>
                                             </div>
                                         </div>
                                         {influencer.verified && (
                                             <div className="absolute top-4 left-4">
-                                                <div className="bg-blue-500 text-white rounded-full p-1">
+                                                <div className="bg-yellow-500 text-white  p-1">
                                                     <CheckCircle className="w-4 h-4" />
                                                 </div>
                                             </div>
                                         )}
                                     </div>
                                     <div className="absolute -bottom-6 left-6">
-                                        <div className="w-16 h-16 bg-white border-4 border-white rounded-xl shadow-lg flex items-center justify-center">
-                                            <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                                        <div className="w-16 h-16 bg-white border-4 border-white  shadow-lg flex items-center justify-center">
+                                            <div className="w-14 h-14 bg-gradient-to-br from-yellow-400 to-yellow-500  flex items-center justify-center text-white font-bold text-lg">
                                                 {influencer.name.charAt(0)}
                                             </div>
                                         </div>
@@ -745,7 +589,7 @@ const Influence = () => {
                                     <div className="flex justify-between items-start mb-3">
                                         <div>
                                             <h3 className="text-xl font-bold text-gray-900 mb-1">{influencer.name}</h3>
-                                            <p className="text-blue-600 font-semibold mb-2">{influencer.category}</p>
+                                            <p className="text-yellow-600 font-semibold mb-2">{influencer.category}</p>
                                         </div>
                                         <div className="text-right">
                                             <div className="text-sm text-gray-500">Projects</div>
@@ -777,7 +621,7 @@ const Influence = () => {
                                         </div>
                                         <div className="flex justify-between items-center text-sm">
                                             <span className="text-gray-600">Rates:</span>
-                                            <span className="font-semibold text-blue-600">{influencer.rates}</span>
+                                            <span className="font-semibold text-yellow-600">{influencer.rates}</span>
                                         </div>
                                     </div>
 
@@ -800,7 +644,7 @@ const Influence = () => {
                                                         <span className="text-gray-600">{collab.project}</span>
                                                         <Link
                                                             to={collab.link}
-                                                            className="text-blue-600 hover:text-blue-700 font-medium"
+                                                            className="text-yellow-600 hover:text-yellow-700 font-medium"
                                                         >
                                                             View →
                                                         </Link>
@@ -814,7 +658,7 @@ const Influence = () => {
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.98 }}
                                         onClick={() => setSelectedInfluencer(influencer)}
-                                        className="w-full bg-blue-600 text-white py-3 font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center justify-center gap-2 group"
+                                        className="w-full bg-yellow-600 text-white py-3 font-semibold  hover:bg-yellow-700 transition-colors inline-flex items-center justify-center gap-2 group"
                                     >
                                         <MessageCircle className="w-4 h-4" />
                                         Collaborate Now
@@ -836,7 +680,7 @@ const Influence = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Majestic Realties <span className="text-blue-600">Success Stories</span>
+                            Majestic Realties <span className="text-yellow-600">Success Stories</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Real results from our influencer collaboration campaigns for premium plots and farmhouses
@@ -851,10 +695,10 @@ const Influence = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.2 }}
                                 whileHover={{ y: -5 }}
-                                className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-2xl border border-blue-100 group"
+                                className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8  border border-yellow-200 group"
                             >
                                 <div className="flex items-start justify-between mb-6">
-                                    <div className="p-3 bg-blue-100 text-blue-600 rounded-lg">
+                                    <div className="p-3 bg-yellow-100 text-yellow-600 ">
                                         {story.icon}
                                     </div>
                                     <div className="text-right">
@@ -867,16 +711,16 @@ const Influence = () => {
                                     <Users className="w-4 h-4" />
                                     <strong>Influencer:</strong> {story.influencer}
                                 </p>
-                                <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-4">
+                                <div className="bg-green-50 border border-green-200  p-4 mb-4">
                                     <p className="text-green-700 font-semibold flex items-center gap-2">
                                         <CheckCircle className="w-4 h-4" />
                                         {story.results}
                                     </p>
                                 </div>
-                                <p className="text-sm text-gray-500 bg-white/50 rounded-lg p-3 mb-4">{story.metrics}</p>
+                                <p className="text-sm text-gray-500 bg-white/50 p-3 mb-4">{story.metrics}</p>
                                 <Link
                                     to={story.projectLink}
-                                    className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors text-center font-semibold inline-flex items-center justify-center gap-2"
+                                    className="w-full bg-yellow-600 text-white py-2 hover:bg-yellow-700 transition-colors text-center font-semibold inline-flex items-center justify-center gap-2"
                                 >
                                     View Project Details
                                     <ExternalLink className="w-4 h-4" />
@@ -896,7 +740,7 @@ const Influence = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                            Our <span className="text-blue-600">Collaboration Process</span>
+                            Our <span className="text-yellow-600">Collaboration Process</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Simple, transparent process for successful influencer partnerships with Majestic Realties
@@ -911,13 +755,13 @@ const Influence = () => {
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 whileHover={{ scale: 1.05 }}
-                                className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 text-center group"
+                                className="bg-white p-8  shadow-lg border border-gray-100 text-center group"
                             >
                                 <div className="relative mb-6">
-                                    <div className="w-16 h-16 bg-blue-600 text-white text-xl font-bold flex items-center justify-center mx-auto rounded-xl group-hover:scale-110 transition-transform">
+                                    <div className="w-16 h-16 bg-yellow-600 text-white text-xl font-bold flex items-center justify-center mx-auto  group-hover:scale-110 transition-transform">
                                         {step.step}
                                     </div>
-                                    <div className="absolute -top-2 -right-2 p-2 bg-blue-100 text-blue-600 rounded-lg">
+                                    <div className="absolute -top-2 -right-2 p-2 bg-yellow-100 text-yellow-600 ">
                                         {step.icon}
                                     </div>
                                 </div>
@@ -930,7 +774,7 @@ const Influence = () => {
             </section>
 
             {/* CTA Section - Real Estate Focus */}
-            <section className="py-20 bg-gradient-to-r from-blue-900 to-indigo-900 text-white">
+            <section className="py-20 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -939,7 +783,7 @@ const Influence = () => {
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">
                             Sell Properties <span className="text-yellow-400">Faster</span> with Influencer Power
                         </h2>
-                        <p className="text-xl text-blue-200 mb-8">
+                        <p className="text-xl text-yellow-100 mb-8">
                            Reach 5M+ potential buyers through trusted influencers promoting Majestic Realties projects
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -960,7 +804,7 @@ const Influence = () => {
                                 Free Project Consultation
                             </motion.button>
                         </div>
-                        <div className="mt-8 grid grid-cols-3 gap-4 text-sm text-blue-300">
+                        <div className="mt-8 grid grid-cols-3 gap-4 text-sm text-yellow-200">
                             <div>✓ 320+ Happy Clients</div>
                             <div>✓ 7+ Projects Delivered</div>
                             <div>✓ 11+ Years Experience</div>

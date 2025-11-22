@@ -1,34 +1,45 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import PrivacyPolicy from './components/AboutComp/PrivacyPolicy';
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Royal_Vista from './components/projectComp/Royal_Vista';
-import Royal_Casa from './components/projectComp/Royal_Casa';
-import Mount_Castle from './components/projectComp/Mount_Castle';
-import PageWrapper from './components/PageWrapper';
-import Loader from './components/Loader';
-import InfoModal from './components/InfoModal';
-import ErrorPage from './components/ErrorPage';
-import OurTeam from './pages/OurTeam';
-import Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat from './Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat';
-import Royal_Vista_NA_Residential_Plots_Yavat from './Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Yavat';
-import RoyalCasaNaResidentialPlotsYavatMalshiras from './Royal_Casa_Landing_Page/RoyalCasaNaResidentialPlotsYavatMalshiras';
-import LegalExpert from './components/Expert_talk/LegalExpert';
-import FinancialExpert from './components/Expert_talk/FinancialExpert';
-import ArchitecturalExpert from './components/Expert_talk/ArchitecturalExpert';
-import Career from './pages/Career';
-import Influence from './pages/Influence';
+// Lazy loading heavy pages
+const Navbar = React.lazy(() => import('./components/Navbar'));
+const Footer = React.lazy(() => import('./components/Footer'));
+const PrivacyPolicy = React.lazy(() => import('./components/AboutComp/PrivacyPolicy'));
+const Home = React.lazy(() => import('./pages/Home'));
+const Projects = React.lazy(() => import('./pages/Projects'));
+const About = React.lazy(() => import('./pages/About'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Royal_Vista = React.lazy(() => import('./components/projectComp/Royal_Vista'));
+const Royal_Casa = React.lazy(() => import('./components/projectComp/Royal_Casa'));
+const Mount_Castle = React.lazy(() => import('./components/projectComp/Mount_Castle'));
+const PageWrapper = React.lazy(() => import('./components/PageWrapper'));
+const Loader = React.lazy(() => import('./components/Loader'));
+const InfoModal = React.lazy(() => import('./components/InfoModal'));
+const ErrorPage = React.lazy(() => import('./components/ErrorPage'));
+const OurTeam = React.lazy(() => import('./pages/OurTeam'));
+const Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat = React.lazy(() =>
+  import('./Landinge_page/Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat')
+);
+const Royal_Vista_NA_Residential_Plots_Yavat = React.lazy(() =>
+  import('./Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Yavat')
+);
+const RoyalCasaNaResidentialPlotsYavatMalshiras = React.lazy(() =>
+  import('./Royal_Casa_Landing_Page/RoyalCasaNaResidentialPlotsYavatMalshiras')
+);
 
-// all your routes
+const LegalExpert = React.lazy(() => import('./components/Expert_talk/LegalExpert'));
+const FinancialExpert = React.lazy(() => import('./components/Expert_talk/FinancialExpert'));
+const ArchitecturalExpert = React.lazy(() => import('./components/Expert_talk/ArchitecturalExpert'));
+const Career = React.lazy(() => import('./pages/Career'));
+const Influence = React.lazy(() => import('./pages/Influence'));
+
+
+// -------------------------------------
+// 🔥 Fast Animated Routes
+// -------------------------------------
 const AnimatedRoutes = () => {
   const location = useLocation();
 
@@ -50,17 +61,15 @@ const AnimatedRoutes = () => {
         <Route path="/career" element={<PageWrapper><Career /></PageWrapper>} />
         <Route path="/real-estate-influence" element={<PageWrapper><Influence /></PageWrapper>} />
 
-        {/* your new landing page */}
+        {/* Landing Pages */}
         <Route
           path="/mount-castle-farmhouse-bungalow-plots-yevat"
           element={<Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat />}
         />
-        {/* your new landing page */}
         <Route
           path="/royal-vista-na-residential-plots-yevat"
           element={<Royal_Vista_NA_Residential_Plots_Yavat />}
         />
-        {/* your new landing page */}
         <Route
           path="/royal-casa-na-residential-plots-yavat"
           element={<RoyalCasaNaResidentialPlotsYavatMalshiras />}
@@ -72,11 +81,13 @@ const AnimatedRoutes = () => {
   );
 };
 
-// wrapper to control header/footer
+
+// -------------------------------------
+// Layout With Hide Header/Footer
+// -------------------------------------
 const Layout = ({ children }) => {
   const location = useLocation();
 
-  // all paths where header/footer should be hidden:
   const noHeaderFooterRoutes = [
     '/mount-castle-farmhouse-bungalow-plots-yevat',
     '/royal-vista-na-residential-plots-yevat',
@@ -88,7 +99,7 @@ const Layout = ({ children }) => {
   return (
     <>
       {!hideHeaderFooter && <Navbar />}
-      <main className="flex-grow pt-0 max-w-screen mx-auto w-full p-2">
+      <main className="flex-grow max-w-screen mx-auto w-full p-2">
         {children}
       </main>
       {!hideHeaderFooter && <Footer />}
@@ -96,12 +107,16 @@ const Layout = ({ children }) => {
   );
 };
 
+
+// -------------------------------------
+// Main App Component
+// -------------------------------------
 const App = () => {
   const [loading, setLoading] = useState(true);
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
+    AOS.init({ duration: 1000 });
   }, []);
 
   useEffect(() => {
@@ -111,15 +126,21 @@ const App = () => {
 
   return (
     <Router>
-      {loading && <Loader onComplete={() => setLoading(false)} />}
-      {!loading && (
-        <div className="min-h-screen text-black overflow-x-hidden">
-          <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
-          <Layout>
-            <AnimatedRoutes />
-          </Layout>
-        </div>
-      )}
+      {/* ❌ Old fallback removed */}
+      {/* ✔ No extra loading, only your Loader works */}
+      <Suspense fallback={null}>
+        {loading && <Loader onComplete={() => setLoading(false)} />}
+
+        {!loading && (
+          <div className="min-h-screen text-black overflow-x-hidden">
+            <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
+
+            <Layout>
+              <AnimatedRoutes />
+            </Layout>
+          </div>
+        )}
+      </Suspense>
     </Router>
   );
 };

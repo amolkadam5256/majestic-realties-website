@@ -124,7 +124,7 @@ const Career = ({ selectedJob, onClose }) => {
     ];
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-25 px-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-25">
             {/* Success Toast */}
             <AnimatePresence>
                 {showToast && (

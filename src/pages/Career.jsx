@@ -36,6 +36,15 @@ const Career = ({ selectedJob, onClose }) => {
     const [showToast, setShowToast] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
+    // HR Contact Information
+    const hrContact = {
+        name: "Pooja Patil",
+        position: "HR Manager",
+        phone: "+91 88062 06442",
+        email: "hr@majesticrealties.in",
+        availability: "Tue - Sun: 9:30 AM - 6:30 PM (Monday - CLOSED)"
+    };
+
     const handleChange = (e) => {
         const { name, value, files } = e.target;
         setFormData(prev => ({
@@ -168,6 +177,35 @@ const Career = ({ selectedJob, onClose }) => {
                     </p>
                 </motion.div>
 
+                {/* HR Contact Information */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.1 }}
+                    className="bg-blue-50 border border-blue-200  p-6 mb-8"
+                >
+                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between">
+                        <div className="mb-4 md:mb-0">
+                            <h3 className="text-xl font-semibold text-blue-800 mb-2">HR Contact</h3>
+                            <p className="text-blue-700 mb-1">
+                                <strong>{hrContact.name}</strong> - {hrContact.position}
+                            </p>
+                            <p className="text-blue-600 mb-1">
+                                📞 {hrContact.phone} | ✉️ {hrContact.email}
+                            </p>
+                            <p className="text-blue-600 text-sm">
+                                Available: {hrContact.availability}
+                            </p>
+                        </div>
+                        <div className="bg-white  p-4 text-center">
+                            <p className="text-blue-800 font-semibold mb-2">Need Help?</p>
+                            <p className="text-blue-600 text-sm">
+                                Contact our HR team for any queries about the application process or position details.
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
+
                 {/* Progress Steps */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -219,7 +257,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.name}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="Enter your full name"
+                                        placeholder="Enter your full legal name as per government ID"
                                     />
                                 </div>
                                 <div>
@@ -233,7 +271,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="your.email@example.com"
+                                        placeholder="user1234@gmail.com"
                                     />
                                 </div>
                                 <div>
@@ -247,7 +285,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="+91 98765 43210"
+                                        placeholder="+91 00000 00000 (Include country code)"
                                     />
                                 </div>
                                 <div>
@@ -261,7 +299,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200 bg-gray-50"
                                     >
-                                        <option value="">Select Position</option>
+                                        <option value="">Select your desired position</option>
                                         <optgroup label="Real Estate Sales">
                                             {realEstatePositions.map(position => (
                                                 <option key={position} value={position}>{position}</option>
@@ -272,7 +310,7 @@ const Career = ({ selectedJob, onClose }) => {
                                                 <option key={position} value={position}>{position}</option>
                                             ))}
                                         </optgroup>
-                                        <option value="Other">Other Position</option>
+                                        <option value="Other">Other Position (Specify in cover letter)</option>
                                     </select>
                                 </div>
                             </div>
@@ -298,12 +336,12 @@ const Career = ({ selectedJob, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
                                     >
-                                        <option value="">Select experience</option>
-                                        <option value="0-1 years">0-1 years</option>
+                                        <option value="">Select your total professional experience</option>
+                                        <option value="0-1 years">Fresher (0-1 years)</option>
                                         <option value="1-3 years">1-3 years</option>
                                         <option value="3-5 years">3-5 years</option>
                                         <option value="5-8 years">5-8 years</option>
-                                        <option value="8+ years">8+ years</option>
+                                        <option value="8+ years">8+ years (Senior)</option>
                                     </select>
                                 </div>
                                 <div>
@@ -316,7 +354,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.currentCompany}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="Your current company"
+                                        placeholder="Your current organization name"
                                     />
                                 </div>
                                 <div>
@@ -329,7 +367,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.currentSalary}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="Current annual salary"
+                                        placeholder="Current annual CTC (Cost to Company)"
                                     />
                                 </div>
                                 <div>
@@ -343,7 +381,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.expectedSalary}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300 focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="Expected annual salary"
+                                        placeholder="Expected annual CTC (Negotiable)"
                                     />
                                 </div>
                                 <div className="md:col-span-2">
@@ -357,13 +395,13 @@ const Career = ({ selectedJob, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
                                     >
-                                        <option value="">Select notice period</option>
-                                        <option value="Immediate">Immediate</option>
+                                        <option value="">Select your current notice period</option>
+                                        <option value="Immediate">Immediate Joining</option>
                                         <option value="15 days">15 days</option>
-                                        <option value="30 days">30 days</option>
+                                        <option value="30 days">30 days (Standard)</option>
                                         <option value="45 days">45 days</option>
                                         <option value="60 days">60 days</option>
-                                        <option value="90 days">90 days</option>
+                                        <option value="90 days">90 days (Long)</option>
                                     </select>
                                 </div>
                             </div>
@@ -392,11 +430,11 @@ const Career = ({ selectedJob, onClose }) => {
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
                                         >
-                                            <option value="">Select experience</option>
-                                            <option value="No experience">No experience</option>
-                                            <option value="0-2 years">0-2 years</option>
-                                            <option value="2-5 years">2-5 years</option>
-                                            <option value="5+ years">5+ years</option>
+                                            <option value="">Select real estate experience</option>
+                                            <option value="No experience">No prior experience</option>
+                                            <option value="0-2 years">0-2 years (Beginner)</option>
+                                            <option value="2-5 years">2-5 years (Intermediate)</option>
+                                            <option value="5+ years">5+ years (Expert)</option>
                                         </select>
                                     </div>
                                     <div>
@@ -409,12 +447,12 @@ const Career = ({ selectedJob, onClose }) => {
                                             value={formData.propertyTypes}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                            placeholder="e.g., Residential, Commercial, Plots"
+                                            placeholder="e.g., Residential Apartments, Commercial Spaces, Plots, Villas"
                                         />
                                     </div>
                                     <div className="md:col-span-2">
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                                            Sales Achievements
+                                            Sales Achievements & Targets
                                         </label>
                                         <textarea
                                             name="salesAchievements"
@@ -422,7 +460,7 @@ const Career = ({ selectedJob, onClose }) => {
                                             value={formData.salesAchievements}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                            placeholder="Describe your sales achievements, targets achieved, etc."
+                                            placeholder="Describe your key sales achievements, monthly targets achieved, major deals closed, and recognition received..."
                                         />
                                     </div>
                                 </div>
@@ -434,7 +472,7 @@ const Career = ({ selectedJob, onClose }) => {
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                                            Marketing Skills
+                                            Marketing Skills & Specializations
                                         </label>
                                         <input
                                             type="text"
@@ -442,12 +480,12 @@ const Career = ({ selectedJob, onClose }) => {
                                             value={formData.marketingSkills}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                            placeholder="e.g., SEO, PPC, Social Media, Content"
+                                            placeholder="e.g., SEO, PPC, Social Media Marketing, Content Strategy, Email Marketing"
                                         />
                                     </div>
                                     <div>
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                                            Tools & Platforms
+                                            Tools & Platforms Proficiency
                                         </label>
                                         <input
                                             type="text"
@@ -455,12 +493,12 @@ const Career = ({ selectedJob, onClose }) => {
                                             value={formData.toolsPlatforms}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                            placeholder="e.g., Google Analytics, Meta Ads, Canva"
+                                            placeholder="e.g., Google Analytics, Meta Ads, Google Ads, Canva, SEMrush, HubSpot"
                                         />
                                     </div>
                                     <div className="md:col-span-2">
                                         <label className="block text-sm font-medium text-gray-700 mb-2">
-                                            Campaign Results
+                                            Campaign Results & Performance Metrics
                                         </label>
                                         <textarea
                                             name="campaignResults"
@@ -468,7 +506,7 @@ const Career = ({ selectedJob, onClose }) => {
                                             value={formData.campaignResults}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                            placeholder="Describe successful campaigns and results achieved"
+                                            placeholder="Describe successful marketing campaigns you've managed, key performance indicators (KPIs), ROI achieved, and growth metrics..."
                                         />
                                     </div>
                                 </div>
@@ -481,7 +519,7 @@ const Career = ({ selectedJob, onClose }) => {
                                 <div className="w-8 h-8 bg-pink-100  flex items-center justify-center">
                                     <span className="text-pink-600">🔗</span>
                                 </div>
-                                Online Presence
+                                Online Presence & Portfolio
                             </h3>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 {socialLinks.map((link) => (
@@ -503,7 +541,7 @@ const Career = ({ selectedJob, onClose }) => {
                             </div>
                             <div className="mt-6">
                                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                                    Other Links (Personal website, blog, etc.)
+                                    Other Professional Links (Blog, Publications, Certifications)
                                 </label>
                                 <input
                                     type="text"
@@ -511,7 +549,7 @@ const Career = ({ selectedJob, onClose }) => {
                                     value={formData.otherLinks}
                                     onChange={handleChange}
                                     className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                    placeholder="https://yourwebsite.com"
+                                    placeholder="https://yourblog.com, https://certification-portal.com"
                                 />
                             </div>
                         </div>
@@ -536,16 +574,17 @@ const Career = ({ selectedJob, onClose }) => {
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
                                     >
-                                        <option value="">Select an option</option>
-                                        <option value="LinkedIn">LinkedIn</option>
-                                        <option value="Indeed">Indeed</option>
+                                        <option value="">Select referral source</option>
+                                        <option value="LinkedIn">LinkedIn Job Posting</option>
+                                        <option value="Indeed">Indeed Portal</option>
                                         <option value="Naukri.com">Naukri.com</option>
-                                        <option value="Company Website">Company Website</option>
+                                        <option value="Company Website">Company Career Page</option>
                                         <option value="Employee Referral">Employee Referral</option>
-                                        <option value="Job Fair">Job Fair</option>
-                                        <option value="Social Media">Social Media</option>
-                                        <option value="Real Estate Portal">Real Estate Portal</option>
-                                        <option value="Other">Other</option>
+                                        <option value="Job Fair">Career Fair/Job Fair</option>
+                                        <option value="Social Media">Social Media (Instagram/Facebook)</option>
+                                        <option value="Real Estate Portal">Real Estate Industry Portal</option>
+                                        <option value="Newspaper">Newspaper Advertisement</option>
+                                        <option value="Other">Other Source</option>
                                     </select>
                                 </div>
                                 <div>
@@ -558,7 +597,7 @@ const Career = ({ selectedJob, onClose }) => {
                                         value={formData.referral}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 transition-all duration-200"
-                                        placeholder="Name of employee who referred you"
+                                        placeholder="Name of Majestic Realties employee who referred you"
                                     />
                                 </div>
                             </div>
@@ -568,6 +607,7 @@ const Career = ({ selectedJob, onClose }) => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-between items-center pt-8 border-t border-gray-200">
                             <p className="text-sm text-gray-600 text-center sm:text-left">
                                 By submitting this form, you agree to our privacy policy and consent to contact.
+                                Our HR team will review your application and contact you within 3 business days.
                             </p>
                             <div className="flex gap-4">
                                 <button
@@ -575,7 +615,7 @@ const Career = ({ selectedJob, onClose }) => {
                                     onClick={onClose}
                                     className="px-8 py-3 text-gray-700 border border-gray-300  hover:bg-gray-50 transition-all duration-200 font-medium"
                                 >
-                                    Cancel
+                                    Cancel Application
                                 </button>
                                 <motion.button
                                     type="submit"
@@ -587,7 +627,7 @@ const Career = ({ selectedJob, onClose }) => {
                                     {isSubmitting ? (
                                         <>
                                             <div className="w-5 h-5 border-2 border-white border-t-transparent animate-spin"></div>
-                                            Submitting...
+                                            Submitting Application...
                                         </>
                                     ) : (
                                         <>
@@ -600,14 +640,17 @@ const Career = ({ selectedJob, onClose }) => {
                     </form>
                 </motion.div>
 
-                {/* Footer Note */}
+                {/* Footer Note with HR Contact */}
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                     className="text-center mt-8 text-gray-600"
                 >
-                    <p>We typically respond to applications within 1-2 business days</p>
+                    <p className="mb-2">We typically respond to applications within 1-2 business days</p>
+                    <p className="text-sm">
+                        For urgent queries, contact HR: {hrContact.email} | {hrContact.phone}
+                    </p>
                 </motion.div>
             </div>
         </div>

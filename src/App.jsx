@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import MilindNikamPage from './components/Top_Influencer/MilindNikamPage';
 
 // Lazy loading heavy pages
 const Navbar = React.lazy(() => import('./components/Navbar'));
@@ -60,6 +61,13 @@ const AnimatedRoutes = () => {
         <Route path="/architectural-expert" element={<PageWrapper><ArchitecturalExpert /></PageWrapper>} />
         <Route path="/career" element={<PageWrapper><Career /></PageWrapper>} />
         <Route path="/real-estate-influence" element={<PageWrapper><Influence /></PageWrapper>} />
+
+
+
+        {/* influence pages */}
+        {/* <Route path="/real-estate-influence/milind-nikam" element={<PageWrapper><MilindNikamPage /></PageWrapper>} /> */}
+
+
 
         {/* Landing Pages */}
         <Route

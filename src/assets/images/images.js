@@ -47,10 +47,12 @@ import Mount_Castle_Brochure_1 from './Mount_Castle_Brochure_1.pdf';
 import Royal_vista from './Royal_vista.pdf';
 import Siddharam from './Siddharam.png';
 import AslamS from './AslamS.webp';
+import milindnikam from './milindnikam.jpg';
 
 
 // Export all as a single object
 const images = {
+  milindnikam,
   Siddharam,
   RoyalCasa1,
   RoyalCasa2,

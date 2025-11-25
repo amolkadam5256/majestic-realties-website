@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Link } from 'react-router-dom';
 
 const InfoModal = ({ isOpen, onClose }) => {
   const [showToast, setShowToast] = useState(false);
@@ -16,10 +17,10 @@ const InfoModal = ({ isOpen, onClose }) => {
     const formData = new FormData(form);
 
     // Add subject based on active section
-    const subject = activeSection === "enquiry" 
-      ? "New Property Enquiry - Majestic Realties" 
+    const subject = activeSection === "enquiry"
+      ? "New Property Enquiry - Majestic Realties"
       : "New Career Application - Majestic Realties";
-    
+
     formData.append("subject", subject);
 
     try {
@@ -66,22 +67,20 @@ const InfoModal = ({ isOpen, onClose }) => {
                 <button
                   type="button"
                   onClick={() => setActiveSection("enquiry")}
-                  className={`flex-1 py-1.5 text-sm font-medium ${
-                    activeSection === "enquiry"
-                      ? "text-yellow-400 border-b-2 border-yellow-400"
-                      : "text-gray-500 dark:text-gray-400"
-                  }`}
+                  className={`flex-1 py-1.5 text-sm font-medium ${activeSection === "enquiry"
+                    ? "text-yellow-400 border-b-2 border-yellow-400"
+                    : "text-gray-500 dark:text-gray-400"
+                    }`}
                 >
                   Enquiry
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveSection("career")}
-                  className={`flex-1 py-1.5 text-sm font-medium ${
-                    activeSection === "career"
-                      ? "text-yellow-400 border-b-2 border-yellow-400"
-                      : "text-gray-500 dark:text-gray-400"
-                  }`}
+                  className={`flex-1 py-1.5 text-sm font-medium ${activeSection === "career"
+                    ? "text-yellow-400 border-b-2 border-yellow-400"
+                    : "text-gray-500 dark:text-gray-400"
+                    }`}
                 >
                   Career Inquiry
                 </button>
@@ -184,24 +183,31 @@ const InfoModal = ({ isOpen, onClose }) => {
                 {activeSection === "career" && (
                   <div>
                     <label className="block text-xs font-medium text-gray-700 dark:text-gray-300">
-                      LinkedIn Profile / Portfolio Link or Resume Link                    
-                      </label>
+                      LinkedIn Profile / Portfolio Link or Resume Link
+                    </label>
                     <input
                       type="url"
                       name="linkedin_link"
                       className="mt-1 w-full px-3 py-1 text-sm border border-gray-300 rounded-md focus:ring-2 focus:ring-yellow-400 dark:bg-gray-900 dark:text-white dark:border-gray-700"
                       placeholder="https://linkedin.com/in/yourprofile"
                     />
+
+                    <div className="text-gray-500 dark:text-gray-400 mt-5">
+                      HR: <a href="tel:+919876543210">+91 88062 06442</a> | <a href="mailto:hr@majesticrealties.com">hr@majesticrealties.in</a>
+                    </div>
                   </div>
+
                 )}
 
+
                 <div className="flex justify-between items-center pt-2">
-                  <a
-                    href="#"
+                  {/* <Link
+                    to="/contact"
                     className="text-xs text-gray-500 hover:text-yellow-400 dark:text-gray-400"
                   >
                     Learn about our privacy policy
-                  </a>
+                  </Link> */}
+
                 </div>
                 <div className="flex justify-end space-x-2 pt-2">
                   <button

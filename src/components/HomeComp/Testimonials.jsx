@@ -4,7 +4,6 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 const testimonials = [
   {
     name: "Dr. Jagtap",
@@ -14,7 +13,8 @@ const testimonials = [
     originalUrl: "https://www.youtube.com/watch?v=y2VnJQEK98Q",
     type: "video",
     platform: "youtube",
-    feedback: "The team at Majestic Realties made the process of purchasing a plot at Mount Castle seamless. Their professionalism and attention to detail are commendable.",
+    feedback:
+      "Majestic Realties guided me through every step of my plot purchase with complete transparency. The overall experience was smooth, reliable, and highly professional.",
     stars: 5
   },
   {
@@ -25,18 +25,20 @@ const testimonials = [
     originalUrl: "https://youtube.com/shorts/H6O6_yF_kY4?si=zuC3wtE8vVD9Jd3Y",
     type: "video",
     platform: "youtube",
-    feedback: "The team at Majestic Realties made the process of purchasing a plot at Mount Castle seamless. Their professionalism and attention to detail are commendable.",
+    feedback:
+      "The team was extremely supportive throughout the entire buying process. Their clarity, honest communication, and quick assistance made everything hassle-free.",
     stars: 5
   },
   {
-    name: "Mr. Aniket Awtani",
+    name: "Mr. Aniket ",
     company: "Mount Castle, Ambedwet, Pirangut",
     date: "April 2024",
     videoId: "81qQQoY2Tpg",
     originalUrl: "https://youtube.com/shorts/81qQQoY2Tpg?si=bAisJ3r5fHysqXof",
     type: "video",
     platform: "youtube",
-    feedback: "The team at Majestic Realties made the process of purchasing a plot at Mount Castle seamless. Their professionalism and attention to detail are commendable.",
+    feedback:
+      "My experience with Majestic Realties was excellent. Their team ensured complete clarity in documentation and provided timely updates at every stage.",
     stars: 5
   },
   {
@@ -47,32 +49,12 @@ const testimonials = [
     originalUrl: "https://www.instagram.com/reel/DOvA2x4jmeN/",
     type: "video",
     platform: "instagram",
-    feedback: "I was searching for the perfect place to build my farmhouse, and Royal Greens exceeded my expectations. The accessibility to essential utilities is a huge plus.",
+    feedback:
+      "Royal Greens is exactly what I was looking for—peaceful, scenic, and well-planned. The project offers great future potential and the staff was very cooperative.",
     stars: 4.5
-  },
-  {
-    name: "Mr. Utkarsh Ghate",
-    company: "Royal Greens, Supa, Morgain",
-    date: "March 2024",
-    reelId: "DOvA2x4jmeN",
-    originalUrl: "https://www.instagram.com/reel/DOvA2x4jmeN/",
-    type: "video",
-    platform: "instagram",
-    feedback: "I was searching for the perfect place to build my farmhouse, and Royal Greens exceeded my expectations. The accessibility to essential utilities is a huge plus.",
-    stars: 4.5
-  },
-  {
-    name: "Mr. Utkarsh Ghate",
-    company: "Royal Greens, Supa, Morgain",
-    date: "March 2024",
-    reelId: "DOvA2x4jmeN",
-    originalUrl: "https://www.instagram.com/reel/DOvA2x4jmeN/",
-    type: "video",
-    platform: "instagram",
-    feedback: "I was searching for the perfect place to build my farmhouse, and Royal Greens exceeded my expectations. The accessibility to essential utilities is a huge plus.",
-    stars: 4.5
-  },
+  }
 ];
+
 
 const renderStars = (rating) => {
   const fullStars = Math.floor(rating);

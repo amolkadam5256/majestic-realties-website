@@ -65,7 +65,7 @@ const AnimatedRoutes = () => {
 
 
         {/* influence pages */}
-        {/* <Route path="/real-estate-influence/milind-nikam" element={<PageWrapper><MilindNikamPage /></PageWrapper>} /> */}
+        <Route path="/real-estate-influence/milind-nikam" element={<PageWrapper><MilindNikamPage /></PageWrapper>} />
 
 
 

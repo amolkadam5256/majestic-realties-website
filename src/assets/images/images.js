@@ -48,10 +48,16 @@ import Royal_vista from './Royal_vista.pdf';
 import Siddharam from './Siddharam.png';
 import AslamS from './AslamS.webp';
 import milindnikam from './milindnikam.jpg';
+import Nigam1 from './Nigam1.jpg';
+import Nigam2 from './Nigam2.jpg';
+import Nigam3 from './Nigam3.jpeg';
 
 
 // Export all as a single object
 const images = {
+  Nigam1,
+  Nigam2,
+  Nigam3,
   milindnikam,
   Siddharam,
   RoyalCasa1,

@@ -90,7 +90,7 @@ const Influence = () => {
         }
     ];
 
-    // Popular Posts Data
+    // Popular Voices Data
     const popularPosts = [
         {
             id: 1,
@@ -134,7 +134,7 @@ const Influence = () => {
                 instagram: "https://instagram.com/puneplus_milindnikam",
                 facebook: "https://www.facebook.com/milind.nikam2"
             },
-            slug: "contact"
+            slug: "milind-nikam"
         },
     ];
 
@@ -268,7 +268,7 @@ const Influence = () => {
                                                                 ))}
                                                             </div>
                                                         </div>
-                                                        <Link to={`/${partner.slug}`} className="block">
+                                                        <Link to={`/real-estate-influence/${partner.slug}`} className="block">
                                                             <div className="flex items-center gap-1 text-yellow-600 font-semibold text-sm group-hover:gap-2 transition-all">
                                                                 <span>Read More</span>
                                                                 <ArrowRight className="w-3 h-3" />
@@ -329,9 +329,9 @@ const Influence = () => {
                                 </div>
                             </div>
 
-                            {/* Popular Posts Section */}
+                            {/* Popular Voices Section */}
                             <div className="bg-white shadow-md border border-gray-200 p-4 mb-6">
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Popular Posts</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-3">Popular Voices</h3>
                                 <div className="space-y-3">
                                     {popularPosts.map((post, index) => (
                                         <motion.div

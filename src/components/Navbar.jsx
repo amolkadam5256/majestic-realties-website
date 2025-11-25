@@ -262,8 +262,8 @@ const Navbar = () => {
                         >
                           {item.label}
                           <FaChevronDown className={`ml-1 transition-transform ${(item.label === 'About' ? aboutOpen :
-                              item.label === 'Projects' ? projectsOpen :
-                                expertTalkOpen) ? 'rotate-180' : ''}`} size={12} />
+                            item.label === 'Projects' ? projectsOpen :
+                              expertTalkOpen) ? 'rotate-180' : ''}`} size={12} />
                         </button>
 
                         {/* Dropdown Menu */}
@@ -314,8 +314,8 @@ const Navbar = () => {
                         >
                           {item.label}
                           <FaChevronDown className={`transition-transform ${(item.label === 'About' ? aboutOpen :
-                              item.label === 'Projects' ? projectsOpen :
-                                expertTalkOpen) ? 'rotate-180' : ''}`} size={12} />
+                            item.label === 'Projects' ? projectsOpen :
+                              expertTalkOpen) ? 'rotate-180' : ''}`} size={12} />
                         </button>
 
                         {/* Mobile Dropdown Menu */}

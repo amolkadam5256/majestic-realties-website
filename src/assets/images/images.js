@@ -51,10 +51,14 @@ import milindnikam from './milindnikam.jpg';
 import Nigam1 from './Nigam1.jpg';
 import Nigam2 from './Nigam2.jpg';
 import Nigam3 from './Nigam3.jpeg';
+import Zakki_Sir from './Zakki_Sir.png';
+import Zakki_SirInf from './Zakki_SirInf.png';
 
 
 // Export all as a single object
 const images = {
+Zakki_Sir,
+Zakki_SirInf,
   Nigam1,
   Nigam2,
   Nigam3,

@@ -34,11 +34,17 @@ import {
     Image as ImageIcon,
     Clock,
     Globe,
+    Briefcase,
+    Rocket,
     Volume2,
-    VolumeX
+    VolumeX,
+    Scale,
+    Gavel,
+    FileText,
+    Landmark
 } from "lucide-react";
 
-const MilindNikamPage = () => {
+const ZakkiSirLegal = () => {
     const [activePhoto, setActivePhoto] = useState(0);
     const [email, setEmail] = useState("");
     const [isSubscribed, setIsSubscribed] = useState(false);
@@ -55,9 +61,9 @@ const MilindNikamPage = () => {
         const formData = new FormData();
         formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Replace with your actual key
         formData.append('email', email);
-        formData.append('subject', 'New Newsletter Subscription - Milind Nikam Page');
+        formData.append('subject', 'New Newsletter Subscription - Zakki Khan Legal Page');
         formData.append('message', `New newsletter subscription from: ${email}`);
-        formData.append('from_name', 'Milind Nikam Page Subscriber');
+        formData.append('from_name', 'Zakki Khan Legal Page Subscriber');
 
         try {
             const response = await fetch('https://api.web3forms.com/submit', {
@@ -82,153 +88,116 @@ const MilindNikamPage = () => {
         }
     };
 
-    // Milind Nikam Data
-    const milindNikamData = {
-        id: 1,
-        name: "Mr. Milind Nikam",
-        title: "25+ Years of Trusted Real Estate Expertise Across Pune & Maharashtra",
-        subtitle: "Real Estate Consultant, Property Influencer, 120K+ Subscribers",
-        category: "Property Influencer",
-        author: "Pune Plus Editorial Team",
-        date: "November 25, 2025",
-        excerpt: "With more than 25 years of experience, Mr. Milind Nikam has guided thousands of families, investors, and NRIs toward the right property decisions. His expertise in green properties, luxury estates, and global real estate makes him one of Pune's most trusted advisors.",
-        image: images.milindnikam,
+    // Zakki Khan Legal Data
+    const zakkiKhanData = {
+        id: 2,
+        name: "Zakki Khan",
+        title: "Real Estate Legal Compliance & Regulatory Expert",
+        subtitle: "Legal Compliance Director | RERA Expert | Property Law Specialist",
+        category: "Legal Compliance Director",
+        author: "Majestic Realties Legal Team",
+        date: "November 26, 2025",
+        excerpt: "Zakki Khan brings extensive expertise in real estate legal compliance, RERA regulations, and property law. With deep understanding of Maharashtra Real Estate Regulatory Authority guidelines, he ensures all property transactions are legally sound and compliant.",
+        image: images.Zakki_Sir,
         readTime: "6 min read",
-        views: "120K+",
+        views: "85K+",
         social: {
-            youtube: "https://youtu.be/Tf7ycC2GYJg",
-            instagram: "https://www.instagram.com/reel/DRGgmQ1k6Kq",
-            facebook: "https://www.facebook.com/reel/878227551310200"
+            linkedin: "https://www.linkedin.com/in/zakkikhan/",
+            instagram: "https://www.instagram.com/",
+            website: "https://www.majesticrealties.com"
         },
-        slug: "milind-nikam",
+        slug: "zakki-khan-legal",
         achievements: [
-            "25+ Years in Real Estate",
-            "120K+ YouTube Subscribers",
-            "5000+ Happy Families",
-            "Pune's Trusted Advisor"
+            "RERA Compliance Expert",
+            "Property Documentation Specialist",
+            "Legal Due Diligence",
+            "Regulatory Advisory"
         ],
         specialties: [
-            "Residential Properties",
-            "Commercial Real Estate",
-            "NRI Investments",
-            "Luxury Projects",
-            "Green Buildings"
-        ]
+            "RERA Regulations & Compliance",
+            "Property Title Verification",
+            "Legal Documentation",
+            "Construction Law",
+            "Consumer Protection in Real Estate"
+        ],
+        description: `Zakki Khan specializes in real estate legal compliance and regulatory frameworks, ensuring all property transactions adhere to the highest legal standards.
+
+With expertise in RERA regulations, property documentation, and legal due diligence, he provides comprehensive legal guidance to home buyers, investors, and developers.
+
+His focus is on creating transparent, legally compliant real estate transactions that protect all stakeholders and build trust in the property market.`
     };
 
-    // YouTube Videos Gallery - Mix of Long and Short Videos
-    const youtubeVideos = [
+    // Real Estate Legal Gallery - Legal Education Videos
+    const professionalGallery = [
         {
             id: 1,
             type: "youtube",
-            videoId: "WisSpLINvl0",
-            alt: "Milind Nikam Real Estate Advice",
-            title: "25+ Years Real Estate Experience - Complete Guide",
-            description: "Watch Mr. Milind Nikam share his 25+ years of real estate expertise and investment strategies.",
-            category: "Expert Advice",
+            videoId: "0FVK9ZHWxDI",
+            alt: "RERA Regulations Complete Guide",
+            title: "Complete RERA Regulations Guide for Home Buyers",
+            description: "Understanding RERA compliance, mandatory registration, financial transparency, and consumer protection in real estate.",
+            category: "Legal Education",
             date: "Nov 2025",
-            duration: "15:30",
-            views: "45K+",
-            videoType: "short",
-            thumbnail: `https://img.youtube.com/vi/Tf7ycC2GYJg/hqdefault.jpg`
-        },
-        {
-            id: 2,
-            type: "youtube",
-            videoId: "Tf7ycC2GYJg",
-            alt: "Quick Property Tips",
-            title: "Milind Nikam Promoting Project Mount Castle by Majestic Realties—A Real Estate Giant in Pune",
-            description: "Milind Nikam shares his expert insights on Majestic Realties’ project Mount Castle — a sophisticated collaboration blending authority, luxury, and unmatched real estate excellence.",
-            category: "Quick Tips",
-            date: "Dec 2024",
-            duration: "4:45",
-            views: "28K+",
+            duration: "18:30",
+            views: "35K+",
             videoType: "long",
-            thumbnail: `https://img.youtube.com/vi/abc123short/hqdefault.jpg`
+            thumbnail: `https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg`
         },
     ];
 
     // Filter videos by type
-    const longVideos = youtubeVideos.filter(video => video.videoType === "long");
-    const shortVideos = youtubeVideos.filter(video => video.videoType === "short");
+    const longVideos = professionalGallery.filter(video => video.videoType === "long");
 
-    // Collaboration Media - Mixed Images and Videos
-    const collaborationMedia = [
+    // Legal Compliance Posts
+    const collaborationPosts = [
         {
             id: 1,
-            type: "image",
-            src: images.Nigam3,
-            poster: images.Nigam3,
-            alt: "First Influencer Collaboration Meeting",
-            title: "Our First Collaboration With Real Estate Influencer",
-            description: "Highlight moments from our first meeting with a leading real estate influencer discussing strategies and future project promotions.",
-            category: "Influencer Collaboration",
-            date: "Dec 2024",
+            title: "RERA Compliance Framework Implementation",
+            excerpt: "Developing comprehensive RERA compliance frameworks for real estate developers and ensuring regulatory adherence",
+            category: "Legal Compliance",
+            date: "Dec 15, 2024",
+            views: "22.8K",
+            readTime: "4 min read",
+            image: images.zakki_khan2,
+            partner: "Maharashtra RERA",
+            status: "Ongoing"
         },
         {
             id: 2,
-            type: "image",
-            src: images.Nigam2,
-            alt: "Influencer Strategy Discussion",
-            title: "Real Estate Influencer Strategy Session",
-            description: "Snapshot from our collaborative session planning upcoming real estate content and marketing ideas.",
-            category: "Influencer Meeting",
-            date: "Dec 2024",
+            title: "Property Documentation Standardization",
+            excerpt: "Creating standardized legal documentation processes to streamline property transactions and reduce legal risks",
+            category: "Legal Documentation",
+            date: "Nov 28, 2024",
+            views: "18.3K",
+            readTime: "5 min read",
+            image: images.zakki_khan2,
+            partner: "Legal Standards Board",
+            status: "Completed"
         },
         {
             id: 3,
-            type: "image",
-            src: images.Nigam1,
-            poster: images.Nigam1,
-            alt: "Real Estate Collaboration Content Shoot",
-            title: "Content Shoot With Real Estate Expert",
-            description: "Behind-the-scenes from our first content shoot with a top real estate influencer for upcoming promotional series.",
-            category: "Influencer Collaboration",
-            date: "Dec 2024",
+            title: "Consumer Protection Initiatives",
+            excerpt: "Implementing consumer protection measures and dispute resolution mechanisms in real estate transactions",
+            category: "Consumer Rights",
+            date: "Oct 15, 2024",
+            views: "15.7K",
+            readTime: "3 min read",
+            image: images.zakki_khan2,
+            partner: "Consumer Forum",
+            status: "Active"
         },
     ];
-// Collaboration Posts
-const collaborationPosts = [
-    {
-        id: 1,
-        title: "Majestic Realties Collaboration with Pune’s No.1 Real Estate Influencer Milind Nikam",
-        excerpt:
-            "Milind Nikam and Majestic Realties — a powerful collaboration where two industry tycoons come together in one iconic frame, redefining class, influence, and real estate excellence.",
-        category: "Influencer Collaboration",
-        date: "Nov 25, 2025",
-        views: "120K+",
-        readTime: "5 min read",
-        image: images.milindnikam,
-        partner: "Mr. Milind Nikam",
-        status: "Active"
-    },
-    {
-        id: 2,
-        title: "Milind Nikam Promoting Project Mount Castle by Majestic Realties—A Real Estate Giant in Pune",
-        excerpt:
-            "Milind Nikam shares his expert insights on Majestic Realties’ project Mount Castle — a sophisticated collaboration blending authority, luxury, and unmatched real estate excellence.",
-        category: "Influencer Promotion",
-        date: "Dec 01, 2025",
-        views: "98.5K",
-        readTime: "4 min read",
-        image: images.milindnikam,
-        partner: "Mr. Milind Nikam",
-        status: "Active"
-    }
-];
 
-
-
-    // Related Influencers
-    const relatedInfluencers = [
+    // Related Legal Professionals
+    const relatedProfessionals = [
         {
             id: 1,
-            name: "Zakki Khan",
-            category: "Real Estate Director",
-            followers: "95K+ Readers",
-            image: images.zakki_khan2,
-            slug: "zakki-khan"
-        }
+            name: "Milind Nikam",
+            category: "Property Influencer",
+            followers: "120K+",
+            image: images.milindnikam,
+            slug: "milind-nikam"
+        },
     ];
 
     // Social Media Links Data
@@ -277,18 +246,29 @@ const collaborationPosts = [
         }
     ];
 
-    // Popular Voices Data
+    // Popular Legal Insights
     const popularPosts = [
         {
             id: 1,
-            title: "25+ Years of Real Estate Excellence – Mr. Milind Nikam's Journey",
-            excerpt: "Discover how Pune's leading Property Influencer built a trusted platform",
-            category: "Real Estate",
-            date: "Nov 25, 2025",
+            title: "Understanding RERA: Complete Guide for Home Buyers",
+            excerpt: "Learn how RERA regulations protect home buyers and ensure transparent real estate transactions",
+            category: "Legal Education",
+            date: "Nov 26, 2025",
             views: "45.2K",
             readTime: "6 min read",
-            image: images.milindnikam,
-            slug: "milind-nikam-journey"
+            image: images.zakki_khan2,
+            slug: "rera-complete-guide"
+        },
+        {
+            id: 2,
+            title: "Property Title Verification: Why It Matters",
+            excerpt: "Essential steps for property title verification and avoiding legal disputes in real estate",
+            category: "Legal Process",
+            date: "Nov 20, 2025",
+            views: "32.8K",
+            readTime: "5 min read",
+            image: images.zakki_khan2,
+            slug: "title-verification-guide"
         },
     ];
 
@@ -299,7 +279,8 @@ const collaborationPosts = [
             instagram: <Instagram className="w-4 h-4" />,
             facebook: <Facebook className="w-4 h-4" />,
             linkedin: <Linkedin className="w-4 h-4" />,
-            twitter: <Twitter className="w-4 h-4" />
+            twitter: <Twitter className="w-4 h-4" />,
+            website: <Globe className="w-4 h-4" />
         };
 
         const colors = {
@@ -307,7 +288,8 @@ const collaborationPosts = [
             instagram: "hover:bg-pink-500 hover:text-white",
             facebook: "hover:bg-blue-600 hover:text-white",
             linkedin: "hover:bg-blue-700 hover:text-white",
-            twitter: "hover:bg-blue-400 hover:text-white"
+            twitter: "hover:bg-blue-400 hover:text-white",
+            website: "hover:bg-green-600 hover:text-white"
         };
 
         return (
@@ -325,12 +307,12 @@ const collaborationPosts = [
 
     // Carousel Navigation
     const nextPhoto = () => {
-        setActivePhoto((prev) => (prev + 1) % youtubeVideos.length);
+        setActivePhoto((prev) => (prev + 1) % professionalGallery.length);
         setIsPlaying(true);
     };
 
     const prevPhoto = () => {
-        setActivePhoto((prev) => (prev - 1 + youtubeVideos.length) % youtubeVideos.length);
+        setActivePhoto((prev) => (prev - 1 + professionalGallery.length) % professionalGallery.length);
         setIsPlaying(true);
     };
 
@@ -426,24 +408,24 @@ const collaborationPosts = [
                         >
                             <div className="bg-white shadow-lg border border-gray-200 overflow-hidden">
                                 <div
-                                    className="h-96 bg-no-repeat bg-cover bg-top relative"
-                                    style={{ backgroundImage: `url(${milindNikamData.image})` }}
+                                    className="h-96 bg-no-repeat bg-cover bg-center relative"
+                                    style={{ backgroundImage: `url(${zakkiKhanData.image})` }}
                                 >
                                     <div className="absolute inset-0 bg-black/40"></div>
                                     <div className="absolute top-6 left-6">
-                                        <span className="inline-block bg-yellow-500 text-white px-4 py-2 text-lg font-bold shadow-lg">
-                                            Featured Influencer
+                                        <span className="inline-block bg-blue-500 text-white px-4 py-2 text-lg font-bold shadow-lg">
+                                            Legal Expert
                                         </span>
                                     </div>
                                     <div className="absolute bottom-6 left-6 right-6 text-white">
                                         <span className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 text-lg font-semibold mb-3">
-                                            {milindNikamData.category}
+                                            {zakkiKhanData.category}
                                         </span>
                                         <h1 className="text-4xl font-bold mb-2">
-                                            {milindNikamData.name}
+                                            {zakkiKhanData.name}
                                         </h1>
-                                        <p className="text-yellow-100 text-xl">
-                                            {milindNikamData.subtitle}
+                                        <p className="text-blue-100 text-xl">
+                                            {zakkiKhanData.subtitle}
                                         </p>
                                     </div>
                                 </div>
@@ -460,32 +442,34 @@ const collaborationPosts = [
                             <div className="flex flex-col">
                                 <div className="mb-6">
                                     <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                                        {milindNikamData.title}
+                                        {zakkiKhanData.title}
                                     </h2>
 
                                     <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                                        <span className="font-semibold text-yellow-600 bg-yellow-50 px-3 py-1">
-                                            {milindNikamData.category}
+                                        <span className="font-semibold text-blue-600 bg-blue-50 px-3 py-1">
+                                            {zakkiKhanData.category}
                                         </span>
-                                        <span>By {milindNikamData.author}</span>
+                                        <span>By {zakkiKhanData.author}</span>
                                         <span>•</span>
-                                        <span>{milindNikamData.date}</span>
+                                        <span>{zakkiKhanData.date}</span>
                                     </div>
 
-                                    <p className="text-gray-700 mb-8 leading-relaxed text-base">
-                                        {milindNikamData.excerpt}
-                                    </p>
+                                    <div className="text-gray-700 mb-8 leading-relaxed text-base space-y-4">
+                                        {zakkiKhanData.description.split('\n\n').map((paragraph, index) => (
+                                            <p key={index}>{paragraph}</p>
+                                        ))}
+                                    </div>
 
                                     {/* Achievements Grid */}
                                     <div className="mb-8">
                                         <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                            <Award className="w-6 h-6 text-yellow-500" />
-                                            Key Achievements
+                                            <Scale className="w-6 h-6 text-blue-500" />
+                                            Legal Expertise Areas
                                         </h3>
                                         <div className="grid grid-cols-2 gap-4">
-                                            {milindNikamData.achievements.map((achievement, index) => (
-                                                <div key={index} className="flex items-center gap-3 text-sm text-gray-700 bg-yellow-50 p-3 border border-yellow-200">
-                                                    <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                            {zakkiKhanData.achievements.map((achievement, index) => (
+                                                <div key={index} className="flex items-center gap-3 text-sm text-gray-700 bg-blue-50 p-3 border border-blue-200">
+                                                    <Gavel className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                     <span className="font-medium">{achievement}</span>
                                                 </div>
                                             ))}
@@ -495,12 +479,12 @@ const collaborationPosts = [
                                     {/* Specialties */}
                                     <div className="mb-8">
                                         <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                            <Building className="w-6 h-6 text-yellow-500" />
-                                            Areas of Expertise
+                                            <FileText className="w-6 h-6 text-blue-500" />
+                                            Legal Specializations
                                         </h3>
                                         <div className="flex flex-wrap gap-2">
-                                            {milindNikamData.specialties.map((specialty, index) => (
-                                                <span key={index} className="bg-yellow-100 text-yellow-800 px-3 py-1 text-sm font-semibold border border-yellow-300">
+                                            {zakkiKhanData.specialties.map((specialty, index) => (
+                                                <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 text-sm font-semibold border border-blue-300">
                                                     {specialty}
                                                 </span>
                                             ))}
@@ -510,21 +494,28 @@ const collaborationPosts = [
 
                                 <div className="flex items-center justify-between pt-6 border-t border-gray-200">
                                     <div className="flex items-center gap-6">
+                                        <div className="flex items-center gap-4 text-sm text-gray-500">
+                                            <span className="flex items-center gap-2">
+                                                <Eye className="w-4 h-4" />
+                                                {zakkiKhanData.views}
+                                            </span>
+                                            <span>{zakkiKhanData.readTime}</span>
+                                        </div>
                                         <div className="flex items-center gap-2">
-                                            {milindNikamData.social && Object.entries(milindNikamData.social).map(([platform, url]) => (
+                                            {zakkiKhanData.social && Object.entries(zakkiKhanData.social).map(([platform, url]) => (
                                                 <SocialIcon key={platform} platform={platform} url={url} />
                                             ))}
                                         </div>
                                     </div>
-                                    <Link to="/contact" className="flex items-center gap-2 text-yellow-600 font-semibold text-sm hover:text-yellow-700 hover:gap-3 transition-all">
-                                        <span>Contact for Consultation</span>
+                                    <Link to="/contact" className="flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 hover:gap-3 transition-all">
+                                        <span>Legal Consultation</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
                                 </div>
                             </div>
                         </motion.section>
 
-                        {/* YouTube Videos Gallery Section */}
+                        {/* Real Estate Legal Education Gallery Section */}
                         <motion.section
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -532,24 +523,26 @@ const collaborationPosts = [
                             className="bg-white shadow-lg border border-gray-200 p-6 mb-8"
                         >
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Youtube className="w-5 h-5 text-red-500" />
-                                YouTube Content Gallery
+                                <Scale className="w-5 h-5 text-blue-500" />
+                                Real Estate Legal Education
                             </h3>
 
                             {/* Main Carousel */}
                             <div className="relative mb-8">
                                 <div className="h-96 bg-gray-900 relative overflow-hidden rounded-lg">
-                                    {renderMediaContent(youtubeVideos[activePhoto])}
+                                    {renderMediaContent(professionalGallery[activePhoto])}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                     <div className="absolute bottom-4 left-4 right-4 text-white">
                                         <div className="flex items-center gap-2 mb-2">
                                             <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                                youtubeVideos[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
+                                                professionalGallery[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
                                             }`}>
-                                                {youtubeVideos[activePhoto].videoType === 'short' ? 'SHORT' : 'LONG FORM'}
+                                                {professionalGallery[activePhoto].videoType === 'short' ? 'SHORT' : 'LONG FORM'}
                                             </span>
                                         </div>
-                                        <h4 className="text-2xl font-bold mb-2">{youtubeVideos[activePhoto].title}</h4>
+                                        <h4 className="text-2xl font-bold mb-2">{professionalGallery[activePhoto].title}</h4>
+                                        
+                                        
                                     </div>
 
                                     {/* Video Controls */}
@@ -593,11 +586,11 @@ const collaborationPosts = [
 
                             {/* Video Categories */}
                             <div className="space-y-6">
-                                {/* Long Videos Section */}
+                                {/* Legal Education Videos Section */}
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <Clock className="w-5 h-5 text-red-500" />
-                                        Long Form Videos
+                                        <FileText className="w-5 h-5 text-blue-500" />
+                                        Legal Education Videos
                                         <span className="text-sm font-normal text-gray-500 ml-2">({longVideos.length} videos)</span>
                                     </h4>
                                     <div className="grid grid-cols-2 gap-4">
@@ -607,47 +600,7 @@ const collaborationPosts = [
                                                 whileHover={{ scale: 1.02 }}
                                                 className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden cursor-pointer group"
                                                 onClick={() => {
-                                                    setActivePhoto(youtubeVideos.findIndex(v => v.id === video.id));
-                                                    setIsPlaying(true);
-                                                }}
-                                            >
-                                                <div className="relative h-32">
-                                                    {renderMediaContent(video, true)}
-                                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-                                                </div>
-                                                <div className="p-3">
-                                                    <h5 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-2">{video.title}</h5>
-                                                    <div className="flex items-center justify-between text-xs text-gray-500">
-                                                        <span className="flex items-center gap-1">
-                                                            <Clock className="w-3 h-3" />
-                                                            {video.duration}
-                                                        </span>
-                                                        <span className="flex items-center gap-1">
-                                                            <Eye className="w-3 h-3" />
-                                                            {video.views}
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </motion.div>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Short Videos Section */}
-                                <div>
-                                    <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <Video className="w-5 h-5 text-purple-500" />
-                                        Short Videos
-                                        <span className="text-sm font-normal text-gray-500 ml-2">({shortVideos.length} videos)</span>
-                                    </h4>
-                                    <div className="grid grid-cols-2 gap-4">
-                                        {shortVideos.map((video, index) => (
-                                            <motion.div
-                                                key={video.id}
-                                                whileHover={{ scale: 1.02 }}
-                                                className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden cursor-pointer group"
-                                                onClick={() => {
-                                                    setActivePhoto(youtubeVideos.findIndex(v => v.id === video.id));
+                                                    setActivePhoto(professionalGallery.findIndex(v => v.id === video.id));
                                                     setIsPlaying(true);
                                                 }}
                                             >
@@ -675,7 +628,7 @@ const collaborationPosts = [
                             </div>
                         </motion.section>
 
-                        {/* Collaboration Media Gallery Section */}
+                        {/* Legal Compliance Initiatives Section */}
                         <motion.section
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -683,68 +636,8 @@ const collaborationPosts = [
                             className="bg-white shadow-lg border border-gray-200 p-6 mb-8"
                         >
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <ImageIcon className="w-5 h-5 text-yellow-500" />
-                                Collaboration Media Gallery
-                            </h3>
-
-                            {/* Main Carousel */}
-                            <div className="relative mb-4">
-                                <div className="h-80 bg-gray-900 relative overflow-hidden">
-                                    {renderMediaContent(collaborationMedia[0])}
-                                    <div className="absolute inset-0 bg-black/30"></div>
-                                    <div className="absolute bottom-4 left-4 text-white">
-                                        <span className={`inline-block px-2 py-1 text-xs font-semibold mb-2 ${collaborationMedia[0].category === 'Latest Collaboration'
-                                            ? 'bg-green-500'
-                                            : collaborationMedia[0].category === 'Recent Collaboration'
-                                                ? 'bg-blue-500'
-                                                : 'bg-gray-500'
-                                            }`}>
-                                            {collaborationMedia[0].category}
-                                        </span>
-                                        <h4 className="text-xl font-bold">{collaborationMedia[0].title}</h4>
-                                        <p className="text-yellow-100 text-sm">{collaborationMedia[0].description}</p>
-                                        <div className="flex items-center gap-3 mt-1 text-xs">
-                                            <span>{collaborationMedia[0].date}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Thumbnail Grid */}
-                            <div className="grid grid-cols-3 gap-3">
-                                {collaborationMedia.map((media, index) => (
-                                    <motion.div
-                                        key={media.id}
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="h-24 cursor-pointer transition-all duration-300 overflow-hidden rounded-lg opacity-80 hover:opacity-100"
-                                    >
-                                        <div className="relative w-full h-full">
-                                            {renderMediaContent(media, true)}
-                                            <div className="absolute bottom-0 left-0 right-0 bg-black/80 text-white p-2">
-                                                <div className="flex items-center justify-between text-xs">
-                                                    <span className="font-semibold truncate">
-                                                        {media.title.split(' ').slice(0, 3).join(' ')}...
-                                                    </span>
-                                                    <ImageIcon className="w-3 h-3 flex-shrink-0" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </motion.section>
-
-                        {/* Collaboration Posts Section */}
-                        <motion.section
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6, duration: 0.6 }}
-                            className="bg-white shadow-lg border border-gray-200 p-6 mb-8"
-                        >
-                            <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Users className="w-5 h-5 text-yellow-500" />
-                                Latest Collaboration Posts
+                                <Landmark className="w-5 h-5 text-blue-500" />
+                                Legal Compliance Initiatives
                             </h3>
 
                             <div className="space-y-4">
@@ -763,18 +656,22 @@ const collaborationPosts = [
                                             ></div>
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2 mb-1">
-                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${post.category === 'Latest Collaboration'
+                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${
+                                                        post.category === 'Legal Compliance'
                                                         ? 'bg-green-100 text-green-800'
-                                                        : post.category === 'Recent Collaboration'
-                                                            ? 'bg-blue-100 text-blue-800'
-                                                            : 'bg-gray-100 text-gray-800'
-                                                        }`}>
+                                                        : post.category === 'Legal Documentation'
+                                                        ? 'bg-blue-100 text-blue-800'
+                                                        : 'bg-purple-100 text-purple-800'
+                                                    }`}>
                                                         {post.category}
                                                     </span>
-                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${post.status === 'Completed'
+                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${
+                                                        post.status === 'Completed'
                                                         ? 'bg-green-100 text-green-800'
+                                                        : post.status === 'Active'
+                                                        ? 'bg-blue-100 text-blue-800'
                                                         : 'bg-yellow-100 text-yellow-800'
-                                                        }`}>
+                                                    }`}>
                                                         {post.status}
                                                     </span>
                                                 </div>
@@ -796,12 +693,12 @@ const collaborationPosts = [
                                                         </span>
                                                     </div>
                                                     <a
-                                                        href="https://www.instagram.com/puneplus_milindnikam"
+                                                        href={zakkiKhanData.social.website}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="text-yellow-600 font-semibold text-xs hover:text-yellow-700 flex items-center gap-1"
+                                                        className="text-blue-600 font-semibold text-xs hover:text-blue-700 flex items-center gap-1"
                                                     >
-                                                        <span>See More</span>
+                                                        <span>Learn More</span>
                                                         <ArrowRight className="w-3 h-3" />
                                                     </a>
                                                 </div>
@@ -812,43 +709,43 @@ const collaborationPosts = [
                             </div>
                         </motion.section>
 
-                        {/* Related Influencers Section */}
+                        {/* Related Legal Professionals Section */}
                         <motion.section
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.7, duration: 0.6 }}
+                            transition={{ delay: 0.6, duration: 0.6 }}
                             className="bg-white shadow-lg border border-gray-200 p-6"
                         >
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Users className="w-5 h-5 text-yellow-500" />
-                                Related Influencers
+                                <Users className="w-5 h-5 text-blue-500" />
+                                Legal & Compliance Team
                             </h3>
 
                             <div className="grid grid-cols-3 gap-4">
-                                {relatedInfluencers.map((influencer, index) => (
+                                {relatedProfessionals.map((professional, index) => (
                                     <motion.div
-                                        key={influencer.id}
+                                        key={professional.id}
                                         whileHover={{ y: -2 }}
                                         className="border border-gray-200 bg-gray-50 overflow-hidden group cursor-pointer rounded-lg"
                                     >
-                                        <Link to={`/real-estate-influence/${influencer.slug}`}>
+                                        <Link to={`/real-estate-influence/${professional.slug}`}>
                                             <div
                                                 className="h-24 bg-cover bg-center relative"
-                                                style={{ backgroundImage: `url(${influencer.image})` }}
+                                                style={{ backgroundImage: `url(${professional.image})` }}
                                             >
                                                 <div className="absolute inset-0 bg-black/20"></div>
                                                 <div className="absolute bottom-2 left-2 text-white">
-                                                    <h4 className="font-bold text-sm">{influencer.name}</h4>
-                                                    <p className="text-gray-200 text-xs">{influencer.followers}</p>
+                                                    <h4 className="font-bold text-sm">{professional.name}</h4>
+                                                    <p className="text-gray-200 text-xs">{professional.followers}</p>
                                                 </div>
                                             </div>
                                             <div className="p-3">
-                                                <span className="inline-block bg-yellow-100 text-yellow-800 px-1.5 py-0.5 text-xs font-semibold mb-1">
-                                                    {influencer.category}
+                                                <span className="inline-block bg-blue-100 text-blue-800 px-1.5 py-0.5 text-xs font-semibold mb-1">
+                                                    {professional.category}
                                                 </span>
                                                 <div className="flex items-center justify-between">
                                                     <span className="text-gray-600 text-xs">View Profile</span>
-                                                    <ArrowRight className="w-3 h-3 text-yellow-600 group-hover:translate-x-0.5 transition-transform" />
+                                                    <ArrowRight className="w-3 h-3 text-blue-600 group-hover:translate-x-0.5 transition-transform" />
                                                 </div>
                                             </div>
                                         </Link>
@@ -865,7 +762,7 @@ const collaborationPosts = [
                             <div className="bg-white shadow-lg border border-gray-200 p-4 mb-6">
                                 <h3 className="text-lg font-bold text-gray-900 mb-3">Connect With Us</h3>
                                 <p className="text-gray-600 text-xs mb-3">
-                                    Follow Majestic Realties on social media for the latest updates and property insights.
+                                    Follow Majestic Realties for latest legal updates and property compliance insights.
                                 </p>
                                 <div className="grid grid-cols-3 gap-2">
                                     {socialMediaLinks.map((social, index) => (
@@ -888,9 +785,9 @@ const collaborationPosts = [
                                 </div>
                             </div>
 
-                            {/* Popular Voices Section */}
+                            {/* Popular Legal Insights Section */}
                             <div className="bg-white shadow-lg border border-gray-200 p-4 mb-6">
-                                <h3 className="text-lg font-bold text-gray-900 mb-3">Popular Voices</h3>
+                                <h3 className="text-lg font-bold text-gray-900 mb-3">Legal Insights</h3>
                                 <div className="space-y-3">
                                     {popularPosts.map((post, index) => (
                                         <motion.div
@@ -907,7 +804,7 @@ const collaborationPosts = [
                                                         style={{ backgroundImage: `url(${post.image})` }}
                                                     ></div>
                                                     <div className="flex-1">
-                                                        <h4 className="font-semibold text-gray-900 group-hover:text-yellow-600 transition-colors leading-tight mb-1 text-xs">
+                                                        <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight mb-1 text-xs">
                                                             {post.title}
                                                         </h4>
                                                         <p className="text-gray-600 text-xs mb-1 leading-relaxed">
@@ -932,10 +829,10 @@ const collaborationPosts = [
                             </div>
 
                             {/* Newsletter Signup with Web3Forms */}
-                            <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-4 text-white">
-                                <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
-                                <p className="text-yellow-100 text-xs mb-3">
-                                    Get the latest influencer collaborations and property insights delivered to your inbox.
+                            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 text-white">
+                                <h3 className="text-lg font-bold mb-2">Stay Legally Informed</h3>
+                                <p className="text-blue-100 text-xs mb-3">
+                                    Get the latest legal updates and property compliance insights delivered to your inbox.
                                 </p>
 
                                 {isSubscribed ? (
@@ -945,11 +842,11 @@ const collaborationPosts = [
                                         className="text-center py-3"
                                     >
                                         <CheckCircle2 className="w-8 h-8 text-green-300 mx-auto mb-1" />
-                                        <p className="text-yellow-100 font-semibold text-sm">
+                                        <p className="text-blue-100 font-semibold text-sm">
                                             Thank you for subscribing!
                                         </p>
-                                        <p className="text-yellow-200 text-xs mt-1">
-                                            You'll receive our latest updates soon.
+                                        <p className="text-blue-200 text-xs mt-1">
+                                            You'll receive our latest legal updates soon.
                                         </p>
                                     </motion.div>
                                 ) : (
@@ -960,7 +857,7 @@ const collaborationPosts = [
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
-                                            className="w-full px-3 py-2 bg-white text-gray-900 placeholder-gray-500 text-xs focus:outline-none focus:ring-1 focus:ring-yellow-300"
+                                            className="w-full px-3 py-2 bg-white text-gray-900 placeholder-gray-500 text-xs focus:outline-none focus:ring-1 focus:ring-blue-300"
                                         />
                                         <button
                                             type="submit"
@@ -985,7 +882,7 @@ const collaborationPosts = [
 
                             {/* Footer Note */}
                             <div className="text-center text-gray-500 text-xs mt-4 p-3 bg-white border border-gray-200">
-                                <p>The views expressed in the articles and interviews are of the writer and the interviewee and not of Majestic Realties.</p>
+                                <p>The legal information provided is for educational purposes only and does not constitute legal advice. Consult with qualified legal professionals for specific legal matters.</p>
                             </div>
                         </div>
                     </div>
@@ -993,27 +890,27 @@ const collaborationPosts = [
             </div>
 
             {/* CTA Section */}
-            <section className="py-12 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white">
+            <section className="py-12 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                            Ready to Collaborate with <span className="text-yellow-400">Majestic Realties</span>?
+                            Need <span className="text-blue-400">Legal Guidance</span> for Your Property?
                         </h2>
-                        <p className="text-lg text-yellow-100 mb-6">
-                            Join our network of trusted influencers and reach millions of potential property buyers.
+                        <p className="text-lg text-blue-100 mb-6">
+                            Get expert legal consultation for property transactions, RERA compliance, and documentation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
                             <Link to="/contact">
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-yellow-500 text-gray-900 px-6 py-3 font-bold text-sm hover:bg-yellow-400 transition-colors inline-flex items-center gap-2"
+                                    className="bg-blue-500 text-white px-6 py-3 font-bold text-sm hover:bg-blue-400 transition-colors inline-flex items-center gap-2"
                                 >
-                                    <MessageCircle className="w-4 h-4" />
-                                    Become a Partner
+                                    <Scale className="w-4 h-4" />
+                                    Legal Consultation
                                 </motion.button>
                             </Link>
 
@@ -1021,26 +918,26 @@ const collaborationPosts = [
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-transparent text-white px-6 py-3 font-bold text-sm border-2 border-white hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center gap-2"
+                                    className="bg-transparent text-white px-6 py-3 font-bold text-sm border-2 border-white hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center gap-2"
                                 >
-                                    <Calendar className="w-4 h-4" />
-                                    Schedule Meeting
+                                    <FileText className="w-4 h-4" />
+                                    Document Review
                                 </motion.button>
                             </Link>
                         </div>
 
-                        <div className="mt-6 grid grid-cols-3 gap-3 text-xs text-yellow-200">
+                        <div className="mt-6 grid grid-cols-3 gap-3 text-xs text-blue-200">
                             <div className="flex items-center justify-center gap-1">
                                 <CheckCircle className="w-4 h-4" />
-                                50+ Influencer Partners
+                                RERA Compliance
                             </div>
                             <div className="flex items-center justify-center gap-1">
                                 <CheckCircle className="w-4 h-4" />
-                                10M+ Combined Reach
+                                Legal Documentation
                             </div>
                             <div className="flex items-center justify-center gap-1">
                                 <CheckCircle className="w-4 h-4" />
-                                85% Engagement Rate
+                                Consumer Protection
                             </div>
                         </div>
                     </motion.div>
@@ -1050,4 +947,4 @@ const collaborationPosts = [
     );
 };
 
-export default MilindNikamPage;
+export default ZakkiSirLegal;

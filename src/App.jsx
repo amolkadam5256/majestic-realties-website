@@ -4,6 +4,10 @@ import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import MilindNikamPage from './components/Top_Influencer/MilindNikamPage';
+import ZakkiKhanPage from './components/Top_Influencer/ZakkiKhanPage';
+
+// legalExpertspages
+import ZakkiSirLegal from './components/legalExpertspages/ZakkiSirLegal'
 
 // Lazy loading heavy pages
 const Navbar = React.lazy(() => import('./components/Navbar'));
@@ -66,8 +70,10 @@ const AnimatedRoutes = () => {
 
         {/* influence pages */}
         <Route path="/real-estate-influence/milind-nikam" element={<PageWrapper><MilindNikamPage /></PageWrapper>} />
+        <Route path="/real-estate-influence/zakki-khan" element={<PageWrapper><ZakkiKhanPage /></PageWrapper>} />
 
-
+{/* legal-experts */}
+        <Route path="/legal-experts/zakki-khan" element={<PageWrapper><ZakkiSirLegal /></PageWrapper>} />
 
         {/* Landing Pages */}
         <Route

@@ -89,30 +89,32 @@ const Influence = () => {
             label: "Subscribe on YouTube"
         }
     ];
-
     // Popular Voices Data
     const popularPosts = [
         {
             id: 1,
-            title: "25+ Years of Real Estate Excellence – How Mr. Milind Nikam Built Pune Plus",
-            excerpt: "Discover how Pune's leading Property Influencer built a trusted platform for buyers, investors, and sellers.",
-            category: "Real Estate",
+            title: "25+ Years of Trusted Real Estate Expertise Across Pune & Maharashtra",
+            excerpt:
+                "With 25+ years of guiding families, investors, and NRIs, Mr. Milind Nikam has become one of Pune’s most trusted real estate advisors.",
+            category: "Property Influencer",
             date: "Nov 25, 2025",
-            views: "45.2K",
+            views: "120K+",
             readTime: "6 min read",
             image: images.milindnikam
         },
         {
             id: 2,
-            title: "Why Green Properties Are the Future: Pune Plus Explains the Benefits",
-            excerpt: "A deep dive into nature living, clean environments, and sustainable property investment.",
-            category: "Green Living",
-            date: "Nov 20, 2025",
-            views: "30.8K",
-            readTime: "4 min read",
-            image: images.milindnikam
+            title: "11+ Years of Real Estate & Digital Expertise Across Pune & Dubai",
+            excerpt:
+                "Zakki Khan, Director of Majestic Realties, is known for trust, transparency, and strategic land investments delivering exceptional returns.",
+            category: "Real Estate Director",
+            date: "Nov 26, 2025",
+            views: "95K+",
+            readTime: "5 min read",
+            image: images.zakki_khan2
         }
     ];
+
 
     // Collaboration Partners Data
     const collaborationPartners = [
@@ -136,6 +138,27 @@ const Influence = () => {
             },
             slug: "milind-nikam"
         },
+        {
+            id: 2,
+            name: "Zakki Khan",
+            title: "11+ Years of Real Estate & Digital Expertise Across Pune & Dubai",
+            subtitle: "Director at Majestic Realties & Webmarkx LLC (Dubai)",
+            category: "Real Estate Director",
+            author: "Pune Plus Editorial Team",
+            date: "November 26, 2025",
+            excerpt:
+                "Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise. He has guided hundreds toward smart, high-return property investments across Pune. Known for trust, transparency, and strategic land opportunities, he continues to shape future-ready real estate decisions.",
+            image: images.Zakki_SirInf,
+            readTime: "5 min read",
+            views: "95K+",
+            social: {
+                linkedin: "https://www.linkedin.com/in/zakkikhan/",
+                // instagram: "https://www.instagram.com/",
+                website: "https://www.majesticrealties.com"
+            },
+            slug: "zakki-khan"
+        },
+
     ];
 
     // Social Icon Component
@@ -214,7 +237,7 @@ const Influence = () => {
                                         <div className="flex flex-col md:flex-row">
                                             {/* Image Section */}
                                             <div className="md:w-1/3">
-                                                <div 
+                                                <div
                                                     className="h-48 md:h-full bg-cover bg-center relative overflow-hidden"
                                                     style={{ backgroundImage: `url(${partner.image})` }}
                                                 >
@@ -342,7 +365,7 @@ const Influence = () => {
                                             className="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0 group cursor-pointer"
                                         >
                                             <div className="flex items-start gap-2">
-                                                <div 
+                                                <div
                                                     className="w-12 h-12 bg-cover bg-center flex-shrink-0"
                                                     style={{ backgroundImage: `url(${post.image})` }}
                                                 ></div>

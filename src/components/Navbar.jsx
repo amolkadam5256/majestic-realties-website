@@ -52,7 +52,7 @@ const Navbar = () => {
     {
       label: 'Expert talk',
       submenu: [
-        { label: 'Real Estate Talks', path: 'https://majesticrealties.com/plots_near_pune' },
+        { label: 'Real Estate Talks', path: 'https://majesticrealties.com/plots_near_pune/' },
         { label: 'Legal Experts', path: '/legal-expert' },
         { label: 'Financial Experts', path: '/financial-expert' },
         { label: 'Architectural Experts', path: '/architectural-expert' },

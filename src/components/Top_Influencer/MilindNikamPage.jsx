@@ -187,35 +187,35 @@ const MilindNikamPage = () => {
             date: "Dec 2024",
         },
     ];
-// Collaboration Posts
-const collaborationPosts = [
-    {
-        id: 1,
-        title: "Majestic Realties Collaboration with Pune’s No.1 Real Estate Influencer Milind Nikam",
-        excerpt:
-            "Milind Nikam and Majestic Realties — a powerful collaboration where two industry tycoons come together in one iconic frame, redefining class, influence, and real estate excellence.",
-        category: "Influencer Collaboration",
-        date: "Nov 25, 2025",
-        views: "120K+",
-        readTime: "5 min read",
-        image: images.milindnikam,
-        partner: "Mr. Milind Nikam",
-        status: "Active"
-    },
-    {
-        id: 2,
-        title: "Milind Nikam Promoting Project Mount Castle by Majestic Realties—A Real Estate Giant in Pune",
-        excerpt:
-            "Milind Nikam shares his expert insights on Majestic Realties’ project Mount Castle — a sophisticated collaboration blending authority, luxury, and unmatched real estate excellence.",
-        category: "Influencer Promotion",
-        date: "Dec 01, 2025",
-        views: "98.5K",
-        readTime: "4 min read",
-        image: images.Nigam2,
-        partner: "Mr. Milind Nikam",
-        status: "Active"
-    }
-];
+    // Collaboration Posts
+    const collaborationPosts = [
+        {
+            id: 1,
+            title: "Majestic Realties Collaboration with Pune’s No.1 Real Estate Influencer Milind Nikam",
+            excerpt:
+                "Milind Nikam and Majestic Realties — a powerful collaboration where two industry tycoons come together in one iconic frame, redefining class, influence, and real estate excellence.",
+            category: "Influencer Collaboration",
+            date: "Nov 25, 2025",
+            views: "120K+",
+            readTime: "5 min read",
+            image: images.milindnikam,
+            partner: "Mr. Milind Nikam",
+            status: "Active"
+        },
+        {
+            id: 2,
+            title: "Milind Nikam Promoting Project Mount Castle by Majestic Realties—A Real Estate Giant in Pune",
+            excerpt:
+                "Milind Nikam shares his expert insights on Majestic Realties’ project Mount Castle — a sophisticated collaboration blending authority, luxury, and unmatched real estate excellence.",
+            category: "Influencer Promotion",
+            date: "Dec 01, 2025",
+            views: "98.5K",
+            readTime: "4 min read",
+            image: images.Nigam2,
+            partner: "Mr. Milind Nikam",
+            status: "Active"
+        }
+    ];
 
 
 
@@ -359,9 +359,8 @@ const collaborationPosts = [
                             <Play className="w-6 h-6 text-white" fill="white" />
                         </div>
                         <div className="absolute top-2 left-2">
-                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                media.videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
-                            } text-white rounded`}>
+                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${media.videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
+                                } text-white rounded`}>
                                 {media.videoType === 'short' ? 'SHORT' : 'LONG'}
                             </span>
                         </div>
@@ -543,9 +542,8 @@ const collaborationPosts = [
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                     <div className="absolute bottom-4 left-4 right-4 text-white">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                                youtubeVideos[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
-                                            }`}>
+                                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${youtubeVideos[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
+                                                }`}>
                                                 {youtubeVideos[activePhoto].videoType === 'short' ? 'SHORT' : 'LONG FORM'}
                                             </span>
                                         </div>
@@ -568,8 +566,8 @@ const collaborationPosts = [
                                             onClick={togglePlay}
                                             className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all"
                                         >
-                                            {isPlaying ? 
-                                                <div className="w-4 h-4 bg-white rounded-sm"></div> : 
+                                            {isPlaying ?
+                                                <div className="w-4 h-4 bg-white rounded-sm"></div> :
                                                 <Play className="w-4 h-4" fill="white" />
                                             }
                                         </motion.button>

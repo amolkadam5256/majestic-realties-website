@@ -150,7 +150,7 @@ const Influence = () => {
                 "Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise. He has guided hundreds toward smart, high-return property investments across Pune. Known for trust, transparency, and strategic land opportunities, he continues to shape future-ready real estate decisions.",
             image: images.Zakki_SirInf,
             readTime: "5 min read",
-            views: "95K+",
+            // views: "95K+",
             social: {
                 linkedin: "https://www.linkedin.com/in/zakkikhan/",
                 // instagram: "https://www.instagram.com/",

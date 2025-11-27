@@ -47,6 +47,11 @@ const ZakkiKhanPage = React.lazy(() =>
   import('./components/Top_Influencer/ZakkiKhanPage')
 );
 
+// FinancialExpertPages
+const ZakkiFinancialExpe = React.lazy(() =>
+  import('./components/FinancialExpertPages/ZakkiFinancialExpe')
+);
+
 
 // -------------------------------------
 // 🔥 Fast Animated Routes
@@ -80,6 +85,10 @@ const AnimatedRoutes = () => {
 
         {/* legal-experts */}
         <Route path="/legal-experts/zakki-khan" element={<PageWrapper><ZakkiSirLegal /></PageWrapper>} />
+
+
+        {/* Financial Experts */}
+        <Route path="/financial-expert/zakki-khan" element={<PageWrapper><ZakkiFinancialExpe /></PageWrapper>} />
 
         {/* Landing Pages */}
         <Route

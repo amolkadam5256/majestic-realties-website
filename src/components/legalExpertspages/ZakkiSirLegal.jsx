@@ -141,8 +141,22 @@ His focus is on creating transparent, legally compliant real estate transactions
             duration: "18:30",
             views: "35K+",
             videoType: "long",
-            thumbnail: `https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg`
+            thumbnail: `https://img.youtube.com/vi/0FVK9ZHWxDI/hqdefault.jpg`
         },
+        {
+        id: 2,
+        type: "youtube",
+        videoId: "p4uDyuHiMV8",
+        alt: "Zakki Khan Real Estate Journey Podcast",
+        title: "Plot Gyan Podcast Episode 1: The Journey of Zakki Khan",
+        description: "In this first episode of the Plot Gyan Podcast, we dive into the journey of Mr. Zakki Khan, Director & Founder of Majestic Realties. Zakki ji shares how his journey began, challenges he faced, his first deal experience, and the turning points that shaped his career. A candid and inspiring conversation about facing uncertainty, building resilience, and finding success one step at a time. 🎙️ Hosted by Plot Gyan. #PlotGyanPodcast #ZakkiKhan #RealEstateJourney #Inspiration #MajesticRealties #realestate #fyp #youtubevideos #youtube #plotgyan #investment",
+        category: "Podcast",
+        date: "Nov 2025",
+        duration: "07:00",
+        views: "5K+",
+        videoType: "long",
+        thumbnail: "https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg"
+    }
     ];
 
     // Filter videos by type

@@ -103,7 +103,6 @@ const ZakkiSirLegal = () => {
         views: "85K+",
         social: {
             linkedin: "https://www.linkedin.com/in/zakkikhan/",
-            instagram: "https://www.instagram.com/",
             website: "https://www.majesticrealties.com"
         },
         slug: "zakki-khan-legal",
@@ -140,26 +139,27 @@ His focus is on creating transparent, legally compliant real estate transactions
             date: "Nov 2025",
             duration: "18:30",
             views: "35K+",
-            videoType: "long",
+            videoType: "short",
             thumbnail: `https://img.youtube.com/vi/0FVK9ZHWxDI/hqdefault.jpg`
         },
         {
-        id: 2,
-        type: "youtube",
-        videoId: "p4uDyuHiMV8",
-        alt: "Zakki Khan Real Estate Journey Podcast",
-        title: "Plot Gyan Podcast Episode 1: The Journey of Zakki Khan",
-        description: "In this first episode of the Plot Gyan Podcast, we dive into the journey of Mr. Zakki Khan, Director & Founder of Majestic Realties. Zakki ji shares how his journey began, challenges he faced, his first deal experience, and the turning points that shaped his career. A candid and inspiring conversation about facing uncertainty, building resilience, and finding success one step at a time. 🎙️ Hosted by Plot Gyan. #PlotGyanPodcast #ZakkiKhan #RealEstateJourney #Inspiration #MajesticRealties #realestate #fyp #youtubevideos #youtube #plotgyan #investment",
-        category: "Podcast",
-        date: "Nov 2025",
-        duration: "07:00",
-        views: "5K+",
-        videoType: "long",
-        thumbnail: "https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg"
-    }
+            id: 2,
+            type: "youtube",
+            videoId: "p4uDyuHiMV8",
+            alt: "Zakki Khan Real Estate Journey Podcast",
+            title: "Plot Gyan Podcast Episode 1: The Journey of Zakki Khan",
+            description: "In this first episode of the Plot Gyan Podcast, we dive into the journey of Mr. Zakki Khan, Director & Founder of Majestic Realties. Zakki ji shares how his journey began, challenges he faced, his first deal experience, and the turning points that shaped his career. A candid and inspiring conversation about facing uncertainty, building resilience, and finding success one step at a time. 🎙️ Hosted by Plot Gyan. #PlotGyanPodcast #ZakkiKhan #RealEstateJourney #Inspiration #MajesticRealties #realestate #fyp #youtubevideos #youtube #plotgyan #investment",
+            category: "Podcast",
+            date: "Nov 2025",
+            duration: "07:00",
+            views: "5K+",
+            videoType: "long",
+            thumbnail: "https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg"
+        }
     ];
 
     // Filter videos by type
+    const shortVideos = professionalGallery.filter(video => video.videoType === "short");
     const longVideos = professionalGallery.filter(video => video.videoType === "long");
 
     // Legal Compliance Posts
@@ -355,9 +355,8 @@ His focus is on creating transparent, legally compliant real estate transactions
                             <Play className="w-6 h-6 text-white" fill="white" />
                         </div>
                         <div className="absolute top-2 left-2">
-                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                media.videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
-                            } text-white rounded`}>
+                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${media.videoType === 'short' ? 'bg-purple-500' : 'bg-yellow-400'
+                                } text-white rounded`}>
                                 {media.videoType === 'short' ? 'SHORT' : 'LONG'}
                             </span>
                         </div>
@@ -427,7 +426,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                 >
                                     <div className="absolute inset-0 bg-black/40"></div>
                                     <div className="absolute top-6 left-6">
-                                        <span className="inline-block bg-blue-500 text-white px-4 py-2 text-lg font-bold shadow-lg">
+                                        <span className="inline-block bg-yellow-400 text-white px-4 py-2 text-lg font-bold shadow-lg">
                                             Legal Expert
                                         </span>
                                     </div>
@@ -460,7 +459,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                     </h2>
 
                                     <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                                        <span className="font-semibold text-blue-600 bg-blue-50 px-3 py-1">
+                                        <span className="font-semibold bg-yellow-400 text-white px-3 py-1">
                                             {zakkiKhanData.category}
                                         </span>
                                         <span>By {zakkiKhanData.author}</span>
@@ -477,12 +476,12 @@ His focus is on creating transparent, legally compliant real estate transactions
                                     {/* Achievements Grid */}
                                     <div className="mb-8">
                                         <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                            <Scale className="w-6 h-6 text-blue-500" />
+                                            <Scale className="w-6 h-6 text-yellow-400" />
                                             Legal Expertise Areas
                                         </h3>
                                         <div className="grid grid-cols-2 gap-4">
                                             {zakkiKhanData.achievements.map((achievement, index) => (
-                                                <div key={index} className="flex items-center gap-3 text-sm text-gray-700 bg-blue-50 p-3 border border-blue-200">
+                                                <div key={index} className="flex items-center gap-3 text-sm text-gray-700 bg-yellow-50 p-3 border border-yellow-200">
                                                     <Gavel className="w-4 h-4 text-green-500 flex-shrink-0" />
                                                     <span className="font-medium">{achievement}</span>
                                                 </div>
@@ -493,12 +492,12 @@ His focus is on creating transparent, legally compliant real estate transactions
                                     {/* Specialties */}
                                     <div className="mb-8">
                                         <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                            <FileText className="w-6 h-6 text-blue-500" />
+                                            <FileText className="w-6 h-6 text-yellow-400" />
                                             Legal Specializations
                                         </h3>
                                         <div className="flex flex-wrap gap-2">
                                             {zakkiKhanData.specialties.map((specialty, index) => (
-                                                <span key={index} className="bg-blue-100 text-blue-800 px-3 py-1 text-sm font-semibold border border-blue-300">
+                                                <span key={index} className="bg-yellow-100 text-yellow-800 px-3 py-1 text-sm font-semibold border border-yellow-300">
                                                     {specialty}
                                                 </span>
                                             ))}
@@ -521,7 +520,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                             ))}
                                         </div>
                                     </div>
-                                    <Link to="/contact" className="flex items-center gap-2 text-blue-600 font-semibold text-sm hover:text-blue-700 hover:gap-3 transition-all">
+                                    <Link to="/contact" className="flex items-center gap-2 text-yellow-400 font-semibold text-sm hover:text-yellow-500 hover:gap-3 transition-all">
                                         <span>Legal Consultation</span>
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
@@ -537,7 +536,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                             className="bg-white shadow-lg border border-gray-200 p-6 mb-8"
                         >
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Scale className="w-5 h-5 text-blue-500" />
+                                <Scale className="w-5 h-5 text-yellow-400" />
                                 Real Estate Legal Education
                             </h3>
 
@@ -548,15 +547,14 @@ His focus is on creating transparent, legally compliant real estate transactions
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                     <div className="absolute bottom-4 left-4 right-4 text-white">
                                         <div className="flex items-center gap-2 mb-2">
-                                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                                professionalGallery[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
-                                            }`}>
+                                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${professionalGallery[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-yellow-400'
+                                                }`}>
                                                 {professionalGallery[activePhoto].videoType === 'short' ? 'SHORT' : 'LONG FORM'}
                                             </span>
                                         </div>
                                         <h4 className="text-2xl font-bold mb-2">{professionalGallery[activePhoto].title}</h4>
-                                        
-                                        
+
+
                                     </div>
 
                                     {/* Video Controls */}
@@ -575,8 +573,8 @@ His focus is on creating transparent, legally compliant real estate transactions
                                             onClick={togglePlay}
                                             className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all"
                                         >
-                                            {isPlaying ? 
-                                                <div className="w-4 h-4 bg-white rounded-sm"></div> : 
+                                            {isPlaying ?
+                                                <div className="w-4 h-4 bg-white rounded-sm"></div> :
                                                 <Play className="w-4 h-4" fill="white" />
                                             }
                                         </motion.button>
@@ -600,45 +598,101 @@ His focus is on creating transparent, legally compliant real estate transactions
 
                             {/* Video Categories */}
                             <div className="space-y-6">
-                                {/* Legal Education Videos Section */}
-                                <div>
-                                    <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                                        <FileText className="w-5 h-5 text-blue-500" />
-                                        Legal Education Videos
-                                        <span className="text-sm font-normal text-gray-500 ml-2">({longVideos.length} videos)</span>
-                                    </h4>
-                                    <div className="grid grid-cols-2 gap-4">
-                                        {longVideos.map((video, index) => (
-                                            <motion.div
-                                                key={video.id}
-                                                whileHover={{ scale: 1.02 }}
-                                                className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden cursor-pointer group"
-                                                onClick={() => {
-                                                    setActivePhoto(professionalGallery.findIndex(v => v.id === video.id));
-                                                    setIsPlaying(true);
-                                                }}
-                                            >
-                                                <div className="relative h-32">
-                                                    {renderMediaContent(video, true)}
-                                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
-                                                </div>
-                                                <div className="p-3">
-                                                    <h5 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-2">{video.title}</h5>
-                                                    <div className="flex items-center justify-between text-xs text-gray-500">
-                                                        <span className="flex items-center gap-1">
-                                                            <Clock className="w-3 h-3" />
-                                                            {video.duration}
-                                                        </span>
-                                                        <span className="flex items-center gap-1">
-                                                            <Eye className="w-3 h-3" />
-                                                            {video.views}
-                                                        </span>
+                                {/* Long Form Videos Section */}
+                                {longVideos.length > 0 && (
+                                    <div>
+                                        <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                            <Play className="w-5 h-5 text-yellow-400" />
+                                            Long Form Videos
+                                            <span className="text-sm font-normal text-gray-500 ml-2">({longVideos.length} videos)</span>
+                                        </h4>
+                                        <div className="grid grid-cols-1 gap-4">
+                                            {longVideos.map((video, index) => (
+                                                <motion.div
+                                                    key={video.id}
+                                                    whileHover={{ scale: 1.02 }}
+                                                    className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden cursor-pointer group"
+                                                    onClick={() => {
+                                                        setActivePhoto(professionalGallery.findIndex(v => v.id === video.id));
+                                                        setIsPlaying(true);
+                                                    }}
+                                                >
+                                                    <div className="flex">
+                                                        <div className="w-1/3">
+                                                            <div className="relative h-32">
+                                                                {renderMediaContent(video, true)}
+                                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="w-2/3 p-3">
+                                                            <h5 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-2">{video.title}</h5>
+                                                            <p className="text-gray-600 text-xs mb-2 line-clamp-2">{video.description}</p>
+                                                            <div className="flex items-center justify-between text-xs text-gray-500">
+                                                                <span className="flex items-center gap-1">
+                                                                    <Clock className="w-3 h-3" />
+                                                                    {video.duration}
+                                                                </span>
+                                                                <span className="flex items-center gap-1">
+                                                                    <Eye className="w-3 h-3" />
+                                                                    {video.views}
+                                                                </span>
+                                                                <span>{video.date}</span>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                            </motion.div>
-                                        ))}
+                                                </motion.div>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
+                                )}
+
+                                {/* Short Videos Section */}
+                                {shortVideos.length > 0 && (
+                                    <div>
+                                        <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                                            <Video className="w-5 h-5 text-purple-500" />
+                                            Short Videos
+                                            <span className="text-sm font-normal text-gray-500 ml-2">({shortVideos.length} videos)</span>
+                                        </h4>
+                                        <div className="grid grid-cols-1 gap-4">
+                                            {shortVideos.map((video, index) => (
+                                                <motion.div
+                                                    key={video.id}
+                                                    whileHover={{ scale: 1.02 }}
+                                                    className="bg-gray-50 border border-gray-200 rounded-lg overflow-hidden cursor-pointer group"
+                                                    onClick={() => {
+                                                        setActivePhoto(professionalGallery.findIndex(v => v.id === video.id));
+                                                        setIsPlaying(true);
+                                                    }}
+                                                >
+                                                    <div className="flex">
+                                                        <div className="w-1/3">
+                                                            <div className="relative h-32">
+                                                                {renderMediaContent(video, true)}
+                                                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div className="w-2/3 p-3">
+                                                            <h5 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-2">{video.title}</h5>
+                                                            <p className="text-gray-600 text-xs mb-2 line-clamp-2">{video.description}</p>
+                                                            <div className="flex items-center justify-between text-xs text-gray-500">
+                                                                <span className="flex items-center gap-1">
+                                                                    <Clock className="w-3 h-3" />
+                                                                    {video.duration}
+                                                                </span>
+                                                                <span className="flex items-center gap-1">
+                                                                    <Eye className="w-3 h-3" />
+                                                                    {video.views}
+                                                                </span>
+                                                                <span>{video.date}</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </motion.div>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </motion.section>
 
@@ -650,7 +704,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                             className="bg-white shadow-lg border border-gray-200 p-6 mb-8"
                         >
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Landmark className="w-5 h-5 text-blue-500" />
+                                <Landmark className="w-5 h-5 text-yellow-400" />
                                 Legal Compliance Initiatives
                             </h3>
 
@@ -670,22 +724,20 @@ His focus is on creating transparent, legally compliant real estate transactions
                                             ></div>
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2 mb-1">
-                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${
-                                                        post.category === 'Legal Compliance'
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : post.category === 'Legal Documentation'
-                                                        ? 'bg-blue-100 text-blue-800'
-                                                        : 'bg-purple-100 text-purple-800'
-                                                    }`}>
+                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${post.category === 'Legal Compliance'
+                                                            ? 'bg-green-100 text-green-800'
+                                                            : post.category === 'Legal Documentation'
+                                                                ? 'bg-yellow-100 text-yellow-800'
+                                                                : 'bg-purple-100 text-purple-800'
+                                                        }`}>
                                                         {post.category}
                                                     </span>
-                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${
-                                                        post.status === 'Completed'
-                                                        ? 'bg-green-100 text-green-800'
-                                                        : post.status === 'Active'
-                                                        ? 'bg-blue-100 text-blue-800'
-                                                        : 'bg-yellow-100 text-yellow-800'
-                                                    }`}>
+                                                    <span className={`px-2 py-0.5 text-xs font-semibold ${post.status === 'Completed'
+                                                            ? 'bg-green-100 text-green-800'
+                                                            : post.status === 'Active'
+                                                                ? 'bg-yellow-100 text-yellow-800'
+                                                                : 'bg-yellow-100 text-yellow-800'
+                                                        }`}>
                                                         {post.status}
                                                     </span>
                                                 </div>
@@ -710,7 +762,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                                         href={zakkiKhanData.social.website}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="text-blue-600 font-semibold text-xs hover:text-blue-700 flex items-center gap-1"
+                                                        className="text-yellow-400 font-semibold text-xs hover:text-yellow-500 flex items-center gap-1"
                                                     >
                                                         <span>Learn More</span>
                                                         <ArrowRight className="w-3 h-3" />
@@ -731,7 +783,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                             className="bg-white shadow-lg border border-gray-200 p-6"
                         >
                             <h3 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                                <Users className="w-5 h-5 text-blue-500" />
+                                <Users className="w-5 h-5 text-yellow-400" />
                                 Legal & Compliance Team
                             </h3>
 
@@ -754,12 +806,12 @@ His focus is on creating transparent, legally compliant real estate transactions
                                                 </div>
                                             </div>
                                             <div className="p-3">
-                                                <span className="inline-block bg-blue-100 text-blue-800 px-1.5 py-0.5 text-xs font-semibold mb-1">
+                                                <span className="inline-block bg-yellow-100 text-yellow-800 px-1.5 py-0.5 text-xs font-semibold mb-1">
                                                     {professional.category}
                                                 </span>
                                                 <div className="flex items-center justify-between">
                                                     <span className="text-gray-600 text-xs">View Profile</span>
-                                                    <ArrowRight className="w-3 h-3 text-blue-600 group-hover:translate-x-0.5 transition-transform" />
+                                                    <ArrowRight className="w-3 h-3 text-yellow-400 group-hover:translate-x-0.5 transition-transform" />
                                                 </div>
                                             </div>
                                         </Link>
@@ -818,7 +870,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                                         style={{ backgroundImage: `url(${post.image})` }}
                                                     ></div>
                                                     <div className="flex-1">
-                                                        <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors leading-tight mb-1 text-xs">
+                                                        <h4 className="font-semibold text-gray-900 group-hover:text-yellow-400 transition-colors leading-tight mb-1 text-xs">
                                                             {post.title}
                                                         </h4>
                                                         <p className="text-gray-600 text-xs mb-1 leading-relaxed">
@@ -843,9 +895,9 @@ His focus is on creating transparent, legally compliant real estate transactions
                             </div>
 
                             {/* Newsletter Signup with Web3Forms */}
-                            <div className="bg-gradient-to-r from-blue-500 to-blue-600 p-4 text-white">
+                            <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-4 text-white">
                                 <h3 className="text-lg font-bold mb-2">Stay Legally Informed</h3>
-                                <p className="text-blue-100 text-xs mb-3">
+                                <p className="text-yellow-100 text-xs mb-3">
                                     Get the latest legal updates and property compliance insights delivered to your inbox.
                                 </p>
 
@@ -856,10 +908,10 @@ His focus is on creating transparent, legally compliant real estate transactions
                                         className="text-center py-3"
                                     >
                                         <CheckCircle2 className="w-8 h-8 text-green-300 mx-auto mb-1" />
-                                        <p className="text-blue-100 font-semibold text-sm">
+                                        <p className="text-yellow-100 font-semibold text-sm">
                                             Thank you for subscribing!
                                         </p>
-                                        <p className="text-blue-200 text-xs mt-1">
+                                        <p className="text-yellow-200 text-xs mt-1">
                                             You'll receive our latest legal updates soon.
                                         </p>
                                     </motion.div>
@@ -871,7 +923,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
                                             required
-                                            className="w-full px-3 py-2 bg-white text-gray-900 placeholder-gray-500 text-xs focus:outline-none focus:ring-1 focus:ring-blue-300"
+                                            className="w-full px-3 py-2 bg-white text-gray-900 placeholder-gray-500 text-xs focus:outline-none focus:ring-1 focus:ring-yellow-300"
                                         />
                                         <button
                                             type="submit"
@@ -904,16 +956,16 @@ His focus is on creating transparent, legally compliant real estate transactions
             </div>
 
             {/* CTA Section */}
-            <section className="py-12 bg-gradient-to-r from-blue-900 to-blue-700 text-white">
+            <section className="py-12 bg-gradient-to-r from-yellow-400 to-yellow-500 text-white">
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                     >
                         <h2 className="text-2xl md:text-3xl font-bold mb-4">
-                            Need <span className="text-blue-400">Legal Guidance</span> for Your Property?
+                            Need <span className="text-yellow-800">Legal Guidance</span> for Your Property?
                         </h2>
-                        <p className="text-lg text-blue-100 mb-6">
+                        <p className="text-lg text-yellow-100 mb-6">
                             Get expert legal consultation for property transactions, RERA compliance, and documentation.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -921,7 +973,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-blue-500 text-white px-6 py-3 font-bold text-sm hover:bg-blue-400 transition-colors inline-flex items-center gap-2"
+                                    className="bg-yellow-600 text-white px-6 py-3 font-bold text-sm hover:bg-yellow-700 transition-colors inline-flex items-center gap-2"
                                 >
                                     <Scale className="w-4 h-4" />
                                     Legal Consultation
@@ -932,7 +984,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                                 <motion.button
                                     whileHover={{ scale: 1.05 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="bg-transparent text-white px-6 py-3 font-bold text-sm border-2 border-white hover:bg-white hover:text-blue-900 transition-colors inline-flex items-center gap-2"
+                                    className="bg-transparent text-white px-6 py-3 font-bold text-sm border-2 border-white hover:bg-white hover:text-yellow-500 transition-colors inline-flex items-center gap-2"
                                 >
                                     <FileText className="w-4 h-4" />
                                     Document Review
@@ -940,7 +992,7 @@ His focus is on creating transparent, legally compliant real estate transactions
                             </Link>
                         </div>
 
-                        <div className="mt-6 grid grid-cols-3 gap-3 text-xs text-blue-200">
+                        <div className="mt-6 grid grid-cols-3 gap-3 text-xs text-yellow-200">
                             <div className="flex items-center justify-center gap-1">
                                 <CheckCircle className="w-4 h-4" />
                                 RERA Compliance

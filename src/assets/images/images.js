@@ -48,7 +48,7 @@ import Royal_vista from './Royal_vista.pdf';
 import Siddharam from './Siddharam.png';
 import AslamS from './AslamS.webp';
 import milindnikam from './milindnikam.jpg';
-import Nigam1 from './Nigam1.jpg';
+import Nigam11 from './Nigam11.jpg';
 import Nigam2 from './Nigam2.jpg';
 import Nigam3 from './Nigam3.jpeg';
 import Zakki_Sir from './Zakki_Sir.png';
@@ -59,7 +59,7 @@ import Zakki_SirInf from './Zakki_SirInf.png';
 const images = {
 Zakki_Sir,
 Zakki_SirInf,
-  Nigam1,
+  Nigam11,
   Nigam2,
   Nigam3,
   milindnikam,

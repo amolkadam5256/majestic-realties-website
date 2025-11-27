@@ -178,8 +178,8 @@ const MilindNikamPage = () => {
         {
             id: 3,
             type: "image",
-            src: images.Nigam1,
-            poster: images.Nigam1,
+            src: images.Nigam11,
+            poster: images.Nigam11,
             alt: "Real Estate Collaboration Content Shoot",
             title: "Content Shoot With Real Estate Expert",
             description: "Behind-the-scenes from our first content shoot with a top real estate influencer for upcoming promotional series.",

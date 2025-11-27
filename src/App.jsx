@@ -29,6 +29,7 @@ const Mount_Castle_Farmhouse_Bungalow_Plots_In_yevat = React.lazy(() =>
 const Royal_Vista_NA_Residential_Plots_Yavat = React.lazy(() =>
   import('./Royal_Vista_Landing_Page/Royal_Vista_NA_Residential_Plots_Yavat')
 );
+
 const RoyalCasaNaResidentialPlotsYavatMalshiras = React.lazy(() =>
   import('./Royal_Casa_Landing_Page/RoyalCasaNaResidentialPlotsYavatMalshiras')
 );

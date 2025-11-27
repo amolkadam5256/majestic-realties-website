@@ -132,7 +132,7 @@ const Navbar = () => {
     setProjectsOpen(false);
     setExpertTalkOpen(false);
     setMenuOpen(false);
-    
+
     // Open external URL in new tab
     window.open(url, '_blank', 'noopener,noreferrer');
   };
@@ -495,7 +495,7 @@ const Navbar = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedinIn />
+                  <FaLinkedinIn />``
                 </a>
 
                 <a

@@ -23,10 +23,10 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    setMenuOpen(false); // Close menu on route change
-    setAboutOpen(false); // Close about dropdown on route change
-    setProjectsOpen(false); // Close projects dropdown on route change
-    setExpertTalkOpen(false); // Close expert talk dropdown on route change
+    setMenuOpen(false);
+    setAboutOpen(false);
+    setProjectsOpen(false);
+    setExpertTalkOpen(false);
   }, [location]);
 
   const navLinks = [
@@ -41,9 +41,9 @@ const Navbar = () => {
     },
     {
       label: 'Projects',
-      path: '/projects', // Direct link to projects page
+      path: '/projects',
       submenu: [
-        { label: 'All Projects', path: '/projects' }, // Link to main projects page
+        { label: 'All Projects', path: '/projects' },
         { label: 'Royal Vista', path: '/projects/royal_vista' },
         { label: 'Royal Casa', path: '/projects/royal_casa' },
         { label: 'Mount Castle', path: '/projects/mount_castle' },
@@ -64,7 +64,6 @@ const Navbar = () => {
   ];
 
   const isActivePath = (path) => {
-    // Remove hash from path for active state comparison
     const pathWithoutHash = path.split('#')[0];
     const currentPathWithoutHash = location.pathname;
     return currentPathWithoutHash === pathWithoutHash;
@@ -105,7 +104,6 @@ const Navbar = () => {
     } else {
       // If we're on another page, navigate to home page first
       navigate('/');
-      // The scroll will be handled by the home page component
     }
   };
 
@@ -127,12 +125,29 @@ const Navbar = () => {
     setMenuOpen(false);
   };
 
+  // Function to handle external links
+  const handleExternalLink = (url) => {
+    // Close all menus
+    setAboutOpen(false);
+    setProjectsOpen(false);
+    setExpertTalkOpen(false);
+    setMenuOpen(false);
+    
+    // Open external URL in new tab
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   // Function to handle Projects main link click
   const handleProjectsMainClick = (e) => {
     e.preventDefault();
     navigate('/projects');
     setProjectsOpen(false);
     setMenuOpen(false);
+  };
+
+  // Function to check if a path is external
+  const isExternalLink = (path) => {
+    return path.startsWith('http://') || path.startsWith('https://');
   };
 
   return (
@@ -272,24 +287,48 @@ const Navbar = () => {
                             expertTalkOpen) && (
                             <div className="absolute left-0 mt-0 w-48 bg-white dark:bg-black border border-[#BF9039]  shadow-lg z-50">
                               {item.submenu.map((subItem) => (
-                                <Link
-                                  key={subItem.path}
-                                  to={subItem.path}
-                                  className={`block py-2 px-4 transition duration-600
-                                  ${isActivePath(subItem.path)
-                                      ? 'text-white bg-[#BF9039]'
-                                      : 'text-black hover:bg-[#D9BD6A] dark:text-white dark:hover:bg-[#BF9039]'
-                                    }
-                                `}
-                                  onClick={(e) => {
-                                    handleSectionClick(subItem.path);
-                                    if (item.label === 'About') setAboutOpen(false);
-                                    else if (item.label === 'Projects') setProjectsOpen(false);
-                                    else if (item.label === 'Expert talk') setExpertTalkOpen(false);
-                                  }}
-                                >
-                                  {subItem.label}
-                                </Link>
+                                isExternalLink(subItem.path) ? (
+                                  // External Link
+                                  <a
+                                    key={subItem.path}
+                                    href={subItem.path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`block py-2 px-4 transition duration-600
+                                      ${isActivePath(subItem.path)
+                                        ? 'text-white bg-[#BF9039]'
+                                        : 'text-black hover:bg-[#D9BD6A] dark:text-white dark:hover:bg-[#BF9039]'
+                                      }
+                                    `}
+                                    onClick={() => {
+                                      if (item.label === 'About') setAboutOpen(false);
+                                      else if (item.label === 'Projects') setProjectsOpen(false);
+                                      else if (item.label === 'Expert talk') setExpertTalkOpen(false);
+                                    }}
+                                  >
+                                    {subItem.label}
+                                  </a>
+                                ) : (
+                                  // Internal Link
+                                  <Link
+                                    key={subItem.path}
+                                    to={subItem.path}
+                                    className={`block py-2 px-4 transition duration-600
+                                      ${isActivePath(subItem.path)
+                                        ? 'text-white bg-[#BF9039]'
+                                        : 'text-black hover:bg-[#D9BD6A] dark:text-white dark:hover:bg-[#BF9039]'
+                                      }
+                                    `}
+                                    onClick={() => {
+                                      handleSectionClick(subItem.path);
+                                      if (item.label === 'About') setAboutOpen(false);
+                                      else if (item.label === 'Projects') setProjectsOpen(false);
+                                      else if (item.label === 'Expert talk') setExpertTalkOpen(false);
+                                    }}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                )
                               ))}
                             </div>
                           )}
@@ -324,25 +363,50 @@ const Navbar = () => {
                             expertTalkOpen) && (
                             <div className="ml-4 mt-2 border-l-2 border-[#BF9039]">
                               {item.submenu.map((subItem) => (
-                                <Link
-                                  key={subItem.path}
-                                  to={subItem.path}
-                                  className={`block py-2 px-3 transition duration-300
-                                  ${isActivePath(subItem.path)
-                                      ? 'text-white bg-[#BF9039]'
-                                      : 'text-black hover:bg-[#D9BD6A] dark:text-white dark:hover:bg-[#BF9039]'
-                                    }
-                                `}
-                                  onClick={() => {
-                                    handleSectionClick(subItem.path);
-                                    if (item.label === 'About') setAboutOpen(false);
-                                    else if (item.label === 'Projects') setProjectsOpen(false);
-                                    else if (item.label === 'Expert talk') setExpertTalkOpen(false);
-                                    setMenuOpen(false);
-                                  }}
-                                >
-                                  {subItem.label}
-                                </Link>
+                                isExternalLink(subItem.path) ? (
+                                  // External Link
+                                  <a
+                                    key={subItem.path}
+                                    href={subItem.path}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={`block py-2 px-3 transition duration-300
+                                      ${isActivePath(subItem.path)
+                                        ? 'text-white bg-[#BF9039]'
+                                        : 'text-black hover:bg-[#D9BD6A] dark:text-white dark:hover:bg-[#BF9039]'
+                                      }
+                                    `}
+                                    onClick={() => {
+                                      if (item.label === 'About') setAboutOpen(false);
+                                      else if (item.label === 'Projects') setProjectsOpen(false);
+                                      else if (item.label === 'Expert talk') setExpertTalkOpen(false);
+                                      setMenuOpen(false);
+                                    }}
+                                  >
+                                    {subItem.label}
+                                  </a>
+                                ) : (
+                                  // Internal Link
+                                  <Link
+                                    key={subItem.path}
+                                    to={subItem.path}
+                                    className={`block py-2 px-3 transition duration-300
+                                      ${isActivePath(subItem.path)
+                                        ? 'text-white bg-[#BF9039]'
+                                        : 'text-black hover:bg-[#D9BD6A] dark:text-white dark:hover:bg-[#BF9039]'
+                                      }
+                                    `}
+                                    onClick={() => {
+                                      handleSectionClick(subItem.path);
+                                      if (item.label === 'About') setAboutOpen(false);
+                                      else if (item.label === 'Projects') setProjectsOpen(false);
+                                      else if (item.label === 'Expert talk') setExpertTalkOpen(false);
+                                      setMenuOpen(false);
+                                    }}
+                                  >
+                                    {subItem.label}
+                                  </Link>
+                                )
                               ))}
                             </div>
                           )}

@@ -211,7 +211,7 @@ const collaborationPosts = [
         date: "Dec 01, 2025",
         views: "98.5K",
         readTime: "4 min read",
-        image: images.milindnikam,
+        image: images.Nigam2,
         partner: "Mr. Milind Nikam",
         status: "Active"
     }
@@ -796,7 +796,7 @@ const collaborationPosts = [
                                                         </span>
                                                     </div>
                                                     <a
-                                                        href="https://www.instagram.com/puneplus_milindnikam"
+                                                        href="https://www.instagram.com/majesticrealtiespune"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         className="text-yellow-600 font-semibold text-xs hover:text-yellow-700 flex items-center gap-1"

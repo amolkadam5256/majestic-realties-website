@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import MilindNikamPage from './components/Top_Influencer/MilindNikamPage';
-import ZakkiKhanPage from './components/Top_Influencer/ZakkiKhanPage';
 
 // legalExpertspages
 import ZakkiSirLegal from './components/legalExpertspages/ZakkiSirLegal'
@@ -38,8 +36,15 @@ const RoyalCasaNaResidentialPlotsYavatMalshiras = React.lazy(() =>
 const LegalExpert = React.lazy(() => import('./components/Expert_talk/LegalExpert'));
 const FinancialExpert = React.lazy(() => import('./components/Expert_talk/FinancialExpert'));
 const ArchitecturalExpert = React.lazy(() => import('./components/Expert_talk/ArchitecturalExpert'));
+// Lazy-loaded pages
 const Career = React.lazy(() => import('./pages/Career'));
 const Influence = React.lazy(() => import('./pages/Influence'));
+const MilindNikamPage = React.lazy(() =>
+  import('./components/Top_Influencer/MilindNikamPage')
+);
+const ZakkiKhanPage = React.lazy(() =>
+  import('./components/Top_Influencer/ZakkiKhanPage')
+);
 
 
 // -------------------------------------
@@ -72,7 +77,7 @@ const AnimatedRoutes = () => {
         <Route path="/real-estate-influence/milind-nikam" element={<PageWrapper><MilindNikamPage /></PageWrapper>} />
         <Route path="/real-estate-influence/zakki-khan" element={<PageWrapper><ZakkiKhanPage /></PageWrapper>} />
 
-{/* legal-experts */}
+        {/* legal-experts */}
         <Route path="/legal-experts/zakki-khan" element={<PageWrapper><ZakkiSirLegal /></PageWrapper>} />
 
         {/* Landing Pages */}

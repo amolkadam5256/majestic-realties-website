@@ -165,17 +165,6 @@ His approach combines traditional financial wisdom with modern investment strate
             videoType: "short",
             thumbnail: `https://img.youtube.com/vi/0FVK9ZHWxDI/hqdefault.jpg`
         },
-        {
-            id: 3,
-            type: "image",
-            src: images.zakki_khan2,
-            alt: "Financial Planning Session",
-            title: "Personalized Financial Planning Services",
-            description: "One-on-one financial planning sessions tailored to individual goals and risk profiles.",
-            category: "Financial Planning",
-            date: "Nov 2025",
-            views: "22K+"
-        },
     ];
 
     // Filter videos by type
@@ -268,18 +257,7 @@ His approach combines traditional financial wisdom with modern investment strate
             views: "38.7K",
             readTime: "6 min read",
             image: images.zakki_khan2,
-            slug: "zakki-investment-strategies"
-        },
-        {
-            id: 2,
-            title: "Wealth Management in Volatile Markets",
-            excerpt: "Expert insights on managing and growing wealth during economic uncertainty",
-            category: "Wealth Management",
-            date: "Nov 20, 2025",
-            views: "29.3K",
-            readTime: "5 min read",
-            image: images.zakki_khan2,
-            slug: "wealth-management-volatility"
+            slug: "zakki-khan"
         },
     ];
 
@@ -840,7 +818,7 @@ His approach combines traditional financial wisdom with modern investment strate
                                             transition={{ delay: index * 0.1 }}
                                             className="border-b border-gray-200 pb-3 last:border-b-0 last:pb-0 group cursor-pointer"
                                         >
-                                            <Link to={`/financial-insights/${post.slug}`}>
+                                            <Link to={`/financial-expert/${post.slug}`}>
                                                 <div className="flex items-start gap-2">
                                                     <div
                                                         className="w-12 h-12 bg-cover bg-center flex-shrink-0 rounded"

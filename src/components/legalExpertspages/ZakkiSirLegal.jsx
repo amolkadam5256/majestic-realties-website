@@ -725,18 +725,18 @@ His focus is on creating transparent, legally compliant real estate transactions
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2 mb-1">
                                                     <span className={`px-2 py-0.5 text-xs font-semibold ${post.category === 'Legal Compliance'
-                                                            ? 'bg-green-100 text-green-800'
-                                                            : post.category === 'Legal Documentation'
-                                                                ? 'bg-yellow-100 text-yellow-800'
-                                                                : 'bg-purple-100 text-purple-800'
+                                                        ? 'bg-green-100 text-green-800'
+                                                        : post.category === 'Legal Documentation'
+                                                            ? 'bg-yellow-100 text-yellow-800'
+                                                            : 'bg-purple-100 text-purple-800'
                                                         }`}>
                                                         {post.category}
                                                     </span>
                                                     <span className={`px-2 py-0.5 text-xs font-semibold ${post.status === 'Completed'
-                                                            ? 'bg-green-100 text-green-800'
-                                                            : post.status === 'Active'
-                                                                ? 'bg-yellow-100 text-yellow-800'
-                                                                : 'bg-yellow-100 text-yellow-800'
+                                                        ? 'bg-green-100 text-green-800'
+                                                        : post.status === 'Active'
+                                                            ? 'bg-yellow-100 text-yellow-800'
+                                                            : 'bg-yellow-100 text-yellow-800'
                                                         }`}>
                                                         {post.status}
                                                     </span>

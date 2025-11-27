@@ -49,7 +49,7 @@ import Siddharam from './Siddharam.png';
 import AslamS from './AslamS.webp';
 import milindnikam from './milindnikam.jpg';
 import Nigam11 from './Nigam11.JPG';
-import Nigam2 from './Nigam2.jpg';
+import Nigam2 from './Nigam2.JPG';
 import Nigam3 from './Nigam3.jpeg';
 import Zakki_Sir from './Zakki_Sir.png';
 import Zakki_SirInf from './Zakki_SirInf.png';

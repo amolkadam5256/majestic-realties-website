@@ -118,35 +118,36 @@ const MilindNikamPage = () => {
 
     // YouTube Videos Gallery - Mix of Long and Short Videos
     const youtubeVideos = [
-        {
-            id: 1,
-            type: "youtube",
-            videoId: "WisSpLINvl0",
-            alt: "Milind Nikam Real Estate Advice",
-            title: "25+ Years Real Estate Experience - Complete Guide",
-            description: "Watch Mr. Milind Nikam share his 25+ years of real estate expertise and investment strategies.",
-            category: "Expert Advice",
-            date: "Nov 2025",
-            duration: "15:30",
-            views: "45K+",
-            videoType: "short",
-            thumbnail: `https://img.youtube.com/vi/Tf7ycC2GYJg/hqdefault.jpg`
-        },
-        {
-            id: 2,
-            type: "youtube",
-            videoId: "Tf7ycC2GYJg",
-            alt: "Quick Property Tips",
-            title: "Milind Nikam Promoting Project Mount Castle by Majestic Realties—A Real Estate Giant in Pune",
-            description: "Milind Nikam shares his expert insights on Majestic Realties’ project Mount Castle — a sophisticated collaboration blending authority, luxury, and unmatched real estate excellence.",
-            category: "Quick Tips",
-            date: "Dec 2024",
-            duration: "4:45",
-            views: "28K+",
-            videoType: "long",
-            thumbnail: `https://img.youtube.com/vi/abc123short/hqdefault.jpg`
-        },
-    ];
+    {
+        id: 1,
+        type: "youtube",
+        videoId: "WisSpLINvl0",
+        alt: "Milind Nikam Real Estate Advice",
+        title: "25+ Years Real Estate Experience - Complete Guide",
+        description: "Watch Mr. Milind Nikam share his 25+ years of real estate expertise and investment strategies.",
+        category: "Expert Advice",
+        date: "Nov 2025",
+        duration: "15:30",
+        views: "45K+",
+        videoType: "long",
+        thumbnail: `https://img.youtube.com/vi/WisSpLINvl0/hqdefault.jpg`
+    },
+    {
+        id: 2,
+        type: "youtube",
+        videoId: "Tf7ycC2GYJg",
+        alt: "Quick Property Tips",
+        title: "Milind Nikam Promoting Project Mount Castle by Majestic Realties—A Real Estate Giant in Pune",
+        description: "Milind Nikam shares his expert insights on Majestic Realties’ project Mount Castle — a sophisticated collaboration blending authority, luxury, and unmatched real estate excellence.",
+        category: "Quick Tips",
+        date: "Dec 2024",
+        duration: "4:45",
+        views: "28K+",
+        videoType: "short",
+        thumbnail: `https://img.youtube.com/vi/Tf7ycC2GYJg/hqdefault.jpg`
+    },
+];
+
 
     // Filter videos by type
     const longVideos = youtubeVideos.filter(video => video.videoType === "long");

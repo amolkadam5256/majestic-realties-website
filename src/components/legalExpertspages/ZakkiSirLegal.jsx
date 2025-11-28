@@ -179,7 +179,7 @@ His focus is on creating transparent, legally compliant real estate transactions
         {
             id: 2,
             title: "Property Documentation Standardization",
-            excerpt: "Creating standardized legal documentation processes to streamline property transactions and reduce legal risks",
+            excerpt: "Creating standardized legal documentation processes to streamline property transactinpmons and reduce legal risks",
             category: "Legal Documentation",
             date: "Nov 28, 2024",
             views: "18.3K",

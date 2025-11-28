@@ -852,7 +852,7 @@ His approach combines traditional financial wisdom with modern investment strate
                             {/* Newsletter Signup with Web3Forms */}
                             <div className="bg-gradient-to-r from-yellow-400 to-yellow-500 p-4 text-white">
                                 <h3 className="text-lg font-bold mb-2">Financial Updates</h3>
-                                <p className="text-yellow-100 text-xs mb-3">
+                                <p className="text-yellow-100 t ext-xs mb-3">
                                     Get expert financial insights and investment opportunities directly in your inbox.
                                 </p>
 

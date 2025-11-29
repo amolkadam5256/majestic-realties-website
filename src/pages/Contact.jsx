@@ -31,7 +31,7 @@ const Contact = () => {
       META KEYWORDS (Based on Your Data)
   ================================== */}
         <meta
-          name="keywordssss"
+          name="keywords"
           content="
       Talk to real estate agents Pune,
       Real estate agent Pune,

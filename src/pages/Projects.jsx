@@ -11,39 +11,76 @@ const Projects = () => {
 
 
       <Helmet>
-        {/* Page Title */}
-        <title>Our Projects | Majestic Realties Pune</title>
+        {/* ============================================
+      PAGE TITLE (Highly SEO-Optimized)
+  ============================================ */}
+        <title>
+          Top Investment Plots Near Pune | Gated Community Projects        </title>
 
-        {/* Meta Description */}
+        {/* ============================================
+      META DESCRIPTION (Using High-Volume Keywords)
+  ============================================ */}
         <meta
           name="description"
-          content="Explore the premium real estate projects by Majestic Realties Pune. Discover luxury homes, residential townships, and investment opportunities across Pune and Maharashtra."
+          content="
+      Explore top NA plots, gated community projects, luxury farmhouse plots, and RERA-approved land developments near Pune & Lonavala. 
+      Majestic Realties offers premium investment plots, bungalow plots, and weekend farmhouse lands with high appreciation potential.
+    "
         />
 
-        {/* Meta Keywords */}
+        {/* ============================================
+      META KEYWORDS (All HIGH-VOLUME Keywords Added)
+  ============================================ */}
         <meta
           name="keywords"
-          content="Majestic Realties projects, Pune real estate, luxury homes, residential townships, property investment Pune, real estate projects"
+          content="
+      Investment plots near Pune,
+      NA plots Pune,
+      RERA approved plots Pune,
+      Gated community projects Pune,
+      Luxury farmhouse plots near Pune,
+      Weekend farmhouse plots Pune,
+      Bungalow plots Pune,
+      Land developers Pune,
+      Commercial real estate,
+      Flats for sale,
+      Plots near Lonavala,
+      Book your plot Pune
+    "
         />
 
-        {/* Open Graph / Facebook */}
-        <meta property="og:title" content="Our Projects | Majestic Realties Pune" />
+        {/* ============================================
+      CANONICAL URL
+  ============================================ */}
+        <link rel="canonical" href={window.location.href} />
+
+        {/* ============================================
+      OPEN GRAPH (FACEBOOK / SOCIAL)
+  ============================================ */}
+        <meta property="og:title" content="Top Investment NA Plots & Gated Community Projects Near Pune | RERA Approved" />
         <meta
           property="og:description"
-          content="Explore the premium real estate projects by Majestic Realties Pune. Discover luxury homes, residential townships, and investment opportunities across Pune and Maharashtra."
+          content="
+      Premium NA plots, luxury farmhouse lands, and RERA-approved projects near Pune by Majestic Realties. 
+      High-return investment plots with gated community infrastructure.
+    "
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={window.location.href} />
         <meta property="og:image" content="URL_TO_PROJECT_FEATURE_IMAGE" />
 
-        {/* Twitter Card */}
+        {/* ============================================
+      TWITTER CARD
+  ============================================ */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Our Projects | Majestic Realties Pune" />
+        <meta name="twitter:title" content="Top Investment NA Plots & Gated Community Projects Near Pune | Majestic Realties" />
         <meta
           name="twitter:description"
-          content="Explore the premium real estate projects by Majestic Realties Pune. Discover luxury homes, residential townships, and investment opportunities across Pune and Maharashtra."
+          content="
+      Explore NA plots, gated communities & luxury farmhouse plots near Pune. 
+      Premium land investment opportunities by Majestic Realties.
+    "
         />
-        <meta name="twitter:image" content="URL_TO_PROJECT_FEATURE_IMAGE" />
       </Helmet>
 
 

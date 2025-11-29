@@ -4,10 +4,6 @@ import { AnimatePresence } from 'framer-motion';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-// legalExpertspages
-import ZakkiSirLegal from './components/legalExpertspages/ZakkiSirLegal'
-import CanonicalLink from './CanonicalLink';
-
 // Lazy loading heavy pages
 const Navbar = React.lazy(() => import('./components/Navbar'));
 const Footer = React.lazy(() => import('./components/Footer'));
@@ -52,6 +48,15 @@ const ZakkiKhanPage = React.lazy(() =>
 const ZakkiFinancialExpe = React.lazy(() =>
   import('./components/FinancialExpertPages/ZakkiFinancialExpe')
 );
+// legalExpertspages
+const ZakkiSirLegal = React.lazy(() =>
+  import('./components/legalExpertspages/ZakkiSirLegal')
+);
+// legalExpertspages
+const CanonicalLink = React.lazy(() =>
+  import('./CanonicalLink')
+);
+
 
 
 // -------------------------------------

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import images from '../assets/images/images';
+import { Helmet } from "react-helmet";
 
 // Icons
 import {
@@ -202,6 +203,44 @@ const Influence = () => {
 
     return (
         <div className="bg-gray-50 pt-20">
+
+
+            <Helmet>
+                {/* Page Title */}
+                <title>Influencer Collaborations | Majestic Realties Pune</title>
+
+                {/* Meta Description */}
+                <meta
+                    name="description"
+                    content="Discover top real estate influencers and collaboration partners at Majestic Realties Pune. Stay updated with expert insights, property tips, and trusted advice."
+                />
+
+                {/* Meta Keywords */}
+                <meta
+                    name="keywords"
+                    content="real estate influencers, Pune property experts, collaboration partners, property insights, Majestic Realties"
+                />
+
+                {/* Open Graph / Facebook */}
+                <meta property="og:title" content="Influencer Collaborations | Majestic Realties Pune" />
+                <meta
+                    property="og:description"
+                    content="Discover top real estate influencers and collaboration partners at Majestic Realties Pune. Stay updated with expert insights, property tips, and trusted advice."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content={window.location.href} />
+                <meta property="og:image" content="URL_TO_YOUR_FEATURE_IMAGE" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Influencer Collaborations | Majestic Realties Pune" />
+                <meta
+                    name="twitter:description"
+                    content="Discover top real estate influencers and collaboration partners at Majestic Realties Pune. Stay updated with expert insights, property tips, and trusted advice."
+                />
+                <meta name="twitter:image" content="URL_TO_YOUR_FEATURE_IMAGE" />
+            </Helmet>
+
             {/* Main Content with Sidebar */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                 <div className="flex flex-col lg:flex-row gap-8">

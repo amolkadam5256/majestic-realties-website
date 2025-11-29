@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Helmet } from 'react-helmet';
 
 const Career = ({ selectedJob, onClose }) => {
     const [formData, setFormData] = useState({
@@ -134,6 +135,46 @@ const Career = ({ selectedJob, onClose }) => {
 
     return (
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-25">
+
+
+            <Helmet>
+                <title>Career Application | Majestic Realties</title>
+
+                <meta
+                    name="description"
+                    content="Apply for real estate and digital marketing jobs at Majestic Realties. Submit your application online for sales, marketing, and business development roles."
+                />
+
+                <meta
+                    name="keywords"
+                    content="Majestic Realties careers, real estate jobs Pune, real estate sales jobs, digital marketing jobs Pune, apply online Majestic Realties"
+                />
+
+                <meta property="og:title" content="Career at Majestic Realties" />
+                <meta
+                    property="og:description"
+                    content="Join Majestic Realties. Explore openings in real estate sales, digital marketing, business development, and more."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://majesticrealties.com/career" />
+                <meta
+                    property="og:image"
+                    content="https://majesticrealties.com/assets/career-banner.jpg"
+                />
+
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Apply Online | Majestic Realties Careers" />
+                <meta
+                    name="twitter:description"
+                    content="Submit your job application for Real Estate & Digital Marketing roles at Majestic Realties."
+                />
+                <meta
+                    name="twitter:image"
+                    content="https://majesticrealties.com/assets/career-banner.jpg"
+                />
+            </Helmet>
+
+
             {/* Success Toast */}
             <AnimatePresence>
                 {showToast && (

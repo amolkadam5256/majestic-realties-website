@@ -1,0 +1,41 @@
+User-agent: *
+Allow: /
+
+# BLOCK internal system files
+Disallow: /private/
+Disallow: /admin/
+Disallow: /server/
+
+# YOUR IMPORTANT PAGES
+Sitemap: https://majesticrealties.com/sitemap.xml
+
+# Main Pages
+Allow: /projects
+Allow: /about
+Allow: /contact
+Allow: /our-team
+Allow: /privacy-policy
+Allow: /career
+Allow: /real-estate-influence
+
+# Project Pages
+Allow: /projects/royal_vista
+Allow: /projects/royal_casa
+Allow: /projects/mount_castle
+
+# Landing Pages
+Allow: /mount-castle-farmhouse-bungalow-plots-yevat
+Allow: /royal-vista-na-residential-plots-yevat
+Allow: /royal-casa-na-residential-plots-yavat
+
+# Experts
+Allow: /legal-experts/zakki-khan
+Allow: /financial-expert/zakki-khan
+Allow: /legal-expert
+Allow: /financial-expert
+Allow: /architectural-expert
+
+# Influencers
+Allow: /real-estate-influence/milind-nikam
+Allow: /real-estate-influence/zakki-khan
+

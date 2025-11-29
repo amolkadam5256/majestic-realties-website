@@ -1,13 +1,10 @@
 import React from 'react';
 import Team from '../components/AboutComp/Team';
 import { Helmet } from "react-helmet";
-import TeamCardCompact from '../components/AboutComp/TeamCardCompact'
 
 const OurTeam = () => {
     return (
         <div className="w-full pt-16 ">
-
-
             <Helmet>
                 {/* Page Title */}
                 <title>Meet Our Team | Majestic Realties Pune</title>

@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 
 // legalExpertspages
 import ZakkiSirLegal from './components/legalExpertspages/ZakkiSirLegal'
+import CanonicalLink from './CanonicalLink';
 
 // Lazy loading heavy pages
 const Navbar = React.lazy(() => import('./components/Navbar'));
@@ -163,7 +164,7 @@ const App = () => {
         {!loading && (
           <div className="min-h-screen text-black overflow-x-hidden">
             <InfoModal isOpen={showModal} onClose={() => setShowModal(false)} />
-
+            <CanonicalLink />
             <Layout>
               <AnimatedRoutes />
             </Layout>

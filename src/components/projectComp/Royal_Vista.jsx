@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import images from "../../assets/images/images"; // assuming it's an object with image paths
 import SubCards from "../HomeComp/SubCards";
+import { Helmet } from "react-helmet";
 import {
   FaPlaneDeparture,
   FaChartLine,
@@ -47,6 +48,79 @@ const Royal_Vista = () => {
 
 
     <>
+
+
+      <Helmet>
+        {/* Page Title */}
+        <title>Royal Vista – Premium Residential Project Near Pune | Majestic Realties</title>
+
+        {/* Meta Description */}
+        <meta
+          name="description"
+          content="Discover Royal Vista by Majestic Realties — a premium residential project near Pune offering modern plots, easy connectivity, and investment-ready properties. Explore layout, amenities, and secure your dream land today."
+        />
+
+        {/* Keywords */}
+        <meta
+          name="keywords"
+          content="Royal Vista Pune project, Plots in Royal Vista near Pune, Residential projects near Pune, Majestic Realties plots, NA plots Pune"
+        />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://www.majesticrealties.com/projects/royal-vista" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content="Royal Vista – Premium Residential Project Near Pune | Majestic Realties" />
+        <meta
+          property="og:description"
+          content="Discover Royal Vista — a premium residential project near Pune offering modern plots, connectivity, and investment-ready property options."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.majesticrealties.com/projects/royal-vista" />
+        <meta property="og:site_name" content="Majestic Realties" />
+        <meta
+          property="og:image"
+          content="https://www.majesticrealties.com/assets/royal-vista-banner.jpg"
+        />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Royal Vista – Premium Residential Project Near Pune | Majestic Realties"
+        />
+        <meta
+          name="twitter:description"
+          content="Premium residential project near Pune with NA plots, scenic location, and future-ready development by Majestic Realties."
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {`
+      {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "name": "Royal Vista – Premium Residential Project Near Pune",
+        "url": "https://www.majesticrealties.com/projects/royal-vista",
+        "description": "Discover Royal Vista — a premium residential project near Pune offering modern plots, excellent connectivity, and investment-ready opportunities.",
+        "image": "https://www.majesticrealties.com/assets/royal-vista-banner.jpg",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Yavat Pondhe",
+          "addressRegion": "Pune",
+          "addressCountry": "India"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Majestic Realties",
+          "url": "https://www.majesticrealties.com",
+          "logo": "https://www.majesticrealties.com/assets/logo.png"
+        }
+      }
+    `}
+        </script>
+      </Helmet>
+
 
 
       {/* Project Heading */}

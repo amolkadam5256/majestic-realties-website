@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import images from '../../assets/images/images';
-
+import { Helmet } from 'react-helmet';
 // Icons
 import {
   TrendingUp,
@@ -181,271 +181,354 @@ const FinancialExpert = () => {
   };
 
   return (
-    <div className="bg-gray-50 pt-20">
-      {/* Main Content with Sidebar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Left Column - Main Content */}
-          <div className="lg:w-2/3  overflow-y-auto pr-4">
-            {/* Collaboration Partners Section */}
-            <section className="mb-16">
-              <div className="flex justify-between items-center mb-8">
-                <div>
-                  <h2 className="text-3xl font-bold text-gray-900 mb-2">
-                    Our Collaboration Partners
-                  </h2>
-                  <p className="text-gray-600 text-sm">
-                    Showing posts with the label <span className="text-yellow-600 font-semibold">Influencer</span>
-                  </p>
-                </div>
-                <div className="flex items-center gap-2 text-yellow-600 font-semibold cursor-pointer hover:text-yellow-700 text-sm">
-                  <span>Show All</span>
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
 
-              <div className="space-y-6">
-                {collaborationPartners.slice(0, visiblePartners).map((partner, index) => (
-                  <motion.div
-                    key={partner.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ y: -2 }}
-                    className="bg-white shadow-md border border-gray-200 overflow-hidden group cursor-pointer"
-                  >
-                    <div className="flex flex-col md:flex-row">
-                      {/* Image Section */}
-                      <div className="md:w-1/3">
-                        <div
-                          className="h-48 md:h-full bg-cover bg-center relative overflow-hidden"
-                          style={{ backgroundImage: `url(${partner.image})` }}
-                        >
-                          <div className="absolute inset-0 bg-black/20"></div>
-                          <div className="absolute bottom-4 left-4 right-4 text-white">
-                            <span className="inline-block bg-white/20 backdrop-blur-sm px-2 py-1 text-xs font-medium mb-1">
-                              {partner.category}
-                            </span>
-                            <h3 className="text-lg font-bold mb-1">
-                              {partner.name}
-                            </h3>
-                            <p className="text-yellow-100 text-xs">
-                              {partner.subtitle}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
+    <>
+      <Helmet>
+        {/* Page Title */}
+        <title>Financial & Real Estate Expert in Pune | Property Guidance & Investments | Majestic Realties</title>
 
-                      {/* Content Section */}
-                      <div className="md:w-2/3 p-4">
-                        <div className="flex flex-col h-full">
-                          <div className="flex-1">
-                            <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors leading-tight">
-                              {partner.title}
-                            </h4>
+        {/* Meta Description */}
+        <meta
+          name="description"
+          content="Connect with certified financial and real estate experts like Zakki Khan and Milind Nikam for trusted property guidance, investment strategies, and land buying support in Pune and Maharashtra."
+        />
 
-                            <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
-                              <span className="font-medium">{partner.category}</span>
-                              <span>By {partner.author}</span>
-                              <span>•</span>
-                              <span>{partner.date}</span>
-                            </div>
+        {/* Meta Keywords */}
+        <meta
+          name="keywords"
+          content="Real estate expert Pune, Property investment advisor Pune, Majestic Realties financial services"
+        />
 
-                            <p className="text-gray-700 mb-4 leading-relaxed text-sm">
-                              {partner.excerpt}
-                            </p>
-                          </div>
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://www.majesticrealties.com/expert-talk/financial-experts" />
 
-                          <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                            <div className="flex items-center gap-4">
-                              <div className="flex items-center gap-3 text-xs text-gray-500">
-                                <span className="flex items-center gap-1">
-                                  <Eye className="w-3 h-3" />
-                                  {partner.views}
-                                </span>
-                                <span>{partner.readTime}</span>
-                              </div>
-                              <div className="flex items-center gap-1">
-                                {partner.social && Object.entries(partner.social).map(([platform, url]) => (
-                                  <SocialIcon key={platform} platform={platform} url={url} />
-                                ))}
-                              </div>
-                            </div>
-                            <Link to={`/financial-expert/${partner.slug}`} className="block">
-                              <div className="flex items-center gap-1 text-yellow-600 font-semibold text-sm group-hover:gap-2 transition-all">
-                                <span>Read More</span>
-                                <ArrowRight className="w-3 h-3" />
-                              </div>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+        {/* Open Graph / Facebook */}
+        <meta property="og:title" content="Financial & Real Estate Expert in Pune | Property Guidance & Investments | Majestic Realties" />
+        <meta
+          property="og:description"
+          content="Connect with certified financial and real estate experts like Zakki Khan and Milind Nikam for trusted property guidance, investment strategies, and land buying support in Pune and Maharashtra."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.majesticrealties.com/expert-talk/financial-experts" />
+        <meta property="og:site_name" content="Majestic Realties" />
+        <meta property="og:image" content="URL_TO_RELEVANT_IMAGE" />
 
-              {/* Load More Button */}
-              {visiblePartners < collaborationPartners.length && (
-                <div className="text-center mt-8">
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={loadMorePartners}
-                    className="bg-yellow-600 text-white px-6 py-2 font-semibold hover:bg-yellow-700 transition-colors inline-flex items-center gap-2 text-sm"
-                  >
-                    Load More
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Financial & Real Estate Expert in Pune | Property Guidance & Investments | Majestic Realties" />
+        <meta
+          name="twitter:description"
+          content="Connect with certified financial and real estate experts like Zakki Khan and Milind Nikam for trusted property guidance, investment strategies, and land buying support in Pune and Maharashtra."
+        />
+        <meta name="twitter:image" content="URL_TO_RELEVANT_IMAGE" />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">
+          {`
+        {
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "Majestic Realties Financial Experts",
+          "url": "https://www.majesticrealties.com/expert-talk/financial-experts",
+          "description": "Connect with certified financial and real estate experts like Zakki Khan and Milind Nikam for trusted property guidance, investment strategies, and land buying support in Pune and Maharashtra.",
+          "logo": "https://www.majesticrealties.com/assets/logo.png",
+          "image": "URL_TO_RELEVANT_IMAGE",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3rd Floor, Bandal Spaces, Paud Rd, Kothrud",
+            "addressLocality": "Pune",
+            "addressRegion": "Maharashtra",
+            "postalCode": "411038",
+            "addressCountry": "India"
+          },
+          "telephone": "+91 78430 77794",
+          "email": "zakki@majesticrealties.com",
+          "sameAs": [
+            "https://www.facebook.com/majesticrealties",
+            "https://www.instagram.com/majesticrealtiespune",
+            "https://x.com/majesticrealti",
+            "https://www.linkedin.com/company/majesticrealties/",
+            "https://www.youtube.com/channel/UCfIYfQweloVUxZikAFsQjXA"
+          ],
+          "areaServed": "Pune, Maharashtra, India",
+          "serviceType": [
+            "Financial Consultation",
+            "Real Estate Investment Guidance",
+            "Property Documentation",
+            "Land Purchase Advisory"
+          ]
+        }
+        `}
+        </script>
+      </Helmet>
+
+
+      <div className="bg-gray-50 pt-20">
+        {/* Main Content with Sidebar */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="flex flex-col lg:flex-row gap-8">
+            {/* Left Column - Main Content */}
+            <div className="lg:w-2/3  overflow-y-auto pr-4">
+              {/* Collaboration Partners Section */}
+              <section className="mb-16">
+                <div className="flex justify-between items-center mb-8">
+                  <div>
+                    <h2 className="text-3xl font-bold text-gray-900 mb-2">
+                      Our Collaboration Partners
+                    </h2>
+                    <p className="text-gray-600 text-sm">
+                      Showing posts with the label <span className="text-yellow-600 font-semibold">Influencer</span>
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2 text-yellow-600 font-semibold cursor-pointer hover:text-yellow-700 text-sm">
+                    <span>Show All</span>
                     <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  </div>
                 </div>
-              )}
-            </section>
-          </div>
 
-          {/* Right Column - Sticky Sidebar */}
-          <div className="lg:w-1/3">
-            <div className="sticky top-8">
-              {/* Social Media Section */}
-              <div className="bg-white shadow-md border border-gray-200 p-4 mb-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Connect With Us</h3>
-                <p className="text-gray-600 text-sm mb-3">
-                  Follow Majestic Realties on social media for the latest updates and property insights.
-                </p>
-                <div className="grid grid-cols-3 gap-2">
-                  {socialMediaLinks.map((social, index) => (
-                    <motion.a
-                      key={social.platform}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ scale: 1.05 }}
-                      className={`flex flex-col items-center justify-center p-2 bg-gray-50 border border-gray-200 text-gray-700 transition-all duration-300 text-xs ${social.color}`}
-                      aria-label={social.label}
-                    >
-                      {social.icon}
-                      <span className="mt-1 font-medium">{social.platform}</span>
-                    </motion.a>
-                  ))}
-                </div>
-              </div>
-
-              {/* Popular Voices Section */}
-              <div className="bg-white shadow-md border border-gray-200 p-4 mb-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-3">Popular Voices</h3>
-                <div className="space-y-3">
-                  {popularPosts.map((post, index) => (
+                <div className="space-y-6">
+                  {collaborationPartners.slice(0, visiblePartners).map((partner, index) => (
                     <motion.div
-                      key={post.id}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
+                      key={partner.id}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0 group cursor-pointer"
+                      whileHover={{ y: -2 }}
+                      className="bg-white shadow-md border border-gray-200 overflow-hidden group cursor-pointer"
                     >
-                      <div className="flex items-start gap-2">
-                        <div
-                          className="w-12 h-12 bg-cover bg-center flex-shrink-0"
-                          style={{ backgroundImage: `url(${post.image})` }}
-                        ></div>
-                        <div className="flex-1">
-                          <h4 className="font-semibold text-gray-900 group-hover:text-yellow-600 transition-colors leading-tight mb-1 text-sm">
-                            {post.title}
-                          </h4>
-                          <p className="text-gray-600 text-xs mb-1">
-                            {post.excerpt}
-                          </p>
-                          <div className="flex items-center gap-2 text-xs text-gray-500">
-                            <span className="text-xs">{post.category}</span>
-                            <span>•</span>
-                            <span className="text-xs">{post.date}</span>
-                            <span>•</span>
-                            <span className="flex items-center gap-1 text-xs">
-                              <Eye className="w-3 h-3" />
-                              {post.views}
-                            </span>
+                      <div className="flex flex-col md:flex-row">
+                        {/* Image Section */}
+                        <div className="md:w-1/3">
+                          <div
+                            className="h-48 md:h-full bg-cover bg-center relative overflow-hidden"
+                            style={{ backgroundImage: `url(${partner.image})` }}
+                          >
+                            <div className="absolute inset-0 bg-black/20"></div>
+                            <div className="absolute bottom-4 left-4 right-4 text-white">
+                              <span className="inline-block bg-white/20 backdrop-blur-sm px-2 py-1 text-xs font-medium mb-1">
+                                {partner.category}
+                              </span>
+                              <h3 className="text-lg font-bold mb-1">
+                                {partner.name}
+                              </h3>
+                              <p className="text-yellow-100 text-xs">
+                                {partner.subtitle}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Content Section */}
+                        <div className="md:w-2/3 p-4">
+                          <div className="flex flex-col h-full">
+                            <div className="flex-1">
+                              <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors leading-tight">
+                                {partner.title}
+                              </h4>
+
+                              <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+                                <span className="font-medium">{partner.category}</span>
+                                <span>By {partner.author}</span>
+                                <span>•</span>
+                                <span>{partner.date}</span>
+                              </div>
+
+                              <p className="text-gray-700 mb-4 leading-relaxed text-sm">
+                                {partner.excerpt}
+                              </p>
+                            </div>
+
+                            <div className="flex items-center justify-between pt-3 border-t border-gray-100">
+                              <div className="flex items-center gap-4">
+                                <div className="flex items-center gap-3 text-xs text-gray-500">
+                                  <span className="flex items-center gap-1">
+                                    <Eye className="w-3 h-3" />
+                                    {partner.views}
+                                  </span>
+                                  <span>{partner.readTime}</span>
+                                </div>
+                                <div className="flex items-center gap-1">
+                                  {partner.social && Object.entries(partner.social).map(([platform, url]) => (
+                                    <SocialIcon key={platform} platform={platform} url={url} />
+                                  ))}
+                                </div>
+                              </div>
+                              <Link to={`/financial-expert/${partner.slug}`} className="block">
+                                <div className="flex items-center gap-1 text-yellow-600 font-semibold text-sm group-hover:gap-2 transition-all">
+                                  <span>Read More</span>
+                                  <ArrowRight className="w-3 h-3" />
+                                </div>
+                              </Link>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </motion.div>
                   ))}
                 </div>
-              </div>
 
-              {/* Newsletter Signup */}
-              <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-4 text-white">
-                <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
-                <p className="text-yellow-100 text-sm mb-3">
-                  Get the latest influencer collaborations and property insights delivered to your inbox.
-                </p>
-                <div className="space-y-2">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-3 py-2 bg-white text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
-                  />
-                  <button className="w-full bg-gray-900 text-white py-2 font-semibold hover:bg-gray-800 transition-colors text-sm">
-                    Subscribe Now
-                  </button>
+                {/* Load More Button */}
+                {visiblePartners < collaborationPartners.length && (
+                  <div className="text-center mt-8">
+                    <motion.button
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={loadMorePartners}
+                      className="bg-yellow-600 text-white px-6 py-2 font-semibold hover:bg-yellow-700 transition-colors inline-flex items-center gap-2 text-sm"
+                    >
+                      Load More
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
+                  </div>
+                )}
+              </section>
+            </div>
+
+            {/* Right Column - Sticky Sidebar */}
+            <div className="lg:w-1/3">
+              <div className="sticky top-8">
+                {/* Social Media Section */}
+                <div className="bg-white shadow-md border border-gray-200 p-4 mb-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Connect With Us</h3>
+                  <p className="text-gray-600 text-sm mb-3">
+                    Follow Majestic Realties on social media for the latest updates and property insights.
+                  </p>
+                  <div className="grid grid-cols-3 gap-2">
+                    {socialMediaLinks.map((social, index) => (
+                      <motion.a
+                        key={social.platform}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ scale: 1.05 }}
+                        className={`flex flex-col items-center justify-center p-2 bg-gray-50 border border-gray-200 text-gray-700 transition-all duration-300 text-xs ${social.color}`}
+                        aria-label={social.label}
+                      >
+                        {social.icon}
+                        <span className="mt-1 font-medium">{social.platform}</span>
+                      </motion.a>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Footer Note */}
-              <div className="text-center text-gray-500 text-xs mt-4 p-2">
-                <p>The views expressed in the articles and interviews are of the writer and the interviewee and not of Majestic Realties.</p>
+                {/* Popular Voices Section */}
+                <div className="bg-white shadow-md border border-gray-200 p-4 mb-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">Popular Voices</h3>
+                  <div className="space-y-3">
+                    {popularPosts.map((post, index) => (
+                      <motion.div
+                        key={post.id}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                        className="border-b border-gray-100 pb-3 last:border-b-0 last:pb-0 group cursor-pointer"
+                      >
+                        <div className="flex items-start gap-2">
+                          <div
+                            className="w-12 h-12 bg-cover bg-center flex-shrink-0"
+                            style={{ backgroundImage: `url(${post.image})` }}
+                          ></div>
+                          <div className="flex-1">
+                            <h4 className="font-semibold text-gray-900 group-hover:text-yellow-600 transition-colors leading-tight mb-1 text-sm">
+                              {post.title}
+                            </h4>
+                            <p className="text-gray-600 text-xs mb-1">
+                              {post.excerpt}
+                            </p>
+                            <div className="flex items-center gap-2 text-xs text-gray-500">
+                              <span className="text-xs">{post.category}</span>
+                              <span>•</span>
+                              <span className="text-xs">{post.date}</span>
+                              <span>•</span>
+                              <span className="flex items-center gap-1 text-xs">
+                                <Eye className="w-3 h-3" />
+                                {post.views}
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Newsletter Signup */}
+                <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 p-4 text-white">
+                  <h3 className="text-lg font-bold mb-2">Stay Updated</h3>
+                  <p className="text-yellow-100 text-sm mb-3">
+                    Get the latest influencer collaborations and property insights delivered to your inbox.
+                  </p>
+                  <div className="space-y-2">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      className="w-full px-3 py-2 bg-white text-gray-900 placeholder-gray-500 text-sm focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                    />
+                    <button className="w-full bg-gray-900 text-white py-2 font-semibold hover:bg-gray-800 transition-colors text-sm">
+                      Subscribe Now
+                    </button>
+                  </div>
+                </div>
+
+                {/* Footer Note */}
+                <div className="text-center text-gray-500 text-xs mt-4 p-2">
+                  <p>The views expressed in the articles and interviews are of the writer and the interviewee and not of Majestic Realties.</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+                Ready to Collaborate with <span className="text-yellow-400">Majestic Realties</span>?
+              </h2>
+              <p className="text-lg text-yellow-100 mb-6">
+                Join our network of trusted influencers and reach millions of potential property buyers.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-yellow-500 text-gray-900 px-6 py-3 font-bold text-base hover:bg-yellow-400 transition-colors inline-flex items-center gap-2"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Become a Partner
+                  </motion.button>
+                </Link>
+
+                <Link to="/contact">
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="bg-transparent text-white px-6 py-3 font-bold text-base border-2 border-white hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center gap-2"
+                  >
+                    <Calendar className="w-4 h-4" />
+                    Schedule Meeting
+                  </motion.button>
+                </Link>
+              </div>
+
+              <div className="mt-6 grid grid-cols-3 gap-3 text-xs text-yellow-200">
+                <div>✓ 50+ Influencer Partners</div>
+                <div>✓ 10M+ Combined Reach</div>
+                <div>✓ 85% Engagement Rate</div>
+              </div>
+            </motion.div>
+          </div>
+        </section>
       </div>
-
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-yellow-900 to-yellow-700 text-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Collaborate with <span className="text-yellow-400">Majestic Realties</span>?
-            </h2>
-            <p className="text-lg text-yellow-100 mb-6">
-              Join our network of trusted influencers and reach millions of potential property buyers.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-              <Link to="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-yellow-500 text-gray-900 px-6 py-3 font-bold text-base hover:bg-yellow-400 transition-colors inline-flex items-center gap-2"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Become a Partner
-                </motion.button>
-              </Link>
-
-              <Link to="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-transparent text-white px-6 py-3 font-bold text-base border-2 border-white hover:bg-white hover:text-gray-900 transition-colors inline-flex items-center gap-2"
-                >
-                  <Calendar className="w-4 h-4" />
-                  Schedule Meeting
-                </motion.button>
-              </Link>
-            </div>
-
-            <div className="mt-6 grid grid-cols-3 gap-3 text-xs text-yellow-200">
-              <div>✓ 50+ Influencer Partners</div>
-              <div>✓ 10M+ Combined Reach</div>
-              <div>✓ 85% Engagement Rate</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+    </>
   );
 };
 

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import images from "../../assets/images/images"; // assuming it's an object with image paths
 import SubCards from "../HomeComp/SubCards";
 import MountCastleShowcase from "./MountCastleShowcase";
+import { Helmet } from "react-helmet";
 
 const mountCastleImages = [
   images.Mount_Castle1,
@@ -34,6 +35,105 @@ const Mount_Castle = () => {
 
 
     <>
+      <Helmet>
+        {/* Title */}
+        <title>Mount Castle – Premium Residential Project Near Pune | Majestic Realties</title>
+
+        {/* Description */}
+        <meta
+          name="description"
+          content="Discover Mount Castle by Majestic Realties — a premium residential project near Pune offering NA-approved farmhouse & bungalow plots on a scenic hilltop tableland. Enjoy modern infrastructure, panoramic views, clean surroundings, and excellent connectivity to Pirangut, Kothrud, and Chandani Chowk."
+        />
+
+        {/* Keywords */}
+        <meta
+          name="keywords"
+          content="Mount Castle Pune, Majestic Realties Mount Castle, Mount Castle project details, farmhouse plots near Pune, bungalow plots Pirangut, NA plots Ambedwet"
+        />
+
+        {/* Canonical */}
+        <link rel="canonical" href="https://www.majesticrealties.com/projects/mount-castle" />
+
+        {/* OG Meta Tags */}
+        <meta
+          property="og:title"
+          content="Mount Castle – Premium Farmhouse & Bungalow Plots Near Pune | Majestic Realties"
+        />
+        <meta
+          property="og:description"
+          content="Premium NA-approved farmhouse & bungalow plots in Ambedwet, Pirangut. Scenic hilltop views, greenery, internal roads, water & electricity, children’s play area, club house, and peaceful surroundings."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.majesticrealties.com/projects/mount-castle" />
+        <meta
+          property="og:site_name"
+          content="Majestic Realties"
+        />
+        <meta
+          property="og:image"
+          content="https://www.majesticrealties.com/assets/mount-castle-banner.jpg"
+        />
+
+        {/* Twitter Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Mount Castle – Premium Residential Project Near Pune | Majestic Realties"
+        />
+        <meta
+          name="twitter:description"
+          content="Explore Mount Castle — NA-approved farmhouse and bungalow plots in Ambedwet, Pirangut with stunning views and modern infrastructure."
+        />
+
+        {/* JSON-LD Schema */}
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "Residence",
+      "name": "Mount Castle (Farmhouse & Bungalow Plots)",
+      "url": "https://www.majesticrealties.com/projects/mount-castle",
+      "description": "Premium NA-approved farmhouse & bungalow plots in Ambedwet, Pirangut by Majestic Realties. Scenic hilltop tableland with amenities like a club house, children's play area, internal roads, drainage system, water connection, electricity supply, and street lighting.",
+      "image": "https://www.majesticrealties.com/assets/mount-castle-banner.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Ambedwet, Pirangut",
+        "addressLocality": "Pune",
+        "addressRegion": "Maharashtra",
+        "addressCountry": "India"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "18.5195",
+        "longitude": "73.6980"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Grand Entrance Gate" },
+        { "@type": "LocationFeatureSpecification", "name": "Children’s Play Area" },
+        { "@type": "LocationFeatureSpecification", "name": "Club House" },
+        { "@type": "LocationFeatureSpecification", "name": "Panoramic Nature Views" },
+        { "@type": "LocationFeatureSpecification", "name": "Street Lighting" },
+        { "@type": "LocationFeatureSpecification", "name": "Water Connection" },
+        { "@type": "LocationFeatureSpecification", "name": "Electricity Supply" },
+        { "@type": "LocationFeatureSpecification", "name": "Drainage System" },
+        { "@type": "LocationFeatureSpecification", "name": "Internal Roads" }
+      ],
+      "provider": {
+        "@type": "Organization",
+        "name": "Majestic Realties",
+        "url": "https://www.majesticrealties.com",
+        "logo": "https://www.majesticrealties.com/assets/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 78430 77794",
+          "email": "zakki@majesticrealties.com",
+          "contactType": "customer service"
+        }
+      }
+    }
+  `}
+        </script>
+      </Helmet>
 
 
       {/* Project Heading */}
@@ -102,6 +202,7 @@ const Mount_Castle = () => {
           </span>
         </button>
 
+
         {/* Next Button */}
         <button
           onClick={nextSlide}
@@ -127,16 +228,16 @@ const Mount_Castle = () => {
       </div>
 
       {/* Project Header Section */}
-     <MountCastleShowcase/>
-     
-          {/* Projects Overview Title */}
+      <MountCastleShowcase />
+
+      {/* Projects Overview Title */}
       <div className="text-start mb-10 mt-16">
         <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-800 uppercase tracking-wide pl-6">
           Our Real Estate Projects
         </h1>
       </div>
-      
-      <SubCards/>
+
+      <SubCards />
 
 
     </>

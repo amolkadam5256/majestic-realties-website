@@ -1,397 +1,434 @@
-    import React, { useState } from "react";
-    import { motion } from "framer-motion";
-    import { Link } from "react-router-dom";
-    import images from '../../assets/images/images';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import images from '../../assets/images/images';
+import { Helmet } from "react-helmet";
+// Icons
+import {
+    MessageCircle,
+    Instagram,
+    Youtube,
+    Facebook,
+    Linkedin,
+    Twitter,
+    Eye,
+    ArrowRight,
+    Calendar,
+    Award,
+    CheckCircle,
+    Building,
+    Home,
+    MapPin,
+    Users,
+    Star,
+    ThumbsUp,
+    TrendingUp,
+    Target,
+    Shield,
+    ChevronLeft,
+    ChevronRight,
+    Mail,
+    CheckCircle2,
+    Play,
+    Video,
+    Image as ImageIcon,
+    Clock,
+    Globe,
+    Briefcase,
+    Rocket,
+    Volume2,
+    VolumeX
+} from "lucide-react";
 
-    // Icons
-    import {
-        MessageCircle,
-        Instagram,
-        Youtube,
-        Facebook,
-        Linkedin,
-        Twitter,
-        Eye,
-        ArrowRight,
-        Calendar,
-        Award,
-        CheckCircle,
-        Building,
-        Home,
-        MapPin,
-        Users,
-        Star,
-        ThumbsUp,
-        TrendingUp,
-        Target,
-        Shield,
-        ChevronLeft,
-        ChevronRight,
-        Mail,
-        CheckCircle2,
-        Play,
-        Video,
-        Image as ImageIcon,
-        Clock,
-        Globe,
-        Briefcase,
-        Rocket,
-        Volume2,
-        VolumeX
-    } from "lucide-react";
+const ZakkiKhanPage = () => {
+    const [activePhoto, setActivePhoto] = useState(0);
+    const [email, setEmail] = useState("");
+    const [isSubscribed, setIsSubscribed] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isMuted, setIsMuted] = useState(true);
+    const [isPlaying, setIsPlaying] = useState(false);
 
-    const ZakkiKhanPage = () => {
-        const [activePhoto, setActivePhoto] = useState(0);
-        const [email, setEmail] = useState("");
-        const [isSubscribed, setIsSubscribed] = useState(false);
-        const [isSubmitting, setIsSubmitting] = useState(false);
-        const [isMuted, setIsMuted] = useState(true);
-        const [isPlaying, setIsPlaying] = useState(false);
+    // Handle newsletter subscription
+    const handleNewsletterSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
 
-        // Handle newsletter subscription
-        const handleNewsletterSubmit = async (e) => {
-            e.preventDefault();
-            setIsSubmitting(true);
+        // Web3Forms configuration
+        const formData = new FormData();
+        formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Replace with your actual key
+        formData.append('email', email);
+        formData.append('subject', 'New Newsletter Subscription - Zakki Khan Page');
+        formData.append('message', `New newsletter subscription from: ${email}`);
+        formData.append('from_name', 'Zakki Khan Page Subscriber');
 
-            // Web3Forms configuration
-            const formData = new FormData();
-            formData.append('access_key', 'YOUR_WEB3FORMS_ACCESS_KEY'); // Replace with your actual key
-            formData.append('email', email);
-            formData.append('subject', 'New Newsletter Subscription - Zakki Khan Page');
-            formData.append('message', `New newsletter subscription from: ${email}`);
-            formData.append('from_name', 'Zakki Khan Page Subscriber');
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
 
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    body: formData
-                });
+            const data = await response.json();
 
-                const data = await response.json();
-
-                if (data.success) {
-                    setIsSubscribed(true);
-                    setEmail("");
-                } else {
-                    console.error('Error:', data);
-                    alert('There was an error submitting the form. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
+            if (data.success) {
+                setIsSubscribed(true);
+                setEmail("");
+            } else {
+                console.error('Error:', data);
                 alert('There was an error submitting the form. Please try again.');
-            } finally {
-                setIsSubmitting(false);
             }
-        };
+        } catch (error) {
+            console.error('Error:', error);
+            alert('There was an error submitting the form. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
-        // Zakki Khan Data
-        const zakkiKhanData = {
-            id: 2,
-            name: "Zakki Khan",
-            title: "11+ Years of Real Estate & Digital Expertise Across Pune & Dubai",
-            subtitle: "Director at Majestic Realties & Webmarkx LLC (Dubai)",
-            category: "Real Estate Director",
-            author: "Majestic Realties Editorial Team",
-            date: "November 26, 2025",
-            excerpt: "Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise. He has guided hundreds toward smart, high-return property investments across Pune. Known for trust, transparency, and strategic land opportunities, he continues to shape future-ready real estate decisions.",
-            image: images.Zakki_Sir,
-            readTime: "5 min read",
-            views: "95K+",
-            social: {
-                linkedin: "https://www.linkedin.com/in/zakkikhan/",
-                instagram: "https://www.instagram.com/",
-                website: "https://www.majesticrealties.com"
-            },
-            slug: "zakki-khan",
-            achievements: [
-                "11+ Years in Real Estate",
-                "Digital Marketing Expert",
-                "Pune & Dubai Operations",
-                "Trusted Property Advisor"
-            ],
-            specialties: [
-                "Strategic Land Investments",
-                "High-Return Properties",
-                "Digital Real Estate Marketing",
-                "NRI Property Services",
-                "Commercial Real Estate"
-            ],
-            description: `Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise, guiding hundreds toward smart property investments across Pune.
+    // Zakki Khan Data
+    const zakkiKhanData = {
+        id: 2,
+        name: "Zakki Khan",
+        title: "11+ Years of Real Estate & Digital Expertise Across Pune & Dubai",
+        subtitle: "Director at Majestic Realties & Webmarkx LLC (Dubai)",
+        category: "Real Estate Director",
+        author: "Majestic Realties Editorial Team",
+        date: "November 26, 2025",
+        excerpt: "Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise. He has guided hundreds toward smart, high-return property investments across Pune. Known for trust, transparency, and strategic land opportunities, he continues to shape future-ready real estate decisions.",
+        image: images.zakki_khan2,
+        readTime: "5 min read",
+        views: "95K+",
+        social: {
+            linkedin: "https://www.linkedin.com/in/zakkikhan/",
+            instagram: "https://www.instagram.com/",
+            website: "https://www.majesticrealties.com"
+        },
+        slug: "zakki-khan",
+        achievements: [
+            "11+ Years in Real Estate",
+            "Digital Marketing Expert",
+            "Pune & Dubai Operations",
+            "Trusted Property Advisor"
+        ],
+        specialties: [
+            "Strategic Land Investments",
+            "High-Return Properties",
+            "Digital Real Estate Marketing",
+            "NRI Property Services",
+            "Commercial Real Estate"
+        ],
+        description: `Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise, guiding hundreds toward smart property investments across Pune.
 
     Under his leadership, Majestic Realties has become a symbol of trust, transparency, and high-return properties—from plots to second homes.
 
     His vision: turn every land deal into a legacy of the future.`
+    };
+
+    // Real Estate Professional Gallery - Videos with Auto Play
+    const professionalGallery = [
+        {
+            id: 1,
+            type: "youtube",
+            videoId: "p4uDyuHiMV8",
+            alt: "Zakki Khan's Real Estate Journey",
+            title: "Zakki Khan's Journey to Real Estate Excellence",
+            description: "Watch Zakki Khan's inspiring journey in the real estate industry and his vision for future property investments.",
+            category: "Leadership Journey",
+            date: "Nov 2025",
+            duration: "15:30",
+            views: "25K+",
+            videoType: "long",
+            thumbnail: `https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg`
+        },
+        {
+            id: 2,
+            type: "youtube",
+            videoId: "0FVK9ZHWxDI",
+            alt: "RERA Regulations Explained",
+            title: "RERA Regulations: Complete Guide for Home Buyers",
+            description: "Understanding RERA compliance, mandatory registration, financial transparency, and consumer protection in real estate.",
+            category: "Legal Education",
+            date: "Dec 2024",
+            duration: "12:45",
+            views: "18K+",
+            videoType: "short",
+            thumbnail: `https://img.youtube.com/vi/0FVK9ZHWxDI/hqdefault.jpg`
+        },
+        {
+            id: 3,
+            type: "image",
+            src: images.zakki_khan2,
+            alt: "Strategic Property Investments",
+            title: "Expert in High-Return Property Investments",
+            description: "Guiding clients toward smart, strategic real estate decisions with proven track record of success.",
+            category: "Investment Strategy",
+            date: "Nov 2025",
+            views: "15K+"
+        },
+    ];
+
+    // Filter videos by type
+    const longVideos = professionalGallery.filter(video => video.videoType === "long");
+    const shortVideos = professionalGallery.filter(video => video.videoType === "short");
+
+    // Collaboration Posts
+    const collaborationPosts = [
+        {
+            id: 1,
+            title: "Strategic Land Development Projects in Pune",
+            excerpt: "Leading innovative land development initiatives with focus on high-return investment opportunities",
+            category: "Land Development",
+            date: "Dec 15, 2024",
+            views: "25.8K",
+            readTime: "3 min read",
+            image: images.zakki_khan2,
+            partner: "Majestic Realties",
+            status: "Ongoing"
+        },
+        {
+            id: 2,
+            title: "Digital Transformation in Real Estate Services",
+            excerpt: "Implementing advanced digital strategies to enhance property marketing and client engagement",
+            category: "Digital Innovation",
+            date: "Nov 28, 2024",
+            views: "18.3K",
+            readTime: "4 min read",
+            image: images.zakki_khan2,
+            partner: "Webmarkx LLC",
+            status: "Completed"
+        },
+    ];
+
+    // Related Professionals
+    const relatedProfessionals = [
+        {
+            id: 1,
+            name: "Milind Nikam",
+            category: "Property Influencer",
+            followers: "120K+",
+            image: images.milindnikam,
+            slug: "milind-nikam"
+        },
+    ];
+
+    // Social Media Links Data
+    const socialMediaLinks = [
+        {
+            platform: "WhatsApp",
+            url: "https://wa.me/917843077794",
+            icon: <MessageCircle className="w-4 h-4" />,
+            color: "hover:bg-green-500 hover:text-white",
+            label: "Chat with us on WhatsApp"
+        },
+        {
+            platform: "Facebook",
+            url: "https://www.facebook.com/majesticrealties?mibextid=LQQJ4d",
+            icon: <Facebook className="w-4 h-4" />,
+            color: "hover:bg-blue-600 hover:text-white",
+            label: "Follow us on Facebook"
+        },
+        {
+            platform: "Instagram",
+            url: "https://www.instagram.com/majesticrealtiespune?igshid=MzRlODBiNWFlZA%3D%3D",
+            icon: <Instagram className="w-4 h-4" />,
+            color: "hover:bg-pink-500 hover:text-white",
+            label: "Follow us on Instagram"
+        },
+        {
+            platform: "Twitter",
+            url: "https://x.com/majesticrealti",
+            icon: <Twitter className="w-4 h-4" />,
+            color: "hover:bg-blue-400 hover:text-white",
+            label: "Follow us on Twitter"
+        },
+        {
+            platform: "LinkedIn",
+            url: "https://www.linkedin.com/company/majesticrealties/?originalSubdomain=in",
+            icon: <Linkedin className="w-4 h-4" />,
+            color: "hover:bg-blue-700 hover:text-white",
+            label: "Follow us on LinkedIn"
+        },
+        {
+            platform: "YouTube",
+            url: "https://www.youtube.com/channel/UCfIYfQweloVUxZikAFsQjXA",
+            icon: <Youtube className="w-4 h-4" />,
+            color: "hover:bg-red-600 hover:text-white",
+            label: "Subscribe on YouTube"
+        }
+    ];
+
+    // Popular Voices Data
+    const popularPosts = [
+        {
+            id: 1,
+            title: "11+ Years of Real Estate Excellence – Zakki Khan's Vision",
+            excerpt: "Discover how Zakki Khan built Majestic Realties into a trusted real estate brand",
+            category: "Leadership",
+            date: "Nov 26, 2025",
+            views: "45.2K",
+            readTime: "5 min read",
+            image: images.zakki_khan2,
+            slug: "zakki-khan-vision"
+        },
+    ];
+
+    // Social Icon Component
+    const SocialIcon = ({ platform, url }) => {
+        const icons = {
+            youtube: <Youtube className="w-4 h-4" />,
+            instagram: <Instagram className="w-4 h-4" />,
+            facebook: <Facebook className="w-4 h-4" />,
+            linkedin: <Linkedin className="w-4 h-4" />,
+            twitter: <Twitter className="w-4 h-4" />,
+            website: <Globe className="w-4 h-4" />
         };
 
-        // Real Estate Professional Gallery - Videos with Auto Play
-        const professionalGallery = [
-            {
-                id: 1,
-                type: "youtube",
-                videoId: "p4uDyuHiMV8",
-                alt: "Zakki Khan's Real Estate Journey",
-                title: "Zakki Khan's Journey to Real Estate Excellence",
-                description: "Watch Zakki Khan's inspiring journey in the real estate industry and his vision for future property investments.",
-                category: "Leadership Journey",
-                date: "Nov 2025",
-                duration: "15:30",
-                views: "25K+",
-                videoType: "long",
-                thumbnail: `https://img.youtube.com/vi/p4uDyuHiMV8/hqdefault.jpg`
-            },
-            {
-                id: 2,
-                type: "youtube",
-                videoId: "0FVK9ZHWxDI",
-                alt: "RERA Regulations Explained",
-                title: "RERA Regulations: Complete Guide for Home Buyers",
-                description: "Understanding RERA compliance, mandatory registration, financial transparency, and consumer protection in real estate.",
-                category: "Legal Education",
-                date: "Dec 2024",
-                duration: "12:45",
-                views: "18K+",
-                videoType: "short",
-                thumbnail: `https://img.youtube.com/vi/0FVK9ZHWxDI/hqdefault.jpg`
-            },
-            {
-                id: 3,
-                type: "image",
-                src: images.zakki_khan2,
-                alt: "Strategic Property Investments",
-                title: "Expert in High-Return Property Investments",
-                description: "Guiding clients toward smart, strategic real estate decisions with proven track record of success.",
-                category: "Investment Strategy",
-                date: "Nov 2025",
-                views: "15K+"
-            },
-        ];
-
-        // Filter videos by type
-        const longVideos = professionalGallery.filter(video => video.videoType === "long");
-        const shortVideos = professionalGallery.filter(video => video.videoType === "short");
-
-        // Collaboration Posts
-        const collaborationPosts = [
-            {
-                id: 1,
-                title: "Strategic Land Development Projects in Pune",
-                excerpt: "Leading innovative land development initiatives with focus on high-return investment opportunities",
-                category: "Land Development",
-                date: "Dec 15, 2024",
-                views: "25.8K",
-                readTime: "3 min read",
-                image: images.zakki_khan2,
-                partner: "Majestic Realties",
-                status: "Ongoing"
-            },
-            {
-                id: 2,
-                title: "Digital Transformation in Real Estate Services",
-                excerpt: "Implementing advanced digital strategies to enhance property marketing and client engagement",
-                category: "Digital Innovation",
-                date: "Nov 28, 2024",
-                views: "18.3K",
-                readTime: "4 min read",
-                image: images.zakki_khan2,
-                partner: "Webmarkx LLC",
-                status: "Completed"
-            },
-        ];
-
-        // Related Professionals
-        const relatedProfessionals = [
-            {
-                id: 1,
-                name: "Milind Nikam",
-                category: "Property Influencer",
-                followers: "120K+",
-                image: images.milindnikam,
-                slug: "milind-nikam"
-            },
-        ];
-
-        // Social Media Links Data
-        const socialMediaLinks = [
-            {
-                platform: "WhatsApp",
-                url: "https://wa.me/917843077794",
-                icon: <MessageCircle className="w-4 h-4" />,
-                color: "hover:bg-green-500 hover:text-white",
-                label: "Chat with us on WhatsApp"
-            },
-            {
-                platform: "Facebook",
-                url: "https://www.facebook.com/majesticrealties?mibextid=LQQJ4d",
-                icon: <Facebook className="w-4 h-4" />,
-                color: "hover:bg-blue-600 hover:text-white",
-                label: "Follow us on Facebook"
-            },
-            {
-                platform: "Instagram",
-                url: "https://www.instagram.com/majesticrealtiespune?igshid=MzRlODBiNWFlZA%3D%3D",
-                icon: <Instagram className="w-4 h-4" />,
-                color: "hover:bg-pink-500 hover:text-white",
-                label: "Follow us on Instagram"
-            },
-            {
-                platform: "Twitter",
-                url: "https://x.com/majesticrealti",
-                icon: <Twitter className="w-4 h-4" />,
-                color: "hover:bg-blue-400 hover:text-white",
-                label: "Follow us on Twitter"
-            },
-            {
-                platform: "LinkedIn",
-                url: "https://www.linkedin.com/company/majesticrealties/?originalSubdomain=in",
-                icon: <Linkedin className="w-4 h-4" />,
-                color: "hover:bg-blue-700 hover:text-white",
-                label: "Follow us on LinkedIn"
-            },
-            {
-                platform: "YouTube",
-                url: "https://www.youtube.com/channel/UCfIYfQweloVUxZikAFsQjXA",
-                icon: <Youtube className="w-4 h-4" />,
-                color: "hover:bg-red-600 hover:text-white",
-                label: "Subscribe on YouTube"
-            }
-        ];
-
-        // Popular Voices Data
-        const popularPosts = [
-            {
-                id: 1,
-                title: "11+ Years of Real Estate Excellence – Zakki Khan's Vision",
-                excerpt: "Discover how Zakki Khan built Majestic Realties into a trusted real estate brand",
-                category: "Leadership",
-                date: "Nov 26, 2025",
-                views: "45.2K",
-                readTime: "5 min read",
-                image: images.zakki_khan2,
-                slug: "zakki-khan-vision"
-            },
-        ];
-
-        // Social Icon Component
-        const SocialIcon = ({ platform, url }) => {
-            const icons = {
-                youtube: <Youtube className="w-4 h-4" />,
-                instagram: <Instagram className="w-4 h-4" />,
-                facebook: <Facebook className="w-4 h-4" />,
-                linkedin: <Linkedin className="w-4 h-4" />,
-                twitter: <Twitter className="w-4 h-4" />,
-                website: <Globe className="w-4 h-4" />
-            };
-
-            const colors = {
-                youtube: "hover:bg-red-500 hover:text-white",
-                instagram: "hover:bg-pink-500 hover:text-white",
-                facebook: "hover:bg-blue-600 hover:text-white",
-                linkedin: "hover:bg-blue-700 hover:text-white",
-                twitter: "hover:bg-blue-400 hover:text-white",
-                website: "hover:bg-green-600 hover:text-white"
-            };
-
-            return (
-                <a
-                    href={url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-2 bg-gray-100 transition-all duration-300 text-gray-600 ${colors[platform] || 'hover:bg-gray-600 hover:text-white'}`}
-                    aria-label={`Follow on ${platform}`}
-                >
-                    {icons[platform]}
-                </a>
-            );
+        const colors = {
+            youtube: "hover:bg-red-500 hover:text-white",
+            instagram: "hover:bg-pink-500 hover:text-white",
+            facebook: "hover:bg-blue-600 hover:text-white",
+            linkedin: "hover:bg-blue-700 hover:text-white",
+            twitter: "hover:bg-blue-400 hover:text-white",
+            website: "hover:bg-green-600 hover:text-white"
         };
 
-        // Carousel Navigation
-        const nextPhoto = () => {
-            setActivePhoto((prev) => (prev + 1) % professionalGallery.length);
-            setIsPlaying(true);
-        };
+        return (
+            <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`p-2 bg-gray-100 transition-all duration-300 text-gray-600 ${colors[platform] || 'hover:bg-gray-600 hover:text-white'}`}
+                aria-label={`Follow on ${platform}`}
+            >
+                {icons[platform]}
+            </a>
+        );
+    };
 
-        const prevPhoto = () => {
-            setActivePhoto((prev) => (prev - 1 + professionalGallery.length) % professionalGallery.length);
-            setIsPlaying(true);
-        };
+    // Carousel Navigation
+    const nextPhoto = () => {
+        setActivePhoto((prev) => (prev + 1) % professionalGallery.length);
+        setIsPlaying(true);
+    };
 
-        // Toggle mute
-        const toggleMute = () => {
-            setIsMuted(!isMuted);
-        };
+    const prevPhoto = () => {
+        setActivePhoto((prev) => (prev - 1 + professionalGallery.length) % professionalGallery.length);
+        setIsPlaying(true);
+    };
 
-        // Toggle play/pause
-        const togglePlay = () => {
-            setIsPlaying(!isPlaying);
-        };
+    // Toggle mute
+    const toggleMute = () => {
+        setIsMuted(!isMuted);
+    };
 
-        // Render Media Content
-        const renderMediaContent = (media, isThumbnail = false) => {
-            if (media.type === "youtube") {
-                if (isThumbnail) {
-                    return (
-                        <div className="relative w-full h-full">
-                            <img
-                                src={media.thumbnail}
-                                alt={media.alt}
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                                <Play className="w-6 h-6 text-white" fill="white" />
-                            </div>
-                            <div className="absolute top-2 left-2">
-                                <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                    media.videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
-                                } text-white rounded`}>
-                                    {media.videoType === 'short' ? 'SHORT' : 'LONG'}
-                                </span>
-                            </div>
-                        </div>
-                    );
-                } else {
-                    return (
-                        <div className="relative w-full h-full">
-                            <iframe
-                                src={`https://www.youtube.com/embed/${media.videoId}?autoplay=${isPlaying ? 1 : 0}&mute=${isMuted ? 1 : 0}&controls=1&modestbranding=1&rel=0`}
-                                className="w-full h-full"
-                                allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
-                                allowFullScreen
-                                title={media.title}
-                            />
-                        </div>
-                    );
-                }
-            } else if (media.type === "video") {
+    // Toggle play/pause
+    const togglePlay = () => {
+        setIsPlaying(!isPlaying);
+    };
+
+    // Render Media Content
+    const renderMediaContent = (media, isThumbnail = false) => {
+        if (media.type === "youtube") {
+            if (isThumbnail) {
                 return (
                     <div className="relative w-full h-full">
-                        <video
-                            className={`w-full h-full object-cover ${isThumbnail ? '' : 'bg-gray-900'}`}
-                            poster={media.poster}
-                            controls={!isThumbnail}
-                            muted={isThumbnail}
-                            autoPlay={isPlaying}
-                        >
-                            <source src={media.src} type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
-                        {isThumbnail && (
-                            <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                                <Play className="w-6 h-6 text-white" fill="white" />
-                            </div>
-                        )}
+                        <img
+                            src={media.thumbnail}
+                            alt={media.alt}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <Play className="w-6 h-6 text-white" fill="white" />
+                        </div>
+                        <div className="absolute top-2 left-2">
+                            <span className={`inline-block px-2 py-1 text-xs font-semibold ${media.videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
+                                } text-white rounded`}>
+                                {media.videoType === 'short' ? 'SHORT' : 'LONG'}
+                            </span>
+                        </div>
                     </div>
                 );
             } else {
                 return (
-                    <div
-                        className="w-full h-full bg-cover bg-no-repeat bg-center bg-gray-200"
-                        style={{ backgroundImage: `url(${media.src})` }}
-                    />
+                    <div className="relative w-full h-full">
+                        <iframe
+                            src={`https://www.youtube.com/embed/${media.videoId}?autoplay=${isPlaying ? 1 : 0}&mute=${isMuted ? 1 : 0}&controls=1&modestbranding=1&rel=0`}
+                            className="w-full h-full"
+                            allow="autoplay; encrypted-media; accelerometer; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            title={media.title}
+                        />
+                    </div>
                 );
             }
-        };
+        } else if (media.type === "video") {
+            return (
+                <div className="relative w-full h-full">
+                    <video
+                        className={`w-full h-full object-cover ${isThumbnail ? '' : 'bg-gray-900'}`}
+                        poster={media.poster}
+                        controls={!isThumbnail}
+                        muted={isThumbnail}
+                        autoPlay={isPlaying}
+                    >
+                        <source src={media.src} type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    {isThumbnail && (
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                            <Play className="w-6 h-6 text-white" fill="white" />
+                        </div>
+                    )}
+                </div>
+            );
+        } else {
+            return (
+                <div
+                    className="w-full h-full bg-cover bg-no-repeat bg-center bg-gray-200"
+                    style={{ backgroundImage: `url(${media.src})` }}
+                />
+            );
+        }
+    };
 
-        return (
+    return (
+        <>
+            <Helmet>
+                {/* Page Title */}
+                <title>Zakki Khan | Real Estate Director at Majestic Realties Pune & Dubai</title>
+
+                {/* Meta Description */}
+                <meta
+                    name="description"
+                    content="Meet Zakki Khan, Founder and Real Estate Director at Majestic Realties & Webmarkx LLC (Dubai). With 11+ years of experience, he guides clients on high-return property investments, NRI services, and strategic land development in Pune."
+                />
+
+                {/* Meta Keywords */}
+                <meta
+                    name="keywords"
+                    content="Zakki Khan, Majestic Realties, Real Estate Director Pune, Property Investment Pune, NRI Property Services, Strategic Land Development, High-Return Properties, Real Estate Expert Pune, Digital Real Estate Marketing, Pune & Dubai Real Estate"
+                />
+
+                {/* Open Graph / Social Sharing */}
+                <meta property="og:title" content="Zakki Khan | Real Estate Director at Majestic Realties Pune & Dubai" />
+                <meta
+                    property="og:description"
+                    content="Discover Zakki Khan's 11+ years of real estate expertise guiding high-return investments, NRI services, and strategic land projects in Pune and Dubai."
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://www.majesticrealties.com/zakki-khan" />
+                <meta property="og:image" content="https://www.majesticrealties.com/assets/zakki-khan.jpg" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Zakki Khan | Real Estate Director at Majestic Realties Pune & Dubai" />
+                <meta
+                    name="twitter:description"
+                    content="Explore Zakki Khan's journey of 11+ years in real estate, leading high-return investments and digital innovation in Pune & Dubai."
+                />
+                <meta name="twitter:image" content="https://www.majesticrealties.com/assets/zakki-khan.jpg" />
+            </Helmet>
+
+
             <div className="bg-gray-50 pt-20">
                 {/* Main Content */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -533,15 +570,14 @@
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                         <div className="absolute bottom-4 left-4 right-4 text-white">
                                             <div className="flex items-center gap-2 mb-2">
-                                                <span className={`inline-block px-2 py-1 text-xs font-semibold ${
-                                                    professionalGallery[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
-                                                }`}>
+                                                <span className={`inline-block px-2 py-1 text-xs font-semibold ${professionalGallery[activePhoto].videoType === 'short' ? 'bg-purple-500' : 'bg-red-500'
+                                                    }`}>
                                                     {professionalGallery[activePhoto].videoType === 'short' ? 'SHORT' : 'LONG FORM'}
                                                 </span>
                                             </div>
                                             <h4 className="text-2xl font-bold mb-2">{professionalGallery[activePhoto].title}</h4>
-                                            
-                                            
+
+
                                         </div>
 
                                         {/* Video Controls */}
@@ -560,8 +596,8 @@
                                                 onClick={togglePlay}
                                                 className="bg-black/50 text-white p-2 rounded-full hover:bg-black/70 transition-all"
                                             >
-                                                {isPlaying ? 
-                                                    <div className="w-4 h-4 bg-white rounded-sm"></div> : 
+                                                {isPlaying ?
+                                                    <div className="w-4 h-4 bg-white rounded-sm"></div> :
                                                     <Play className="w-4 h-4" fill="white" />
                                                 }
                                             </motion.button>
@@ -695,20 +731,18 @@
                                                 ></div>
                                                 <div className="flex-1">
                                                     <div className="flex items-center gap-2 mb-1">
-                                                        <span className={`px-2 py-0.5 text-xs font-semibold ${
-                                                            post.category === 'Land Development'
+                                                        <span className={`px-2 py-0.5 text-xs font-semibold ${post.category === 'Land Development'
                                                             ? 'bg-green-100 text-green-800'
                                                             : post.category === 'Digital Innovation'
-                                                            ? 'bg-blue-100 text-blue-800'
-                                                            : 'bg-gray-100 text-gray-800'
-                                                        }`}>
+                                                                ? 'bg-blue-100 text-blue-800'
+                                                                : 'bg-gray-100 text-gray-800'
+                                                            }`}>
                                                             {post.category}
                                                         </span>
-                                                        <span className={`px-2 py-0.5 text-xs font-semibold ${
-                                                            post.status === 'Completed'
+                                                        <span className={`px-2 py-0.5 text-xs font-semibold ${post.status === 'Completed'
                                                             ? 'bg-green-100 text-green-800'
                                                             : 'bg-yellow-100 text-yellow-800'
-                                                        }`}>
+                                                            }`}>
                                                             {post.status}
                                                         </span>
                                                     </div>
@@ -981,7 +1015,8 @@
                     </div>
                 </section>
             </div>
-        );
-    };
+        </>
+    );
+};
 
-    export default ZakkiKhanPage;
+export default ZakkiKhanPage;

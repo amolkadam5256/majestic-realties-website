@@ -128,7 +128,7 @@ const FinancialExpert = () => {
       date: "November 26, 2025",
       excerpt:
         "Zakki Khan, Founder of Majestic Realties, brings 11+ years of real estate and digital expertise. He has guided hundreds toward smart, high-return property investments across Pune. Known for trust, transparency, and strategic land opportunities, he continues to shape future-ready real estate decisions.",
-      image: images.Zakki_SirInf,
+      image: images.zakki_khan2,
       readTime: "5 min read",
       // views: "95K+",
       social: {

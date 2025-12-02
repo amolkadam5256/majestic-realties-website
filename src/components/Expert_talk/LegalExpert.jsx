@@ -135,7 +135,7 @@ const LegalExpert = () => {
       date: "November 26, 2025",
       excerpt:
         "Zakki Khan, Founder of Majestic Realties, brings 11+ years of expertise in real estate and digital strategy. He has guided hundreds toward high-return land and property investments across Pune. Known for trust, transparency, and strategic project selection, he continues to shape future-ready real estate opportunities.",
-      image: images.Zakki_SirInf,
+      image: images.zakki_khan2,
       readTime: "5 min read",
       views: "95K+",
       social: {
@@ -255,7 +255,7 @@ const LegalExpert = () => {
                       {/* Image Section */}
                       <div className="md:w-1/3">
                         <div
-                          className="h-48 md:h-full bg-cover bg-left relative overflow-hidden"
+                          className="h-48 md:h-full bg-cover bg-center relative overflow-hidden"
                           style={{ backgroundImage: `url(${partner.image})` }}
                         >
                           <div className="absolute inset-0 bg-yellow-900/20"></div>

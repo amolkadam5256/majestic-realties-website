@@ -5,13 +5,14 @@ import images from "../../assets/images/images";
 import TeamCardCompact from "./TeamCardCompact";
 
 const coreTeam = [
- {
+{
   name: "Aslam Shaikh",
   role: "Branch Manager and Digital Marketing Head",
-  desc: "A former Google employee with expertise in digital marketing and creative strategies. Now managing the NIBM Pune branch, leading all aspects of digital marketing, real estate, and creative direction with a professional and innovative approach.",
+  desc: "A former Google employee with expertise in digital marketing and creative strategies. Now managing the NIBM Pune branch, leading all aspects of digital marketing, real estate, and creative direction with a professional and innovative approach. Aslam isn’t only a brand manager. he’s someone actively designing his life with craft and clarity, blending structure and creativity to make things that resonate-whether they’re projects, ideas, or personal goals. Aslam is the type of person who intentionally constructs both his life and his job. He creates like an artist while thinks like a strategist. He switches between small detail and big-picture ideas with ease. His insatiable curiosity is what makes him stand out. He is organised without being predictable and driven without being inflexible.",
   image: images.AslamS,
   animation: "fade-up",
-},
+}
+,
 {
   name: "Siddharam B.",
   role: "Accountant – Real Estate",
